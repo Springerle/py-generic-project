@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
 """
-    {{ cookiecutter.repo_name }} – {{ cookiecutter.short_description }}
+    {{ cookiecutter.repo_name }} – {{ cookiecutter.short_description }}.
 
     Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 
