@@ -33,7 +33,7 @@ To bootstrap the project (as mentioned, best after `git add`), use these command
 ```sh
 . .env # answer the prompt with (y)es
 inv ci | less -R
-"$name" --help
+"$(basename $(pwd))" --help
 ```
 
 
