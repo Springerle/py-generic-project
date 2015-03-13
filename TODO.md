@@ -4,6 +4,7 @@
 
 * Testing infrastructure
 * Integration test for the template itself (create + build)
+* "Missing final newline" fix for CC
 
 
 ## Backlog
