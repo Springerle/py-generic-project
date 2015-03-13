@@ -28,13 +28,10 @@ generated files are added, that you don't want to have in your repository.
 ---- | :----
 
 
-To bootstrap the project, use these commands from within its directory:
+To bootstrap the project (as mentioned, best after `git add`), use these commands from within its directory:
 
 ```sh
-name="$(basename $(pwd))"
-/usr/bin/virtualenv ".venv/$name"
-. ".venv/$name/bin/activate"
-pip install -r dev-requirements.txt
+. .env # answer the prompt with (y)es
 inv ci | less -R
 "$name" --help
 ```
