@@ -47,6 +47,7 @@ except ImportError as exc:
 
 # Helpers
 project_root = os.path.abspath(os.path.dirname(__file__))
+package_name = name.replace('-', '_')
 
 def srcfile(*args):
     "Helper for path building."
@@ -72,12 +73,12 @@ class PyTest(TestCommand):
         if errno:
             sys.exit(errno)
 
-def _build_metadata():
+def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
     "Return project's metadata as a dict."
     # Handle metadata in package source
     expected_keys = ('url', 'version', 'license', 'author', 'author_email', 'long_description', 'keywords')
     metadata = {}
-    with open(srcfile('src', name, '__init__.py')) as handle:
+    with open(srcfile('src', package_name, '__init__.py')) as handle:
         pkg_init = handle.read()
         # Get default long description from docstring
         metadata['long_description'] = re.search(r'^"""(.+?)^"""$', pkg_init, re.DOTALL|re.MULTILINE).group(1).strip()
@@ -111,7 +112,7 @@ def _build_metadata():
 
     # CLI entry points
     console_scripts = []
-    for path, _, files in os.walk(srcfile('src', name)):
+    for path, _, files in os.walk(srcfile('src', package_name)):
         if '__main__.py' in files:
             path = path[len(srcfile('src') + os.sep):]
             appname = path.split(os.sep)[-1]
@@ -131,7 +132,7 @@ def _build_metadata():
     data_files = defaultdict(list)
     for filename in candidate_files:
         if os.path.exists(srcfile(filename)):
-            data_files['EGG-INFO'.format(name)].append(filename)
+            data_files['EGG-INFO'].append(filename)
 
     # Complete project metadata
     with open(srcfile('classifiers.txt'), 'r') as handle:
@@ -139,7 +140,7 @@ def _build_metadata():
 
     metadata.update(dict(
         name = name,
-        description = metadata['long_description'].split('.')[0],
+        description = ' '.join(metadata['long_description'].split('.')[0].split()), # normalize whitespace
         url = metadata['url'],
         package_dir = {'': 'src'},
         packages = find_packages(srcfile('src'), exclude=['tests']),
@@ -161,6 +162,6 @@ def _build_metadata():
 
 # Ensure "setup.py" is importable by other tools, to access the project's metadata
 project = _build_metadata()
-__all__ = ['project', 'project_root', 'srcfile']
+__all__ = ['project', 'project_root', 'package_name', 'srcfile']
 if __name__ == '__main__':
     setup(**project)
