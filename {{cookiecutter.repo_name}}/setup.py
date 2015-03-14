@@ -33,6 +33,7 @@
 import os
 import re
 import sys
+from collections import defaultdict
 
 # Project data (the rest is parsed from __init__.py and other project files)
 name = __doc__.strip().split(None, 1)[0]
@@ -95,7 +96,7 @@ def _build_metadata():
         test = 'test-requirements.txt',
     )
     requires = {}
-    for key, filename in requirements_files.iteritems():
+    for key, filename in requirements_files.items():
         requires[key] = []
         if os.path.exists(srcfile(filename)):
             with open(srcfile(filename), 'r') as handle:
@@ -121,6 +122,17 @@ def _build_metadata():
                         appname = match.group(2)
             console_scripts.append('{0} = {1}.__main__:cli'.format(appname, path.replace(os.sep, '.')))
 
+    # Add some common files to EGG-INFO
+    candidate_files = [
+        'LICENSE', 'NOTICE',
+        'README', 'README.md', 'README.rst', 'README.txt',
+        'CHANGES', 'CHANGELOG', 'debian/changelog',
+    ]
+    data_files = defaultdict(list)
+    for filename in candidate_files:
+        if os.path.exists(srcfile(filename)):
+            data_files['EGG-INFO'.format(name)].append(filename)
+
     # Complete project metadata
     with open(srcfile('classifiers.txt'), 'r') as handle:
         classifiers = [i.strip() for i in handle if i.strip() and not i.startswith('#')]
@@ -131,6 +143,7 @@ def _build_metadata():
         url = metadata['url'],
         package_dir = {'': 'src'},
         packages = find_packages(srcfile('src'), exclude=['tests']),
+        data_files = data_files.items(),
         zip_safe = False,
         include_package_data = True,
         install_requires = requires['install'],
