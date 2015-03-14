@@ -27,6 +27,10 @@ generated files are added, that you don't want to have in your repository.
 :bulb: | To get *your* defaults for common template values `cookiecutter` will ask you for when you use a template, it makes sense to have a [~/.cookiecutterrc](https://github.com/jhermann/ruby-slippers/blob/master/home/.cookiecutterrc) in your home directory. Follow the link to see an example.
 ---- | :----
 
+You should at least check these files regarding their content and adapt them according to your needs:
+
+ * `` classifiers.txt`` – Add the correct [categories](http://pypi.python.org/pypi?:action=list_classifiers) (a/k/a Trove classifiers) for your project.
+ * ``requirements.txt`` – Add any Python packages you need for your project _at runtime_.
 
 To bootstrap the project (as mentioned, best after `git add`), use these commands from within its directory:
 
