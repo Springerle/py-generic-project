@@ -75,7 +75,7 @@ class PyTest(TestCommand):
 def _build_metadata():
     "Return project's metadata as a dict."
     # Handle metadata in package source
-    expected_keys = ('url', 'version', 'license', 'author', 'author_email', 'long_description')
+    expected_keys = ('url', 'version', 'license', 'author', 'author_email', 'long_description', 'keywords')
     metadata = {}
     with open(srcfile('src', name, '__init__.py')) as handle:
         pkg_init = handle.read()

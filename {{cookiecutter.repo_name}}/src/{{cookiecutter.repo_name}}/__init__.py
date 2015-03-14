@@ -23,5 +23,6 @@ __version__         = "{{ cookiecutter.version }}"
 __license__         = "Apache 2.0"
 __author__          = "{{ cookiecutter.full_name }}"
 __author_email__    = "{{ cookiecutter.email }}"
+__keywords__        = "{{ cookiecutter.keywords }}"
 
 __all__ = []
