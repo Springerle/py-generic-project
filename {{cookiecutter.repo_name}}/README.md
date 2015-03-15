@@ -3,7 +3,7 @@
 {{ cookiecutter.short_description }}.
 
  [![Travis CI](https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
- [![GitHub Issues](https://img.shields.io/github/issues/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)]()
+ [![GitHub Issues](https://img.shields.io/github/issues/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues)
  [![License](https://img.shields.io/pypi/l/{{ cookiecutter.repo_name }}.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/blob/master/LICENSE)
  [![Latest Version](https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
  [![Downloads](https://img.shields.io/pypi/dw/{{ cookiecutter.repo_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
