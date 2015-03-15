@@ -2,9 +2,11 @@
 
 {{ cookiecutter.short_description }}.
 
-![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
-[![Travis CI](https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
-
+ [![Travis CI](https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
+ [![GitHub Issues](https://img.shields.io/github/issues/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)]()
+ [![License](https://img.shields.io/pypi/l/{{ cookiecutter.repo_name }}.svg)](/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/blob/master/LICENSE)
+ [![Latest Version](https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
+ [![Downloads](https://img.shields.io/pypi/dw/{{ cookiecutter.repo_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
 
 
 ## Overview
