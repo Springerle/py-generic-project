@@ -6,13 +6,49 @@ A cookiecutter template that creates a basic Python setuptools project, which ca
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
 
 
-## Preparations
+## Features
+
+The resulting project uses
+[rituals](https://github.com/jhermann/rituals)
+and [invoke](https://github.com/pyinvoke/invoke/)
+for task automation, and
+[setuptools](https://bitbucket.org/pypa/setuptools)
+for building and distributing the project.
+A provided [autoenv](https://github.com/kennethreitz/autoenv) script takes care
+of creating a fully boot-strapped `virtualenv` – it can also be used manually
+if you don't want to install `autoenv`.
+
+The `setup.py` script follows the DRY principle and tries to
+minimize repetition of project metadata by loading it from other
+places (like the package's `__init__.py`). Incidently, this makes
+the script almost identical between different projects, and thus
+provides an easy update experience later on. Usually, the only specific
+thing in it is the docstring with the project's name and license notice.
+This relies on conventions, specially check out
+[\_\_init\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.repo_name%7D%7D/__init__.py)
+and
+[\_\_main\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.repo_name%7D%7D/__main__.py)
+in the `src` folder, for their double-underscore meta variables.
+
+It is also importable (by using the usual `if __name__ == '__main__'`
+idiom), and exposes the project's setup data in a `project` dict.
+This allows other tools to exploit the contained data assembling code,
+and again supports the DRY principle. The `rituals` package
+uses that to provide Invoke tasks that work for any project, based on
+its project metadata.
+
+Other integrated tools are `pylint` for code quality checking,
+`pytest` for testing support, and a Travis CI configuration.
+
+
+## Using the Template
+
+### Preparations
 
 In case you don't have the `cookiecutter` command line tool yet, here's
 [how to install](https://github.com/Springerle/springerle.github.io#installing-the-cookiecutter-cli) it.
 
-
-## Using the template
+### Project Creation
 
 Creating a new Python project based on this template goes like this (make sure
 you're in the directory you want your project added to):
@@ -43,5 +79,10 @@ inv ci | less -R
 
 ## References
 
-* [pypa/sampleproject](https://github.com/pypa/sampleproject)
+* [audreyr/cookiecutter](https://github.com/audreyr/cookiecutter)
+* [jhermann/rituals](https://github.com/jhermann/rituals)
+* [pyinvoke/invoke](https://github.com/pyinvoke/invoke)
+* [kennethreitz/autoenv](https://github.com/kennethreitz/autoenv)
 * [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
+* [pypa/sampleproject](https://github.com/pypa/sampleproject)
+* [pypa/setuptools](https://bitbucket.org/pypa/setuptools)
