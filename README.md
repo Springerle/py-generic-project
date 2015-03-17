@@ -48,7 +48,7 @@ Other integrated tools are `pylint` for code quality checking,
 In case you don't have the `cookiecutter` command line tool yet, here's
 [how to install](https://github.com/Springerle/springerle.github.io#installing-the-cookiecutter-cli) it.
 
-:loudpseaker: | For `py-generic-project` v1.2 and upwards, you need at least `cookiecutter` v1.0 – for `pipsi` installs, just issue a `pipsi upgrade cookiecutter` command and you're done.
+:loudspeaker: | For `py-generic-project` v1.2 and upwards, you need at least `cookiecutter` v1.0 – for `pipsi` installs, just issue a `pipsi upgrade cookiecutter` command and you're done.
 ---- | :----
 
 
