@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
 """
-    {{ cookiecutter.repo_name }} – {{ cookiecutter.short_description }}.
+    {{ cookiecutter.project_name }} – {{ cookiecutter.short_description }}.
 
     This setuptools script follows the DRY principle and tries to
     minimize repetition of project metadata by loading it from other
@@ -36,7 +36,8 @@ import sys
 from collections import defaultdict
 
 # Project data (the rest is parsed from __init__.py and other project files)
-name = __doc__.strip().split(None, 1)[0]
+name = '{{ cookiecutter.repo_name }}'
+package_name = '{{ cookiecutter.pkg_name }}'
 
 # Import setuptools
 try:
@@ -47,7 +48,6 @@ except ImportError as exc:
 
 # Helpers
 project_root = os.path.abspath(os.path.dirname(__file__))
-package_name = name.replace('-', '_')
 
 def srcfile(*args):
     "Helper for path building."

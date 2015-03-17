@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
 """
-    {{ cookiecutter.repo_name }} – {{ cookiecutter.short_description }}.
+    {{ cookiecutter.project_name }} – {{ cookiecutter.short_description }}.
 
     Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 
@@ -20,7 +20,7 @@
 
 __url__             = "{{ cookiecutter.url }}"
 __version__         = "{{ cookiecutter.version }}"
-__license__         = "Apache 2.0"
+__license__         = "{{ cookiecutter.license }}"
 __author__          = "{{ cookiecutter.full_name }}"
 __author_email__    = "{{ cookiecutter.email }}"
 __keywords__        = "{{ cookiecutter.keywords }}"
