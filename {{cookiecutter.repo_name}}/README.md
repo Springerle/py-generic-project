@@ -37,7 +37,15 @@ See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) fo
 
 ## References
 
-…
+**Tools**
+
+* [Cookiecutter](http://cookiecutter.readthedocs.org/en/latest/)
+* [PyInvoke](http://www.pyinvoke.org/)
+
+**Packages**
+
+* [Rituals](https://jhermann.github.io/rituals)
+* [Click](http://click.pocoo.org/)
 
 
 ## Acknowledgements
