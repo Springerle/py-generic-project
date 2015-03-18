@@ -188,6 +188,11 @@ pre code {
   box-shadow: none;
 }
 
+th code {
+  color: #ccd;
+  background-color: #373737;
+}
+
 blockquote {
   color: #666;
   margin-bottom: 20px;
