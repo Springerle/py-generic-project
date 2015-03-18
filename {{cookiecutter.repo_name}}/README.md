@@ -32,7 +32,7 @@ cd "{{ cookiecutter.repo_name }}"
 invoke build --docs
 ```
 
-See [CONTRIBUTING.md]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) for more.
+See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) for more.
 
 
 ## References
