@@ -25,9 +25,9 @@ the script almost identical between different projects, and thus
 provides an easy update experience later on. Usually, the only specific
 thing in it is the docstring with the project's name and license notice.
 This relies on conventions, specially check out
-[\_\_init\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.repo_name%7D%7D/__init__.py)
+[\_\_init\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.pkg_name%7D%7D/__init__.py)
 and
-[\_\_main\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.repo_name%7D%7D/__main__.py)
+[\_\_main\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.pkg_name%7D%7D/__main__.py)
 in the `src` folder, for their double-underscore meta variables.
 
 It is also importable (by using the usual `if __name__ == '__main__'`
