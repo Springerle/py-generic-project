@@ -1,6 +1,6 @@
 # *- coding: utf-8 -*-
-# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation, superfluous-parens
-""" Project automation for Invoke.
+# pylint: disable=
+""" Test the template.
 """
 # Copyright (c) 2015 Jürgen Hermann
 #
@@ -22,11 +22,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from invoke import run, task
-#from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
+import os
 
 
-@task
-def test():
-    """Perform integration tests."""
-    run("py.test --color=yes")
+def test_project_base(project):
+    """Test the created project base dir."""
+    assert os.path.exists(project), "Project was created"
+    assert os.path.isdir(project), "Project base directory was created"
+
+
+def test_src_package(project):
+    """Test the created project package source."""
+    pkg_name = os.path.basename(project).replace('-', '_')
+    init_py = '{0}/src/{1}/__init__.py'.format(project, pkg_name)
+
+    assert os.path.isfile(init_py), "Project package was created"
+
+
+def test_readme(project):
+    """Test the README contents."""
+    with open(project + '/README.md') as handle:
+        readme = handle.read()
+
+    # TODO: cookiecutter needs a --no-rc option, so we'll always get 'jschmoe'
+    assert any("https://github.com/{}/new-project".format(i) in readme
+        for i in ('jschmoe', 'jhermann')), "README contains repo URL"

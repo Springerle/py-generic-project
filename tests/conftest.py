@@ -1,6 +1,10 @@
-# *- coding: utf-8 -*-
-# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation, superfluous-parens
-""" Project automation for Invoke.
+# -*- coding: utf-8 -*-
+# pylint: disable=
+""" py.test dynamic configuration.
+
+    For details needed to understand these tests, refer to:
+        https://pytest.org/
+        http://pythontesting.net/start-here/
 """
 # Copyright (c) 2015 Jürgen Hermann
 #
@@ -22,11 +26,29 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from invoke import run, task
-#from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
+import os
+import shutil
+import logging
+import subprocess
+
+import pytest
 
 
-@task
-def test():
-    """Perform integration tests."""
-    run("py.test --color=yes")
+# Globally available fixtures
+@pytest.fixture(scope='session')
+def project():
+    """Materialize cookiecutter template (once)."""
+    new_project = 'new-project'
+
+    if os.path.exists(new_project):
+        shutil.rmtree(new_project)
+    subprocess.check_call(['cookiecutter', '--no-input', '.'])
+
+    return os.path.abspath(new_project)
+
+
+@pytest.fixture(scope='session')
+def logger():
+    """Test logger instance as a fixture."""
+    logging.basicConfig(level=logging.DEBUG)
+    return logging.getLogger('tests')
