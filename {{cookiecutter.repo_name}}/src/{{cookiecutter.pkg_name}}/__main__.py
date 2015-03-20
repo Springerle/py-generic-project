@@ -15,8 +15,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+from __future__ import absolute_import
+
+import sys
 
 import click
+
+from . import __version__
+
 
 __app_name__ = '{{ cookiecutter.repo_name }}'
 CONTEXT_SETTINGS = dict(
@@ -24,12 +30,19 @@ CONTEXT_SETTINGS = dict(
 )
 
 
-@click.group(context_settings=CONTEXT_SETTINGS)
+@click.group(context_settings=CONTEXT_SETTINGS, invoke_without_command=True)
+@click.option('--version', is_flag=True, default=False, help='Show version information.')
 @click.option('-q', '--quiet', is_flag=True, default=False, help='Be quiet (show only errors).')
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
-def cli(quiet=False, verbose=False): # pylint: disable=unused-argument
+@click.pass_context
+def cli(ctx, version=False, quiet=False, verbose=False): # pylint: disable=unused-argument
     """'{{ cookiecutter.repo_name }}' command line tool."""
     appdir = click.get_app_dir(__app_name__)
+    if version:
+        click.echo("{0} {1} [Python {2}]".format(__app_name__, __version__, ' '.join(sys.version.split()),))
+        sys.exit(0)
+    else:
+        ctx.fail('Missing command.')
     #click.secho('appdir = {0}'.format(appdir), fg='yellow')
 
 
@@ -40,4 +53,5 @@ def help():
 
 
 if __name__ == "__main__": # imported via "python -m"?
-    cli()
+    __package__ = '{{ cookiecutter.pkg_name }}'
+    cli() # pylint: disable=no-value-for-parameter
