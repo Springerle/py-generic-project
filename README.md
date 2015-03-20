@@ -75,7 +75,7 @@ You should at least check these files regarding their content and adapt them acc
 To bootstrap the project (as mentioned, best after `git add`), use these commands from within its directory:
 
 ```sh
-. .env # answer the prompt with (y)es
+. .env --yes --develop
 inv ci | less -R
 "$(basename $(pwd))" --help
 ```
