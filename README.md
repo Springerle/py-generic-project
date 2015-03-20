@@ -3,7 +3,7 @@ py-generic-project
 
 A cookiecutter template that creates a basic Python setuptools project, which can be later on augmented with various optional accessories.
 
-![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
+![MIT licensed](http://img.shields.io/badge/license-MIT-red.svg)
 
 
 ## Features
