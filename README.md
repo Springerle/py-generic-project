@@ -24,7 +24,7 @@ places (like the package's `__init__.py`). Incidently, this makes
 the script almost identical between different projects, and thus
 provides an easy update experience later on. Usually, the only specific
 thing in it is the docstring with the project's name and license notice.
-This relies on conventions, specially check out
+This relies on conventions, especially check out
 [\_\_init\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.pkg_name%7D%7D/__init__.py)
 and
 [\_\_main\_\_.py](https://github.com/Springerle/py-generic-project/blob/master/%7B%7Bcookiecutter.repo_name%7D%7D/src/%7B%7Bcookiecutter.pkg_name%7D%7D/__main__.py)
