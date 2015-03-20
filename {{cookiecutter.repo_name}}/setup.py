@@ -135,8 +135,13 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
             data_files['EGG-INFO'].append(filename)
 
     # Complete project metadata
-    with open(srcfile('classifiers.txt'), 'r') as handle:
-        classifiers = [i.strip() for i in handle if i.strip() and not i.startswith('#')]
+    classifiers = []
+    for classifiers_txt in ('classifiers.txt', 'project.d/classifiers.txt'):
+        classifiers_txt = srcfile(classifiers_txt)
+        if os.path.exists(classifiers_txt):
+            with open(classifiers_txt, 'r') as handle:
+                classifiers = [i.strip() for i in handle if i.strip() and not i.startswith('#')]
+            break
 
     metadata.update(dict(
         name = name,
