@@ -41,6 +41,12 @@ See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) fo
 
 * [Cookiecutter](http://cookiecutter.readthedocs.org/en/latest/)
 * [PyInvoke](http://www.pyinvoke.org/)
+* [pytest](http://pytest.org/latest/contents.html)
+* [tox](https://tox.readthedocs.org/en/latest/)
+* [Pylint](http://docs.pylint.org/)
+* [twine](https://github.com/pypa/twine#twine)
+* [bpython](http://docs.bpython-interpreter.org/)
+* [yolk3k](https://github.com/myint/yolk#yolk)
 
 **Packages**
 
