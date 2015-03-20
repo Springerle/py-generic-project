@@ -1,0 +1,13 @@
+#
+# Development and integration test requirements
+#
+
+invoke==0.9.0
+#rituals==0.3.0
+#-e git+https://github.com/jhermann/rituals.git#egg=rituals
+
+cookiecutter>=1.0
+
+pylint==1.4.1
+bpython==0.13.1
+yolk3k==0.8.6

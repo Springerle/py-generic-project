@@ -1,9 +1,11 @@
-py-generic-project
-==================
+# py-generic-project
 
 A cookiecutter template that creates a basic Python setuptools project, which can be later on augmented with various optional accessories.
 
-![MIT licensed](http://img.shields.io/badge/license-MIT-red.svg)
+ [![Logo](https://raw.github.com/Springerle/springerle.github.io/master/static/img/logo-64.png)](http://springerle.github.io/)
+ [![Travis CI](https://api.travis-ci.org/Springerle/py-generic-project.svg)](https://travis-ci.org/Springerle/py-generic-project)
+ [![GitHub Issues](https://img.shields.io/github/issues/Springerle/py-generic-project.svg)](https://github.com/Springerle/py-generic-project/issues)
+ [![License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE)
 
 
 ## Features
