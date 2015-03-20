@@ -119,7 +119,7 @@ generated files are added, that you don't want to have in your repository.</p>
 
 <p>To bootstrap the project (as mentioned, best after <code>git add</code>), use these commands from within its directory:</p>
 
-<div class="highlight highlight-sh"><pre><span class="pl-s3">.</span> .env <span class="pl-c"># answer the prompt with (y)es</span>
+<div class="highlight highlight-sh"><pre><span class="pl-s3">.</span> .env --yes --develop
 inv ci <span class="pl-k">|</span> less -R
 <span class="pl-s1"><span class="pl-pds">"</span><span class="pl-s1"><span class="pl-pds">$(</span>basename <span class="pl-s1"><span class="pl-pds">$(</span><span class="pl-s3">pwd</span><span class="pl-pds">)</span></span><span class="pl-pds">)</span></span><span class="pl-pds">"</span></span> --help</pre></div>
 
