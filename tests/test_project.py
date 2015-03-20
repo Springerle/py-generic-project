@@ -47,3 +47,4 @@ def test_readme(project):
     # TODO: cookiecutter needs a --no-rc option, so we'll always get 'jschmoe'
     assert any("https://github.com/{}/new-project".format(i) in readme
         for i in ('jschmoe', 'jhermann')), "README contains repo URL"
+    assert readme.endswith('\n'), "README has the newline at end of file"
