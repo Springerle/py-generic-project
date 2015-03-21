@@ -9,4 +9,4 @@ Filename | Description
 ``classifiers.txt`` | The Trove classifiers for this project (loaded into ``setup.py``).
 ``pylint.cfg`` | Configuration for Pylint during ``invoke check``.
 ``skeleton_module.py`` | A skeleton file to quickly create new package modules.
-``skeleton_test.py`` | A skeleton file to quickly create new test modules.
+``skeleton_testmodule.py`` | A skeleton file to quickly create new test modules.
