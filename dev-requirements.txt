@@ -4,7 +4,7 @@
 
 invoke==0.9.0
 #rituals==0.3.0
-#-e git+https://github.com/jhermann/rituals.git#egg=rituals
+-e git+https://github.com/jhermann/rituals.git#egg=rituals
 
 cookiecutter>=1.0
 pytest==2.6.4

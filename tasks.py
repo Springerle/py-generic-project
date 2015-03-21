@@ -22,11 +22,50 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
+import shlex
+import shutil
+
 from invoke import run, task
-#from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
+from rituals.invoke_tasks import help, pushd
+from rituals.util import antglob, notify
+
+
+@task(help=dict(
+    venv="Include an existing virtualenv (in '.venv')",
+    extra="Any extra patterns, space-separated and possibly quoted",
+))
+def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
+    """Perform house-keeping."""
+    notify.banner("Cleaning up project files")
+
+    # Add patterns based on given parameters
+    venv_dirs = ['.venv']
+    patterns = ['new-project/', 'pip-selfcheck.json', '**/*~']
+    if venv:
+        patterns.extend([i + '/' for i in venv_dirs])
+    if extra:
+        patterns.extend(shlex.split(extra))
+
+    # Build fileset
+    patterns = [antglob.includes(i) for i in patterns]
+    if not venv:
+        # Do not scan venv dirs when not cleaning them
+        patterns.extend([antglob.excludes(i + '/') for i in venv_dirs])
+    fileset = antglob.FileSet('.', patterns)
+
+    # Iterate over matches and remove them
+    for name in fileset:
+        notify.info('rm {0}'.format(name))
+        if name.endswith('/'):
+            shutil.rmtree(name)
+        else:
+            os.unlink(name)
 
 
 @task
 def test():
     """Perform integration tests."""
-    run("py.test --color=yes")
+    run("py.test --color=yes --ignore '{{'*'}}' --ignore new-project")
+    with pushd('new-project'):
+        run("bash -c '. .env --yes && invoke ci'")
