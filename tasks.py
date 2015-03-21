@@ -68,4 +68,9 @@ def test():
     """Perform integration tests."""
     run("py.test --color=yes --ignore '{{'*'}}' --ignore new-project")
     with pushd('new-project'):
-        run("bash -c '. .env --yes && invoke ci'")
+        if os.environ.get('TRAVIS', '') == 'true':
+            notify.info("Installing archetype requirements...")
+            run("pip --log pip-install.log -q install -r dev-requirements.txt")
+            run("invoke ci")
+        else:
+            run("bash -c '. .env --yes && invoke ci'")
