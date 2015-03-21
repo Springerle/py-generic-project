@@ -66,11 +66,17 @@ def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
 @task
 def test():
     """Perform integration tests."""
-    run("py.test --color=yes --ignore '{{'*'}}' --ignore new-project")
+    sh = lambda cmd: run(cmd, echo=True)
+    sh("py.test --color=yes --ignore '{{'*'}}' --ignore new-project")
+
     with pushd('new-project'):
         if os.environ.get('TRAVIS', '') == 'true':
             notify.info("Installing archetype requirements...")
-            run("pip --log pip-install.log -q install -r dev-requirements.txt")
-            run("invoke ci")
+            sh("pip --log pip-install.log -q install -r dev-requirements.txt")
+            sh("invoke ci")
         else:
-            run("bash -c '. .env --yes && invoke ci'")
+            sh("bash -c '. .env --yes && invoke ci'")
+
+        sh("new-project --help")
+        sh("new-project --version")
+        sh("new-project help")
