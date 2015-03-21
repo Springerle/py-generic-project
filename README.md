@@ -85,10 +85,32 @@ inv ci | less -R
 
 ## References
 
-* [audreyr/cookiecutter](https://github.com/audreyr/cookiecutter)
-* [jhermann/rituals](https://github.com/jhermann/rituals)
-* [pyinvoke/invoke](https://github.com/pyinvoke/invoke)
-* [kennethreitz/autoenv](https://github.com/kennethreitz/autoenv)
-* [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
-* [pypa/sampleproject](https://github.com/pypa/sampleproject)
+**Tools**
+
+
+* [Cookiecutter](http://cookiecutter.readthedocs.org/en/latest/)
+* [PyInvoke](http://www.pyinvoke.org/)
+* [pytest](http://pytest.org/latest/contents.html)
+* [tox](https://tox.readthedocs.org/en/latest/)
+* [Pylint](http://docs.pylint.org/)
 * [pypa/setuptools](https://bitbucket.org/pypa/setuptools)
+* [pypa/sampleproject](https://github.com/pypa/sampleproject)
+* [twine](https://github.com/pypa/twine#twine)
+* [autoenv](https://github.com/kennethreitz/autoenv)
+* [bpython](http://docs.bpython-interpreter.org/)
+* [yolk3k](https://github.com/myint/yolk#yolk)
+
+**Packages**
+
+* [Rituals](https://jhermann.github.io/rituals)
+* [Click](http://click.pocoo.org/)
+
+**Similar Archetypes**
+
+* [cookiecutter-pyvanguard](https://github.com/robinandeer/cookiecutter-pyvanguard)
+* [cookiecutter-pylibrary](https://github.com/ionelmc/cookiecutter-pylibrary)
+* [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
+* [tony/cookiecutter-pypackage](https://github.com/tony/cookiecutter-pypackage)
+* [Nekroze/cookiecutter-pypackage](https://github.com/Nekroze/cookiecutter-pypackage)
+
+See also the full list at [Cookiecutter's README](https://github.com/audreyr/cookiecutter#python).
