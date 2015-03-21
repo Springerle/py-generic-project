@@ -67,7 +67,7 @@ def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
 def test():
     """Perform integration tests."""
     sh = lambda cmd: run(cmd, echo=True)
-    sh("py.test --color=yes --ignore '{{'*'}}' --ignore new-project")
+    sh("py.test")
 
     with pushd('new-project'):
         if os.environ.get('TRAVIS', '') == 'true':
