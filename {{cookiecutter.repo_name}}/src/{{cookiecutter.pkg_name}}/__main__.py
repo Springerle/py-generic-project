@@ -44,11 +44,11 @@ def cli(ctx, version=False, quiet=False, verbose=False): # pylint: disable=unuse
 
 
 @cli.command()
-def help():
+def help(): # pylint: disable=redefined-builtin
     """Print some helpful message."""
     click.echo('Helpful message.')
 
 
 if __name__ == "__main__": # imported via "python -m"?
-    __package__ = '{{ cookiecutter.pkg_name }}'
+    __package__ = '{{ cookiecutter.pkg_name }}' # pylint: disable=redefined-builtin
     cli() # pylint: disable=no-value-for-parameter
