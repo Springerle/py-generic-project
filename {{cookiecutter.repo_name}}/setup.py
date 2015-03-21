@@ -112,8 +112,8 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     # CLI entry points
     console_scripts = []
-    for path, _, files in os.walk(srcfile('src', package_name)):
-        dirs = [i for i in dirs if not dirs.startswith('.')]
+    for path, dirs, files in os.walk(srcfile('src', package_name)):
+        dirs = [i for i in dirs if not i.startswith('.')]
         if '__main__.py' in files:
             path = path[len(srcfile('src') + os.sep):]
             appname = path.split(os.sep)[-1]
