@@ -21,8 +21,10 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+from __future__ import absolute_import, unicode_literals
 
 import os
+from codecs import open
 
 
 def test_project_base(project):
@@ -41,7 +43,7 @@ def test_src_package(project):
 
 def test_readme(project):
     """Test the README contents."""
-    with open(project + '/README.md') as handle:
+    with open(project + '/README.md', encoding='utf-8') as handle:
         readme = handle.read()
 
     # TODO: cookiecutter needs a --no-rc option, so we'll always get 'jschmoe'

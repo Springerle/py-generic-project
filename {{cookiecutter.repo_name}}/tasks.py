@@ -2,6 +2,7 @@
 # pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation
 """ Project automation for Invoke.
 """
+from __future__ import absolute_import, unicode_literals
 
 from invoke import run, task
 from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
