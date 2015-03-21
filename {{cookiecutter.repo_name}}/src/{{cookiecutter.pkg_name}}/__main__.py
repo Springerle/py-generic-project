@@ -43,8 +43,8 @@ def cli(ctx, version=False, quiet=False, verbose=False): # pylint: disable=unuse
     #click.secho('appdir = {0}'.format(appdir), fg='yellow')
 
 
-@cli.command()
-def help(): # pylint: disable=redefined-builtin
+@cli.command(name='help')
+def help_command():
     """Print some helpful message."""
     click.echo('Helpful message.')
 
