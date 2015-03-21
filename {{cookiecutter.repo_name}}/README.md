@@ -28,8 +28,8 @@ To create a working directory for this project, call these commands:
 ```sh
 git clone "{{ cookiecutter.github_url }}.git"
 cd "{{ cookiecutter.repo_name }}"
-. .env # answer the prompt with (y)es
-invoke build --docs
+. .env --yes --develop
+invoke build --docs test check
 ```
 
 See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) for more.
