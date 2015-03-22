@@ -5,7 +5,6 @@ A cookiecutter template that creates a basic Python setuptools project, which ca
  [![Logo](https://raw.github.com/Springerle/springerle.github.io/master/static/img/logo-64.png)](http://springerle.github.io/)
  [![Travis CI](https://api.travis-ci.org/Springerle/py-generic-project.svg)](https://travis-ci.org/Springerle/py-generic-project)
  [![GitHub Issues](https://img.shields.io/github/issues/Springerle/py-generic-project.svg)](https://github.com/Springerle/py-generic-project/issues)
- [![License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE)
 
 
 ## Features
@@ -86,6 +85,16 @@ To bootstrap the project (as mentioned, best after `git add`), use these command
 inv ci | less -R
 "$(basename $(pwd))" --help
 ```
+
+## Split Licensing
+
+Since the files contained in the template itself will comprise the foundation of your project,
+they're unlicensed using the “Creative Commons Zero v1.0 Universal” license.
+All other files are MIT-licensed – this effectively means you only have to attribute this project
+if you re-use all or parts of the contained templating mechanics.
+
+* [![Project License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE_MIT) for the project.
+* [![Template License](http://img.shields.io/badge/license-CC0-blue.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE_CC0) for the template proper (everything in `{{cookiecutter.repo_name}}`).
 
 
 ## References
