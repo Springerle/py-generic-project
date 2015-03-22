@@ -98,7 +98,7 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
     text = metadata['long_description'].strip()
     if text:
         metadata['description'], text = text.split('.', 1)
-        metadata['description'] = ' '.join(metadata['description'].split()).strip() # normalize whitespace
+        metadata['description'] = ' '.join(metadata['description'].split()).strip() + '.' # normalize whitespace
         metadata['long_description'] = textwrap.dedent(text).strip()
     metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
 
