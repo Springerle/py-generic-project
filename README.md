@@ -41,6 +41,11 @@ its project metadata.
 
 Other integrated tools are `pylint` for code quality checking,
 `pytest` for testing support, and a Travis CI configuration.
+To ease writing code that supports both Python 2 _and_ Python 3,
+Jinja2's `_compat` module is available in the package, and fitting
+``__future__`` imports are placed in every module.
+See [Porting to Python 3 Redux](http://lucumr.pocoo.org/2013/5/21/porting-to-python-3-redux/)
+for a pragmatic porting guide, based on actual experience.
 
 
 ## Using the Template
