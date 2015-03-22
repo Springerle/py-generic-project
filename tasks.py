@@ -71,12 +71,14 @@ def test():
 
     with pushd('new-project'):
         if os.environ.get('TRAVIS', '') == 'true':
+            venv_bin = ''
             notify.info("Installing archetype requirements...")
             sh("pip --log pip-install.log -q install -r dev-requirements.txt")
             sh("invoke ci")
         else:
+            venv_bin = '.venv/new-project/bin/'
             sh("bash -c '. .env --yes && invoke ci'")
 
-        sh("new-project --help")
-        sh("new-project --version")
-        sh("new-project help")
+        sh(venv_bin + "new-project --help")
+        sh(venv_bin + "new-project --version")
+        sh(venv_bin + "new-project help")
