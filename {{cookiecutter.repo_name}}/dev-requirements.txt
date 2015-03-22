@@ -10,11 +10,9 @@ pylint==1.4.1
 bpython==0.13.1
 yolk3k==0.8.6
 
-pytest==2.6.4
-pytest-spec==0.2.24
 tox==1.8.1
-
 twine==1.5.0
 
+-r test-requirements.txt
 -r requirements.txt
 -e .

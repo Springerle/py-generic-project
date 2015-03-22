@@ -119,8 +119,8 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
                         if line.startswith('-e'):
                             line = line.split()[1].split('#egg=')[1]
                         requires[key].append(line)
-    if 'pytest' not in requires['test']:
-        requires['test'].append('pytest')
+    if not any('pytest' == re.split('[\t ,<=>]', i.lower())[0] for i in requires['test']):
+        requires['test'].append('pytest') # add missing requirement
 
     # CLI entry points
     console_scripts = []
