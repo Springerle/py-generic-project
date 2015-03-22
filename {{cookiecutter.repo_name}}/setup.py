@@ -35,7 +35,7 @@
 import os
 import re
 import sys
-from codecs import open
+from codecs import open # pylint: disable=redefined-builtin
 from collections import defaultdict
 
 # Project data (the rest is parsed from __init__.py and other project files)
