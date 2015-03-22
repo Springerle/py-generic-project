@@ -35,6 +35,7 @@
 import os
 import re
 import sys
+import textwrap
 from codecs import open # pylint: disable=redefined-builtin
 from collections import defaultdict
 
@@ -84,7 +85,7 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
     with open(srcfile('src', package_name, '__init__.py'), encoding='utf-8') as handle:
         pkg_init = handle.read()
         # Get default long description from docstring
-        metadata['long_description'] = re.search(r'^"""(.+?)^"""$', pkg_init, re.DOTALL|re.MULTILINE).group(1).strip()
+        metadata['long_description'] = re.search(r'^"""(.+?)^"""$', pkg_init, re.DOTALL|re.MULTILINE).group(1)
         for line in pkg_init.splitlines():
             match = re.match(r"""^__({0})__ += (?P<q>['"])(.+?)(?P=q)$""".format('|'.join(expected_keys)), line)
             if match:
@@ -92,6 +93,13 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     if not all(i in metadata for i in expected_keys):
         raise RuntimeError("Missing or bad metadata in '{0}' package".format(name))
+
+    text = metadata['long_description'].strip()
+    if text:
+        metadata['description'], text = text.split('.', 1)
+        metadata['description'] = ' '.join(metadata['description'].split()).strip() # normalize whitespace
+        metadata['long_description'] = textwrap.dedent(text).strip()
+    metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
 
     # Load requirements files
     requirements_files = dict(
@@ -149,8 +157,6 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     metadata.update(dict(
         name = name,
-        description = ' '.join(metadata['long_description'].split('.')[0].split()), # normalize whitespace
-        url = metadata['url'],
         package_dir = {'': 'src'},
         packages = find_packages(srcfile('src'), exclude=['tests']),
         data_files = data_files.items(),
