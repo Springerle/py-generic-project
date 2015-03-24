@@ -35,8 +35,17 @@ import os
 import sys
 import json
 import pprint
+from fnmatch import fnmatchcase as globmatch
 
+
+VERBOSE = True
 DEBUG = False
+NOSCAN_DIRS = set((
+    '.git', '.svn', '.hg',
+    '.env', '.venv', '.tox',
+    'build', 'bin', 'lib', 'local', 'include', 'share', '*.egg-info',
+))
+KEEP_FILES = set(('__init__.py'))
 
 
 def get_context():
@@ -52,10 +61,32 @@ def dump_context(context, filename):
         handle.write(data + '\n')
 
 
+def prune_empty_files():
+    """ Prune any empty files left over from switched off features.
+
+        Empty in this case also means "has just 1 or 2 bytes".
+    """
+    for path, dirs, files in os.walk(os.getcwd()):
+        for dirname in dirs[:]:
+            if any(globmatch(dirname, i) for i in NOSCAN_DIRS):
+                dirs.remove(dirname)
+        # sys.stderr.write(repr((files, dirs, path)) + '\n'); continue
+
+        for filename in files:
+            filepath = os.path.join(path, filename)
+            if os.path.getsize(filepath) <= 2 and filename not in KEEP_FILES:
+                if VERBOSE:
+                    sys.stderr.write("Removing {} byte sized '{}'...\n".format(
+                        os.path.getsize(filepath), filepath
+                    ))
+                os.unlink(filepath)
+
+
 def run():
     """Main loop."""
     context = get_context()
     dump_context(context, 'project.d/cookiecutter.json')
+    prune_empty_files()
 
 
 if __name__ == '__main__':
