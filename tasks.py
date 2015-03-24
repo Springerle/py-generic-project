@@ -63,10 +63,12 @@ def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
             os.unlink(name)
 
 
-@task
-def test():
+@task(help={
+    'pty': "Whether to run commands under a pseudo-tty",
+})
+def test(pty=True):
     """Perform integration tests."""
-    sh = lambda cmd: run(cmd, echo=True)
+    sh = lambda cmd: run(cmd, echo=True, pty=pty)
     sh("py.test")
 
     with pushd('new-project'):
