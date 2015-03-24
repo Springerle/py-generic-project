@@ -9,7 +9,7 @@
     also already be populated when Cookiecutter is called on a pre-
     existing project.
 
-    Copyright (c) 2015 Jürgen Hermann
+    Copyright (c) 2015 Juergen Hermann
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
