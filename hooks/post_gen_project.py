@@ -58,6 +58,7 @@ def dump_context(context, filename):
     """Dump JSON context to given file."""
     with io.open(filename, 'w', encoding='ascii') as handle:
         data = json.dumps(context, indent=4, sort_keys=True, ensure_ascii=True)
+        data = '\n'.join([i.rstrip() for i in data.splitlines()])
         handle.write(data + '\n')
 
 
