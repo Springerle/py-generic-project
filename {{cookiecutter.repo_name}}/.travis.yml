@@ -1,3 +1,4 @@
+{% if "travis" in cookiecutter.features.replace(',', ' ').split() %}
 #
 # Travis Project Descriptor
 #
@@ -22,3 +23,4 @@ install:
 
 # command to run tests
 script: invoke ci
+{% endif %}

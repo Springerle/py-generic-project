@@ -2,7 +2,9 @@
 
 {{ cookiecutter.short_description }}.
 
+{% if "travis" in cookiecutter.features.replace(',', ' ').split() %}
  [![Travis CI](https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
+{% endif %}
  [![GitHub Issues](https://img.shields.io/github/issues/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)]({{ cookiecutter.github_url }}/issues)
  [![License](https://img.shields.io/pypi/l/{{ cookiecutter.repo_name }}.svg)]({{ cookiecutter.github_url }}/blob/master/LICENSE)
  [![Development Status](https://pypip.in/status/{{ cookiecutter.repo_name }}/badge.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
