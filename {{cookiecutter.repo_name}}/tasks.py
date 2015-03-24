@@ -22,6 +22,10 @@ def moar_cookies(mold=''):
     mold = mold or "https://github.com/Springerle/py-generic-project.git"
     tmpdir = os.path.join(tempfile.gettempdir(), "moar-{{ cookiecutter.repo_name }}")
 
+    if os.path.isdir('.git'):
+        # TODO: Ensure there are no local unstashed changes
+        pass
+
     # Make a copy of the new mold version
     if os.path.isdir(tmpdir):
         shutil.rmtree(tmpdir)
