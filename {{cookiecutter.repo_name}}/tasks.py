@@ -41,7 +41,8 @@ def moar_cookies(mold=''):
 
     with pushd('..'):
         run("cookiecutter --no-input {}".format(tmpdir), echo=True)
-    run("git status", echo=True)
+    if os.path.exists('.git'):
+        run("git status", echo=True)
 
 
 @task(help={
