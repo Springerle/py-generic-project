@@ -86,6 +86,34 @@ inv ci | less -R
 "$(basename $(pwd))" --help
 ```
 
+
+## Feature Toggles
+
+This template has a few options that can be turned on and off even after initial creation,
+which the following terminal session demonstrates for Travis CI support.
+
+![Demo Terminal Session](https://raw.githubusercontent.com/Springerle/py-generic-project/master/docs/_static/img/feature-toggles.png)
+
+At the moment of this writing, those feature are ``travis``, ``flake8``, and ``cli``.
+See the ``features`` value in ``cookiecutter.json`` for a current list.
+
+Note that since the whole template is re-created, you should make sure that
+you have no pending changes in your working directory, i.e. everything is
+either safely committed or stashed away.
+After changing ``project.d/cookiecutter.json`` and the call to ``invoke moar-cookies``,
+you should look at the diff, and ``git add`` any files that can just be updated (e.g. typically
+``.travis.yml``, ``setup.py``, and some others).
+
+Files with considerable changes you have to merge manually, e.g. by dumping a diff, resetting
+the affected files, reducing the diffs to the chnages you really want, and then applying the edited diff.
+Note that the easiest way to do such a reset to the last commit is calling ``git stash && git stash drop``.
+
+Another option is to work with two directories, i.e. clone a copy of your project for the update process,
+perform the update, and then selectively copy changes to your main working directory.
+There might be a more stream-lined way applying some ``git`` magic, we'll see (ideas are welcome).
+Still this is better than wading through commit logs to catch up with an evolving template.
+
+
 ## Split Licensing
 
 Since the files contained in the template itself will comprise the foundation of your project,
