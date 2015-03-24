@@ -12,5 +12,5 @@
   , "url": "{{ cookiecutter.github_url }}"
   , "short_description": "A new Python project"
   , "keywords": "hosted.by.github"
-  , "features": "travis flake8"
+  , "features": "travis flake8 cli"
 }
