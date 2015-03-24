@@ -105,7 +105,7 @@ you should look at the diff, and ``git add`` any files that can just be updated 
 ``.travis.yml``, ``setup.py``, and some others).
 
 Files with considerable changes you have to merge manually, e.g. by dumping a diff, resetting
-the affected files, reducing the diffs to the chnages you really want, and then applying the edited diff.
+the affected files, reducing the diffs to the changes you really want, and then applying the edited diff.
 Note that the easiest way to do such a reset to the last commit is calling ``git stash && git stash drop``.
 
 Another option is to work with two directories, i.e. clone a copy of your project for the update process,
