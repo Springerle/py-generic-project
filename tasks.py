@@ -69,9 +69,14 @@ def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
 def test(pty=True):
     """Perform integration tests."""
     sh = lambda cmd: run(cmd, echo=True, pty=pty)
+
+    sh("touch '{{cookiecutter.repo_name}}/empty-testfile'")
     sh("py.test")
+    sh("rm '{{cookiecutter.repo_name}}/empty-testfile'")
 
     with pushd('new-project'):
+        assert not os.path.exists('empty-testfile'), "empty file is removed"
+
         if os.environ.get('TRAVIS', '') == 'true':
             venv_bin = ''
             notify.info("Installing archetype requirements...")
