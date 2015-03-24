@@ -77,7 +77,7 @@ def test_cli_invalid_sub_command(cmd):
 
 
 @cli
-def test_cmd_missing(cmd):
+def test_cmd_missing():
     runner = CliRunner()
     result = runner.invoke(main.cli)
 
@@ -85,7 +85,7 @@ def test_cmd_missing(cmd):
 
 
 @cli
-def test_cmd_help(cmd):
+def test_cmd_help():
     runner = CliRunner()
     result = runner.invoke(main.help_command)
     word1 = result.output.split()[0]

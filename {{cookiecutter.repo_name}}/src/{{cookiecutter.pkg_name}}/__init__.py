@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
+# flake8: noqa
 """
     {{ cookiecutter.project_name }} – {{ cookiecutter.short_description }}.
 
