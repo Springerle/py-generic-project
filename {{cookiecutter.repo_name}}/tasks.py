@@ -12,14 +12,14 @@ from invoke import run, task
 from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
 
 
-@task(name='moar-cookies',
+@task(name='fresh-cookies',
     help={
         'mold': "git URL or directory to use for the refresh",
     },
 )
-def moar_cookies(mold=''):
+def fresh_cookies(mold=''):
     """Refresh the project from the original cookiecutter template."""
-    mold = mold or "https://github.com/Springerle/py-generic-project.git"
+    mold = mold or "https://github.com/Springerle/py-generic-project.git"  # TODO: URL from config
     tmpdir = os.path.join(tempfile.gettempdir(), "moar-{{ cookiecutter.repo_name }}")
 
     if os.path.isdir('.git'):
