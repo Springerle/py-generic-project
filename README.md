@@ -126,6 +126,7 @@ if you re-use all or parts of the contained templating mechanics.
 * [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
 * [tony/cookiecutter-pypackage](https://github.com/tony/cookiecutter-pypackage)
 * [Nekroze/cookiecutter-pypackage](https://github.com/Nekroze/cookiecutter-pypackage)
+* [transcode-de/cookiecutter-django-project](https://github.com/transcode-de/cookiecutter-django-project)
 
 * [PyScaffold](https://github.com/blue-yonder/pyscaffold)
 
