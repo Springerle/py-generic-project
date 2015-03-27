@@ -35,6 +35,7 @@ import os
 import sys
 import json
 import pprint
+import shutil
 from fnmatch import fnmatchcase as globmatch
 
 
@@ -46,6 +47,26 @@ NOSCAN_DIRS = set((
     'build', 'bin', 'lib', 'local', 'include', 'share', '*.egg-info',
 ))
 KEEP_FILES = set(('__init__.py'))
+
+# Map from short / file name to Trove name
+LICENSES = {
+    "Apache 2.0": "Apache Software License",
+    "Artistic": "Artistic License",
+    "BSD 2-clause": "BSD License",
+    "BSD 3-clause": "BSD License",
+    "BSD ISC": "BSD License",
+    "CC0": "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Eclipse": "License :: Other/Proprietary License",
+    "GPLv2": "GNU General Public License v2 (GPLv2)",
+    "GPLv2+": "GNU General Public License v2 or later (GPLv2+)",
+    "GPLv3+": "GNU General Public License v3 or later (GPLv3+)",
+    "LGPL v2": "GNU Lesser General Public License v2 (LGPLv2)",
+    "LGPL v3": "GNU Lesser General Public License v3 (LGPLv3)",
+    "MIT": "MIT License",
+    "Mozilla v2.0": "Mozilla Public License 2.0 (MPL 2.0)",
+    "Unlicense": "License :: Public Domain",
+}
+LICENSE_OSI = "License :: OSI Approved :: "
 
 
 def get_context():
@@ -83,11 +104,36 @@ def prune_empty_files():
                 os.unlink(filepath)
 
 
+def copy_license(repo_dir, name):
+    """Copy license file."""
+    if repo_dir is None:
+        sys.stderr.write("Cannot access license files, is your 'cookiecutter' version too old? (need v1.1+)")
+        return
+
+    filename = os.path.join(repo_dir, 'licenses', name.replace(' ', '_') + '.txt')
+    trove_name = LICENSES.get(name, None)
+    if trove_name:
+        if '::' not in trove_name:
+            trove_name = LICENSE_OSI + trove_name
+        if VERBOSE:
+            sys.stderr.write("Writing license file for '{}'... [{}]\n".format(name, trove_name,))
+        shutil.copyfile(filename, "LICENSE")
+    elif VERBOSE:
+        sys.stderr.write("Unknown license '{}', I know about: {}\n".format(
+            name, ', '.join(sorted(LICENSES.keys())),
+        ))
+
+
 def run():
     """Main loop."""
+    Undefined = None # pylint: disable=invalid-name, unused-variable
+    repo_dir = None
+    repo_dir = {{ repo_dir | pprint }}
+
     context = get_context()
     dump_context(context, 'project.d/cookiecutter.json')
     prune_empty_files()
+    copy_license(repo_dir, context['license'])
 
 
 if __name__ == '__main__':
