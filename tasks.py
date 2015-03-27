@@ -84,7 +84,7 @@ def test(pty=True):
             sh("invoke ci")
         else:
             venv_bin = '.venv/new-project/bin/'
-            sh("bash -c '. .env --yes && invoke ci'")
+            sh("bash -c '. .env --yes --develop && invoke ci'")
 
         sh(venv_bin + "new-project --help")
         sh(venv_bin + "new-project --version")
