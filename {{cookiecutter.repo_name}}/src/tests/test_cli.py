@@ -1,4 +1,4 @@
-{% if "cli" in cookiecutter.features.replace(',', ' ').split() %}
+{% if "cli" in cookiecutter.features.replace(',', ' ').split() -%}
 # *- coding: utf-8 -*-
 # pylint: disable=wildcard-import, unused-wildcard-import, missing-docstring
 # pylint: disable=redefined-outer-name, no-self-use, bad-continuation
@@ -93,4 +93,4 @@ def test_cmd_help():
 
     assert result.exit_code == 0
     assert word1 == 'Helpful', "Helpful message is printed"
-{% endif %}
+{% endif -%}
