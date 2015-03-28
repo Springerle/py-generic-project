@@ -2,15 +2,15 @@
 # Development and integration test requirements
 #
 
-invoke==0.9.0
+invoke==0.10.1
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
 
 #cookiecutter>=1.1
 -e git+https://github.com/jhermann/cookiecutter.git@enriched-context-for-hooks#egg=cookiecutter
-pytest==2.6.4
+pytest==2.7.0
 pytest-spec==0.2.24
 
-pylint==1.4.1
-bpython==0.13.1
+pylint==1.4.3
+bpython==0.14.1
 yolk3k==0.8.6
