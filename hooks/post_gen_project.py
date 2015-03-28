@@ -136,7 +136,13 @@ def prune_empty_files():
 def copy_license(repo_dir, name):
     """Copy license file."""
     if repo_dir is None:
-        sys.stderr.write("Cannot access license files, is your 'cookiecutter' version too old? (need v1.1+)")
+        sys.stderr.write(
+            "Cannot access license files, is your 'cookiecutter' version too old? (need v1.1+)\n"
+            "Search for '## LICENSE' in the generated files for unreplaced placeholders.\n"
+            "\nTo install the necessary patches that make this work, use\n"
+            "\n    pip install -e 'git+https://github.com/jhermann/cookiecutter.git"
+                "@enriched-context-for-hooks#egg=cookiecutter'\n\n"
+        )
         return
 
     filename = os.path.join(repo_dir, 'licenses', name.replace(' ', '_') + '.txt')
