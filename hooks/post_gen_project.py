@@ -100,7 +100,7 @@ def replace_marker(filepath, marker, lines):
     for idx, line in enumerate(source_lines):
         if line.rstrip().endswith(marker):
             line = line.rstrip().replace(marker, '')
-            source_lines[idx] = ''.join(line + i for i in lines)
+            source_lines[idx] = '\n'.join((line + i).rstrip() for i in lines) + '\n'
             changed = True
 
     if changed:
