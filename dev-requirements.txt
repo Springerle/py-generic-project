@@ -6,7 +6,8 @@ invoke==0.9.0
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
 
-cookiecutter>=1.0
+#cookiecutter>=1.1
+-e git+https://github.com/jhermann/cookiecutter.git@enriched-context-for-hooks#egg=cookiecutter
 pytest==2.6.4
 pytest-spec==0.2.24
 
