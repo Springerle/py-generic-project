@@ -123,7 +123,7 @@ All other files are MIT-licensed – this effectively means you only have to att
 if you re-use all or parts of the contained templating mechanics.
 
 * [![Project License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE_MIT) for the project.
-* [![Template License](http://img.shields.io/badge/license-CC0-blue.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE_CC0) for the template proper (everything in `{{cookiecutter.repo_name}}`).
+* [![Template License](http://img.shields.io/badge/license-CC0-blue.svg)](https://github.com/Springerle/py-generic-project/blob/master/LICENSE_CC0) for the template proper (everything in `{{cookiecutter.repo_name}}`), unless specified otherwise within the file itself.
 
 
 ## References
