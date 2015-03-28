@@ -28,7 +28,8 @@ import shlex
 import shutil
 
 from invoke import run, task
-from rituals.invoke_tasks import help, pushd, devpi_refresh
+from rituals.invoke_tasks import help, pushd
+from rituals.acts.devpi import devpi_refresh
 from rituals.util import antglob, notify
 
 
