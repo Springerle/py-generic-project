@@ -1,5 +1,6 @@
 # *- coding: utf-8 -*-
-# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation, superfluous-parens
+# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation
+# pylint: disable=superfluous-parens, redefined-builtin, unused-import
 """ Project automation for Invoke.
 """
 # Copyright (c) 2015 Jürgen Hermann
@@ -35,7 +36,7 @@ from rituals.util import antglob, notify
     venv="Include an existing virtualenv (in '.venv')",
     extra="Any extra patterns, space-separated and possibly quoted",
 ))
-def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
+def clean(venv=False, extra=''):
     """Perform house-keeping."""
     notify.banner("Cleaning up project files")
 
@@ -68,7 +69,7 @@ def clean(venv=False, extra=''): # pylint: disable=redefined-builtin
 })
 def test(pty=True):
     """Perform integration tests."""
-    sh = lambda cmd: run(cmd, echo=True, pty=pty)
+    sh = lambda cmd: run(cmd, echo=True, pty=pty)  # pylint: disable=invalid-name
 
     sh("touch '{{cookiecutter.repo_name}}/empty-testfile'")
     sh("py.test")
