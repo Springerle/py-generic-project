@@ -23,7 +23,7 @@ from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
 def fresh_cookies(mold=''):
     """Refresh the project from the original cookiecutter template."""
     mold = mold or "https://github.com/Springerle/py-generic-project.git"  # TODO: URL from config
-    tmpdir = os.path.join(tempfile.gettempdir(), "moar-{{ cookiecutter.repo_name }}")
+    tmpdir = os.path.join(tempfile.gettempdir(), "cc-upgrade-{{ cookiecutter.repo_name }}")
 
     if os.path.isdir('.git'):
         # TODO: Ensure there are no local unstashed changes
