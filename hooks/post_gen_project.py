@@ -67,12 +67,48 @@ LICENSES = {
     "Unlicense": "License :: Public Domain",
 }
 LICENSE_OSI = "License :: OSI Approved :: "
+LICENSE_MARKER = "## LICENSE_SHORT ##"
+LICENSE_TROVE = "## LICENSE_TROVE ##"
 
 
 def get_context():
     """Return context as a dict."""
     cookiecutter = None  # Make pylint happy
     return {{ cookiecutter | pprint }}
+
+
+def walk_project():
+    """Yield all files in the created project."""
+    for path, dirs, files in os.walk(os.getcwd()):
+        for dirname in dirs[:]:
+            if any(globmatch(dirname, i) for i in NOSCAN_DIRS):
+                dirs.remove(dirname)
+        # sys.stderr.write(repr((files, dirs, path)) + '\n'); continue
+
+        for filename in files:
+            yield os.path.join(path, filename)
+
+
+def replace_marker(filepath, marker, lines):
+    """Replace given marker with provides lines."""
+    # Read source file
+    with io.open(filepath, 'r', encoding='utf-8') as handle:
+        source_lines = handle.readlines()
+
+    # Replace marker, and use any text before it as an indent string
+    changed = False
+    for idx, line in enumerate(source_lines):
+        if line.rstrip().endswith(marker):
+            line = line.rstrip().replace(marker, '')
+            source_lines[idx] = ''.join(line + i for i in lines)
+            changed = True
+
+    if changed:
+        # Write back modified source
+        with io.open(filepath, 'w', encoding='utf-8') as handle:
+            handle.writelines(source_lines)
+
+    return changed
 
 
 def dump_context(context, filename):
@@ -88,20 +124,13 @@ def prune_empty_files():
 
         Empty in this case also means "has just 1 or 2 bytes".
     """
-    for path, dirs, files in os.walk(os.getcwd()):
-        for dirname in dirs[:]:
-            if any(globmatch(dirname, i) for i in NOSCAN_DIRS):
-                dirs.remove(dirname)
-        # sys.stderr.write(repr((files, dirs, path)) + '\n'); continue
-
-        for filename in files:
-            filepath = os.path.join(path, filename)
-            if os.path.getsize(filepath) <= 2 and filename not in KEEP_FILES:
-                if VERBOSE:
-                    sys.stderr.write("Removing {} byte sized '{}'...\n".format(
-                        os.path.getsize(filepath), filepath
-                    ))
-                os.unlink(filepath)
+    for filepath in walk_project():
+        if os.path.getsize(filepath) <= 2 and os.path.basename(filepath) not in KEEP_FILES:
+            if VERBOSE:
+                sys.stderr.write("Removing {} byte sized '{}'...\n".format(
+                    os.path.getsize(filepath), filepath
+                ))
+            os.unlink(filepath)
 
 
 def copy_license(repo_dir, name):
@@ -112,12 +141,32 @@ def copy_license(repo_dir, name):
 
     filename = os.path.join(repo_dir, 'licenses', name.replace(' ', '_') + '.txt')
     trove_name = LICENSES.get(name, None)
-    if trove_name:
+    if trove_name:  # Known license?
         if '::' not in trove_name:
             trove_name = LICENSE_OSI + trove_name
+
+        # Write main LICENSE file
         if VERBOSE:
             sys.stderr.write("Writing license file for '{}'... [{}]\n".format(name, trove_name,))
         shutil.copyfile(filename, "LICENSE")
+
+        # Read in short license form for source files
+        filename_short = os.path.join(repo_dir, 'licenses', 'short', name.replace(' ', '_') + '.txt')
+        with io.open(filename_short, 'r', encoding='utf-8') as handle:
+            license_short = handle.readlines()
+
+        # Iterate over files and insert license notices
+        count = 0
+        for filepath in walk_project():
+            if os.path.basename(filepath) == 'classifiers.txt':
+                if replace_marker(filepath, LICENSE_TROVE, [trove_name + '\n']):
+                    count += 1
+            elif filepath.endswith('.py'):
+                if replace_marker(filepath, LICENSE_MARKER, license_short):
+                    count += 1
+
+        if VERBOSE:
+            sys.stderr.write("Rewrote {} source files with a license notice added.\n".format(count,))
     elif VERBOSE:
         sys.stderr.write("Unknown license '{}', I know about: {}\n".format(
             name, ', '.join(sorted(LICENSES.keys())),
