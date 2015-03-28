@@ -1,5 +1,5 @@
 # *- coding: utf-8 -*-
-# pylint: disable=
+# pylint: disable=missing-docstring, bad-continuation
 """ Test the template.
 """
 # Copyright (c) 2015 Jürgen Hermann
@@ -23,17 +23,16 @@
 # SOFTWARE.
 from __future__ import absolute_import, unicode_literals
 
+import io
 import os
-from codecs import open
 
 
-def test_project_base(project):
-    """Test the created project base dir."""
+def test_project_basedir_was_created(project):
     assert os.path.exists(project), "Project was created"
     assert os.path.isdir(project), "Project base directory was created"
 
 
-def test_src_package(project):
+def test_package_init_module_was_created(project):
     """Test the created project package source."""
     pkg_name = os.path.basename(project).replace('-', '_')
     init_py = '{0}/src/{1}/__init__.py'.format(project, pkg_name)
@@ -41,12 +40,33 @@ def test_src_package(project):
     assert os.path.isfile(init_py), "Project package was created"
 
 
-def test_readme(project):
-    """Test the README contents."""
-    with open(project + '/README.md', encoding='utf-8') as handle:
+def test_readme_has_github_url_and_newline_at_end(project):
+    with io.open(project + '/README.md', encoding='utf-8') as handle:
         readme = handle.read()
 
     # TODO: cookiecutter needs a --no-rc option, so we'll always get 'jschmoe'
     assert any("https://github.com/{}/new-project".format(i) in readme
         for i in ('jschmoe', 'jhermann')), "README contains repo URL"
     assert readme.endswith('\n'), "README has the newline at end of file"
+
+
+def test_license_is_reflected_in_trove_classifiers(project):
+    with io.open(project + '/project.d/classifiers.txt', encoding='utf-8') as handle:
+        text = handle.read()
+
+    assert "License :: OSI Approved :: Apache Software License" in text, \
+        "Trove classifer for license properly replaced"
+
+
+def test_license_short_form_added_to_python_source_with_spaces(project):
+    with io.open(project + '/setup.py', encoding='utf-8') as handle:
+        text = handle.read()
+
+    assert "\n    Licensed under the Apache License" in text
+
+
+def test_license_short_form_added_to_python_source_as_comments(project):
+    with io.open(project + '/tasks.py', encoding='utf-8') as handle:
+        text = handle.read()
+
+    assert "\n# Licensed under the Apache License" in text
