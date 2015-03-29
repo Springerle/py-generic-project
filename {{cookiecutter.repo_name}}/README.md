@@ -53,7 +53,9 @@ See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) fo
 **Packages**
 
 * [Rituals](https://jhermann.github.io/rituals)
+{%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 * [Click](http://click.pocoo.org/)
+{%- endif %}
 
 
 ## Acknowledgements

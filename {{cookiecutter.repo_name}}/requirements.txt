@@ -1,6 +1,8 @@
 #
 # Install requirements
 #
+{%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 
 click>=3.3,<4
 colorama
+{%- endif %}
