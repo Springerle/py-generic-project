@@ -8,6 +8,8 @@
 # ## LICENSE_SHORT ##
 from __future__ import absolute_import, unicode_literals, print_function
 
+import os
+import re
 import sys
 
 import click
@@ -18,11 +20,20 @@ CONTEXT_SETTINGS = dict(
     help_option_names=['-h', '--help'],
 )
 
+try:
+    CLI_PATH = sys.modules['__main__'].__file__
+except (KeyError, AttributeError):
+    CLI_PATH = __file__
+CLI_PATH = os.path.dirname(CLI_PATH)
+if CLI_PATH.endswith('/bin'):
+    CLI_PATH = CLI_PATH[:-4]
+CLI_PATH = re.sub('^' + os.path.expanduser('~'), '~', CLI_PATH)
+
+VERSION_INFO = '%(prog)s %(version)s from {} [Python {}]'.format(CLI_PATH, ' '.join(sys.version.split()[:1]),)
+
 
 @click.group(context_settings=CONTEXT_SETTINGS)
-@click.version_option(
-    message='%(prog)s %(version)s [Python {}]'.format(' '.join(sys.version.split())),
-)
+@click.version_option(message=VERSION_INFO)
 @click.option('-q', '--quiet', is_flag=True, default=False, help='Be quiet (show only errors).')
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
 @click.pass_context
