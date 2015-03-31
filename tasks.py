@@ -27,9 +27,7 @@ import os
 import shlex
 import shutil
 
-from invoke import run, task
-from rituals.invoke_tasks import help, pushd
-from rituals.acts.devpi import devpi_refresh
+from rituals.easy import task, pushd
 from rituals.util import antglob, notify
 
 
@@ -37,7 +35,7 @@ from rituals.util import antglob, notify
     venv="Include an existing virtualenv (in '.venv')",
     extra="Any extra patterns, space-separated and possibly quoted",
 ))
-def clean(venv=False, extra=''):
+def clean(ctx, venv=False, extra=''):
     """Perform house-keeping."""
     notify.banner("Cleaning up project files")
 
@@ -68,13 +66,11 @@ def clean(venv=False, extra=''):
 @task(help={
     'pty': "Whether to run commands under a pseudo-tty",
 })
-def test(pty=True):
+def test(ctx, pty=True):
     """Perform integration tests."""
-    sh = lambda cmd: run(cmd, echo=True, pty=pty)  # pylint: disable=invalid-name
-
-    sh("touch '{{cookiecutter.repo_name}}/empty-testfile'")
-    sh("py.test")
-    sh("rm '{{cookiecutter.repo_name}}/empty-testfile'")
+    ctx.run("touch '{{cookiecutter.repo_name}}/empty-testfile'")
+    ctx.run("py.test")
+    ctx.run("rm '{{cookiecutter.repo_name}}/empty-testfile'")
 
     with pushd('new-project'):
         assert not os.path.exists('empty-testfile'), "empty file is removed"
@@ -82,12 +78,12 @@ def test(pty=True):
         if os.environ.get('TRAVIS', '') == 'true':
             venv_bin = ''
             notify.info("Installing archetype requirements...")
-            sh("pip --log pip-install.log -q install -r dev-requirements.txt")
-            sh("invoke ci")
+            ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
+            ctx.run("invoke ci")
         else:
             venv_bin = '.venv/new-project/bin/'
-            sh("bash -c '. .env --yes --develop && invoke ci'")
+            ctx.run("bash -c '. .env --yes --develop && invoke ci'")
 
-        sh(venv_bin + "new-project --help")
-        sh(venv_bin + "new-project --version")
-        sh(venv_bin + "new-project help")
+        ctx.run(venv_bin + "new-project --help")
+        ctx.run(venv_bin + "new-project --version")
+        ctx.run(venv_bin + "new-project help")

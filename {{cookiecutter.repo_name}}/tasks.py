@@ -11,8 +11,7 @@ import os
 import shutil
 import tempfile
 
-from invoke import run, task
-from rituals.invoke_tasks import *  # pylint: disable=redefined-builtin
+from rituals.easy import *  # pylint: disable=redefined-builtin
 
 
 @task(name='fresh-cookies',
@@ -20,7 +19,7 @@ from rituals.invoke_tasks import *  # pylint: disable=redefined-builtin
         'mold': "git URL or directory to use for the refresh",
     },
 )
-def fresh_cookies(mold=''):
+def fresh_cookies(ctx, mold=''):
     """Refresh the project from the original cookiecutter template."""
     mold = mold or "https://github.com/Springerle/py-generic-project.git"  # TODO: URL from config
     tmpdir = os.path.join(tempfile.gettempdir(), "cc-upgrade-{{ cookiecutter.repo_name }}")
@@ -37,28 +36,32 @@ def fresh_cookies(mold=''):
             ".git", ".svn", "*~",
         ))
     else:
-        run("git clone {} {}".format(mold, tmpdir), echo=True)
+        ctx.run("git clone {} {}".format(mold, tmpdir))
 
     # Copy recorded "cookiecutter.json" into mold
     shutil.copy2("project.d/cookiecutter.json", tmpdir)
 
     with pushd('..'):
-        run("cookiecutter --no-input {}".format(tmpdir), echo=True)
+        ctx.run("cookiecutter --no-input {}".format(tmpdir))
     if os.path.exists('.git'):
-        run("git status", echo=True)
+        ctx.run("git status")
+
+namespace.add_task(fresh_cookies)
 
 
 @task(help={
     'pty': "Whether to run commands under a pseudo-tty",
 })  # pylint: disable=invalid-name
-def ci(pty=True):
+def ci(ctx):
     """Perform continuous integration tasks."""
     opts = ['']
 
     # 'tox' makes no sense in Travis
     if os.environ.get('TRAVIS', '').lower() == 'true':
-        opts += ['test']
+        opts += ['test.pytest']
     else:
-        opts += ['tox']
+        opts += ['test.tox']
 
-    run("invoke clean --all build --docs check --reports{} 2>&1".format(' '.join(opts)), echo=True, pty=pty)
+    ctx.run("invoke clean --all build --docs check --reports{} 2>&1".format(' '.join(opts)))
+
+namespace.add_task(ci)
