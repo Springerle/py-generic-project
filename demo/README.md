@@ -1,5 +1,11 @@
 # Creating + Releasing a New Project in 10 Minutes
 
+_This is a practical demo with screenshots of how this Cookiecutter
+template can be used to create a project from scratch without much effort,
+how to develop and release it – while applying testing and code quality controls –
+and finally end up with a fully working CLI tool stub installed as a Debian package._
+
+
 ## Preparation
 
 Install a few tools.
