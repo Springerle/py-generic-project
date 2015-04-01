@@ -31,7 +31,7 @@ cookiecutter --version
 
 Now use the locally cloned Cookiecutter template “py-generic-project”
 to create our demo project.
-Normally you'd do that directly from the GitHUb repository (using its URL instead of ‘``.``’).
+Normally you'd do that directly from the GitHub repository (using its URL instead of ‘``.``’).
 
 ```sh
 rm -rf new-project # make sure there is nothing there
