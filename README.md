@@ -1,6 +1,10 @@
 # py-generic-project
 
-A cookiecutter template that creates a basic Python setuptools project, which can be later on augmented with various optional accessories.
+A cookiecutter template that creates a basic Python setuptools project,
+which can be later on augmented with various optional accessories.
+See the [demo](https://github.com/Springerle/py-generic-project/tree/master/demo)
+for getting a 1ˢᵗ impression on how this Cookiecutter template can be used,
+including screenshots of the terminal session.
 
  [![Logo](https://raw.github.com/Springerle/springerle.github.io/master/static/img/logo-64.png)](http://springerle.github.io/)
  [![Travis CI](https://api.travis-ci.org/Springerle/py-generic-project.svg)](https://travis-ci.org/Springerle/py-generic-project)
