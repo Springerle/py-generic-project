@@ -41,7 +41,7 @@ cookiecutter --no-input .
 ![Bootstrap #2](img/demo020.png)
 
 
-Add the created files immediately into a new ``git` repo,
+Add the created files immediately into a new ``git`` repo,
 and tag that tree for easy incremental updates of the template.
 
 ```sh
@@ -106,7 +106,7 @@ inv dist --devpi
 ![Development Dist](img/demo140.png)
 
     ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    
- 
+
 ![Development Dist](img/demo141.png)
 
 
@@ -183,7 +183,7 @@ dpkg -I ../*.deb
 ![Packaging create 'debian'](img/demo220.png)
 
     ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇   
- 
+
 ![Packaging create 'debian'](img/demo221.png)
 
 
