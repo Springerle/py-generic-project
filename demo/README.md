@@ -83,7 +83,7 @@ inv check
 ![Development Check](img/demo120.png)
 
 
-Assuming you have a local ``devpi` install (see “References” below for more),
+Assuming you have a local ``devpi`` install (see “References” below for more),
 you can now release a development version for use by your co-workers.
 
 ```sh
@@ -104,7 +104,9 @@ inv dist --devpi
 ```
 
 ![Development Dist](img/demo140.png)
-…
+
+    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    
+ 
 ![Development Dist](img/demo141.png)
 
 
@@ -139,7 +141,9 @@ git show HEAD
 ```
 
 ![Release Prep #1](img/demo152.png)
-…
+
+    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇   
+
 ![Release Prep #2](img/demo153.png)
 
 
@@ -177,7 +181,9 @@ dpkg -I ../*.deb
 ```
 
 ![Packaging create 'debian'](img/demo220.png)
-…
+
+    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇    ⌇   
+ 
 ![Packaging create 'debian'](img/demo221.png)
 
 
