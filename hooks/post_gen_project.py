@@ -65,6 +65,7 @@ LICENSES = {
     "MIT": "MIT License",
     "Mozilla v2.0": "Mozilla Public License 2.0 (MPL 2.0)",
     "Unlicense": "License :: Public Domain",
+    "Internal": "License :: Other/Proprietary License",
 }
 LICENSE_OSI = "License :: OSI Approved :: "
 LICENSE_MARKER = "## LICENSE_SHORT ##"

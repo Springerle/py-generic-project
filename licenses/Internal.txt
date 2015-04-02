@@ -1,0 +1,21 @@
+FOR INTERNAL USE ONLY. All rights reserved.
+
+THIS BODY OF WORK IS INTENDED FOR USE AND SOLE DISTRIBUTION
+WITHIN THE CONFINES OF THE LEGAL ENTITY OWNING THE RIGHTS TO IT
+("THE COMPANY").
+
+ 1) DO NOT REDISTRIBUTE. Distribution is limited to units and
+    persons WITHIN the company. This is especially important
+    with regards to contained software / libraries licensed
+    under the GPL or similar FOSS licenses, since those require
+    you to redistribute ALL of your work if it leaves the
+    confines of the company, including these proprietary parts.
+
+    Note that associated partners of the company are legally
+    and otherwise NOT "internal" to the company, and thus
+    EXCLUDED from the allowed recipients of a distribution.
+
+ 2) DO NOT RELICENSE WITHOUT CONSENT. If you want to publish
+    parts or all of this work under different licensing
+    provisions, contact the project maintainer or the legal
+    department first.

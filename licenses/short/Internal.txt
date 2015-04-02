@@ -1,0 +1,3 @@
+FOR INTERNAL USE ONLY. All rights reserved.
+
+See the LICENSE file for more details.
