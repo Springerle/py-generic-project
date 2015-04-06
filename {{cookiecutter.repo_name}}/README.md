@@ -20,7 +20,18 @@
 
 ## Installation
 
-See [Contributing](#contributing) for now.
+*{{ cookiecutter.project_name }}* can be installed via ``pip install {{ cookiecutter.repo_name }}`` as usual,
+see [releases]({{ cookiecutter.github_url }}/releases) for an overview of available versions.
+To get a bleeding-edge version from source, use these commands:
+
+```sh
+repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+pip install -r <(curl -skS "https://raw.githubusercontent.com/$repo/master/requirements.txt")
+pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+```
+
+See [Contributing](#contributing) on how to create a full development environment.
+
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 
 To add bash completion, read the [Click docs](http://click.pocoo.org/4/bashcomplete/#activation) about it,
