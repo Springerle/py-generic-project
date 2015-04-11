@@ -4,6 +4,7 @@
 
 {% if "travis" in cookiecutter.features.replace(',', ' ').split() -%}
  [![Travis CI](https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
+ [![Coveralls](https://img.shields.io/coveralls/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)](https://coveralls.io/r/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }})
 {% endif -%}
  [![GitHub Issues](https://img.shields.io/github/issues/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg)]({{ cookiecutter.github_url }}/issues)
  [![License](https://img.shields.io/pypi/l/{{ cookiecutter.repo_name }}.svg)]({{ cookiecutter.github_url }}/blob/master/LICENSE)
