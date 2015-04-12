@@ -7,6 +7,8 @@ for getting a 1ˢᵗ impression on how this Cookiecutter template can be used,
 including screenshots of the terminal session.
 
  [![Logo](https://raw.github.com/Springerle/springerle.github.io/master/static/img/logo-64.png)](http://springerle.github.io/)
+ [![Groups](https://img.shields.io/badge/Google_groups-springerle--users-orange.svg)](https://groups.google.com/forum/#!forum/springerle-users)
+ ![MIT+CC0 licensed](http://img.shields.io/badge/license-MIT+CC0-red.svg)
  [![Travis CI](https://api.travis-ci.org/Springerle/py-generic-project.svg)](https://travis-ci.org/Springerle/py-generic-project)
  [![GitHub Issues](https://img.shields.io/github/issues/Springerle/py-generic-project.svg)](https://github.com/Springerle/py-generic-project/issues)
  [![GitHub Release](https://img.shields.io/github/release/Springerle/py-generic-project.svg)](https://github.com/Springerle/py-generic-project/releases)
