@@ -11,6 +11,7 @@
 # ## LICENSE_SHORT ##
 from __future__ import absolute_import, unicode_literals, print_function
 
+import os
 import sys
 
 import sh
@@ -20,6 +21,7 @@ from click.testing import CliRunner
 from markers import *
 from {{ cookiecutter.pkg_name }} import __version__ as version
 from {{ cookiecutter.pkg_name }} import __main__ as main
+from {{ cookiecutter.pkg_name }} import commands
 
 
 UsageError = sh.ErrorReturnCode_2  # pylint: disable=no-member
@@ -78,9 +80,15 @@ def test_cmd_missing():
 @cli
 def test_cmd_help():
     runner = CliRunner()
-    result = runner.invoke(main.help_command)
-    word1 = result.output.split()[0]
+    result = runner.invoke(commands.help.help_command)
+    if result.exit_code:
+        print(vars(result))
+        print('~' * 78)
+        print(result.output_bytes)
+        print('~' * 78)
+    words = result.output.split()
 
     assert result.exit_code == 0
-    assert word1 == 'Helpful', "Helpful message is printed"
+    assert 'configuration' in words
+    assert any(i.endswith(os.sep + main.__app_name__ + '.conf') for i in words)
 {% endif -%}

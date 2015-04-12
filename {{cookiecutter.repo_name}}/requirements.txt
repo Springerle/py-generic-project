@@ -5,4 +5,7 @@
 
 click>=3.3,<4
 colorama
+
+#configobj>=5.1,<6
+-e git+https://github.com/jhermann/configobj@move-to-package-32#egg=configobj
 {%- endif %}

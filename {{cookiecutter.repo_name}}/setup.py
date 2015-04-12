@@ -83,9 +83,8 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
                 metadata[match.group(1)] = match.group(3)
 
     if not all(i in metadata for i in expected_keys):
-        raise RuntimeError("Missing or bad metadata in '{0}' package: {1}".format(
-                           name, ', '.join(sorted(set(expected_keys) - set(metadata.keys()))),
-                           ))
+        raise RuntimeError("Missing or bad metadata in '{0}' package: {1}"
+                           .format(name, ', '.join(sorted(set(expected_keys) - set(metadata.keys()))),))
 
     text = metadata['long_description'].strip()
     if text:
