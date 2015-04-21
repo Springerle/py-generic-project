@@ -10,10 +10,9 @@ from __future__ import absolute_import, unicode_literals, print_function
 
 import os
 
-import click
+from rudiments.reamed import click
 
 from .. import config
-from ..util.dclick import pretty_path
 
 
 @config.cli.command(name='help')
@@ -32,8 +31,8 @@ def help_command(ctx):
     click.echo(config.version_info(ctx))
 
     banner('Configuration')
-    locations = config.locations(exists=False, extras=ctx.find_root().params.get('config', None))
-    locations = [(u'✔' if os.path.exists(i) else u'✘', pretty_path(i)) for i in locations]
+    locations = ctx.obj.cfg.locations(exists=False)
+    locations = [(u'✔' if os.path.exists(i) else u'✘', click.pretty_path(i)) for i in locations]
     click.echo(u'The following configuration files are merged in order, if they exist:\n    {0}'.format(
         u'\n    '.join(u'{}   {}'.format(*i) for i in locations),
     ))

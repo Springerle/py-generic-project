@@ -80,7 +80,7 @@ def test_cmd_missing():
 @cli
 def test_cmd_help():
     runner = CliRunner()
-    result = runner.invoke(commands.help.help_command)
+    result = runner.invoke(main.cli, args=('help',))
     if result.exit_code:
         print(vars(result))
         print('~' * 78)
@@ -90,5 +90,6 @@ def test_cmd_help():
 
     assert result.exit_code == 0
     assert 'configuration' in words
-    assert any(i.endswith(os.sep + main.__app_name__ + '.conf') for i in words)
+    assert any(i.endswith(os.sep + 'cli.conf') for i in words), \
+           "Some '.conf' files listed in " + repr(words)
 {% endif -%}
