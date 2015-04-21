@@ -63,10 +63,8 @@ def clean(ctx, venv=False, extra=''):
             os.unlink(name)
 
 
-@task(help={
-    'pty': "Whether to run commands under a pseudo-tty",
-})
-def test(ctx, pty=True):
+@task()
+def test(ctx):
     """Perform integration tests."""
     ctx.run("touch '{{cookiecutter.repo_name}}/empty-testfile'")
     ctx.run("py.test")
@@ -79,7 +77,7 @@ def test(ctx, pty=True):
             venv_bin = ''
             notify.info("Installing archetype requirements...")
             ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
-            ctx.run("invoke ci")
+            ctx.run("invoke --echo --pty ci")
         else:
             venv_bin = '.venv/new-project/bin/'
             ctx.run("bash -c '. .env --yes --develop && invoke ci'")
