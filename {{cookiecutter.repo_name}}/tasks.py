@@ -62,6 +62,6 @@ def ci(ctx):
     else:
         opts += ['test.tox']
 
-    ctx.run("invoke clean --all build --docs check --reports{} 2>&1".format(' '.join(opts)))
+    ctx.run("invoke --echo --pty clean --all build --docs check --reports{}".format(' '.join(opts)))
 
 namespace.add_task(ci)
