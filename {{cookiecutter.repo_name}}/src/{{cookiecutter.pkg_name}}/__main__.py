@@ -62,7 +62,7 @@ def license_option(*param_decls, **attrs):
 @click.option('-c', '--config', "config_paths", metavar='FILE',
               multiple=True, type=click.Path(), help='Load given configuration file(s).')
 @click.pass_context
-def cli(ctx, quiet=False, verbose=False, config_paths=None):  # pylint: disable=unused-argument, redefined-outer-name
+def cli(ctx, quiet=False, verbose=False, config_paths=None):  # pylint: disable=unused-argument
     """'{{ cookiecutter.repo_name }}' command line tool."""
     config.Configuration.from_context(ctx, config_paths)
     ctx.obj.quiet = quiet
