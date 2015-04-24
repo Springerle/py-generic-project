@@ -63,7 +63,7 @@ def clean(ctx, venv=False, extra=''):
             os.unlink(name)
 
 
-@task()
+@task(pre=[clean])
 def test(ctx):
     """Perform integration tests."""
     ctx.run("touch '{{cookiecutter.repo_name}}/empty-testfile'")
