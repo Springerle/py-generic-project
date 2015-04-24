@@ -9,6 +9,7 @@
 from __future__ import absolute_import, unicode_literals, print_function
 
 import os
+import sys
 
 from rudiments.reamed import click
 
@@ -16,13 +17,18 @@ from .. import config
 
 
 @config.cli.command(name='help')
+@click.option('-c', '--config-dump', is_flag=True, default=False, help='Dump the merged configuration to stdout.')
 @click.pass_context
-def help_command(ctx):
+def help_command(ctx, config_dump=False):
     """Print some information on the system environment."""
     def banner(title):
         "Helper"
         click.echo('')
         click.secho('~~~ {} ~~~'.format(title), fg='green', bg='black', bold=True)
+
+    if config_dump:
+        ctx.obj.cfg.dump()
+        sys.exit(0)
 
     app_name = ctx.find_root().info_name
     click.secho('*** "{}" Help & Information ***'.format(app_name), fg='white', bg='blue', bold=True)
