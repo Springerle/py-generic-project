@@ -10,7 +10,12 @@ Installing Python
 -----------------
 
 There are different ways to get a working Python installation, depending on your
-computer's operating system.
+computer's operating system. Note that there are two major versions of Python,
+and at this time Python 2.7 and Python 3.4 are the recommended versions to use.
+
+Read the documentation of any software you want to install regarding the versions
+of Python that particular software runs on, and act accordingly by e.g. calling
+``virtualenv-3`` instead of just ``virtualenv``.
 
 
 POSIX (Linux, BSD, …)
@@ -51,6 +56,16 @@ with roots in the Scientific Python community and being part of the ``Anaconda``
 `Miniconda`_ is a minimal distribution containing only the Conda package manager and Python.
 Once Miniconda is installed, you can use the ``conda`` command to install any other packages
 and create environments (``conda`` is the equivalent of ``pip``).
+
+
+pyenv (Simple Python Version Management)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`pyenv`_ works for Mac OS X and POSIX systems and is a simple way
+to obtain access to Python versions that are not available from
+your system's software repositories, and switch between them at will.
+
+See the `pyenv installation instructions`_ for details.
 
 
 Installing releases from PyPI
@@ -104,3 +119,5 @@ which in the end are only lists of ``pip install`` arguments.
 
 .. _`Conda`: http://conda.pydata.org/
 .. _`Miniconda`: http://conda.pydata.org/miniconda.html#miniconda
+.. _`pyenv`: https://github.com/yyuu/pyenv
+.. _`pyenv installation instructions`: https://github.com/yyuu/pyenv#installation
