@@ -46,7 +46,7 @@ Conda (Windows, Mac OS X, Linux)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Alternatively, there is also the *cross-platform*, Python-agnostic binary package manager `Conda`_,
-with roots in the Scientific Python community and part of the ``Anaconda`` data processing platform.
+with roots in the Scientific Python community and being part of the ``Anaconda`` data processing platform.
 
 `Miniconda`_ is a minimal distribution containing only the Conda package manager and Python.
 Once Miniconda is installed, you can use the ``conda`` command to install any other packages
