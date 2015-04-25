@@ -94,7 +94,7 @@ with a single command.
     the difference is that the package will end up in a top-level ``src`` directory
     instead of the deeply nested ``…/site-packages`` one, and any changes to the source will
     be instantly visible to any process that imports it.
-    When you plan to change the source or otherwise need easy access to it, that makes this easy::
+    When you plan to change the source or otherwise need quick access to it, that makes this easy::
 
         pip install -e git+….git#egg=‹PKG-NAME›
 
