@@ -86,7 +86,7 @@ with a single command.
 
 *   Via a ZIP archive download (does not need ``git`` installed)::
 
-        pip install https://github.com/jhermann/configobj/archive/‹TAG-OR-SHA›.zip
+        pip install https://github.com/‹USER›/‹REPO-NAME›/archive/‹TAG-OR-SHA›.zip
 
     Usually, ``‹TAG-OR-SHA›`` will be ``master`` or ``develop`` –
     in the GitHub web UI, you can use the ``branch`` selector above the file listing
