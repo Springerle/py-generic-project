@@ -1,5 +1,6 @@
 # *- coding: utf-8 -*-
 # pylint: disable=wildcard-import, missing-docstring, no-self-use, bad-continuation
+# pylint: disable=invalid-name, redefined-outer-name, too-few-public-methods
 """ Test «some_module».
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
