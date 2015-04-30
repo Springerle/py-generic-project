@@ -66,6 +66,9 @@ cd "{{ cookiecutter.repo_name }}"
 invoke build --docs test check
 ```
 
+Contributing to this project is easy, and reporting an issue or
+adding to the documentation also improves things for every user.
+You don’t need to be a developer to contribute.
 See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) for more.
 
 
