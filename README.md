@@ -1,5 +1,7 @@
 # py-generic-project
 
+ [![Logo](https://raw.github.com/Springerle/py-generic-project/docs/img/logo.png)](https://py-generic-project.readthedocs.org/)
+
 A cookiecutter template that creates a basic Python setuptools project,
 which can be later on augmented with various optional accessories.
 See the [demo](https://github.com/Springerle/py-generic-project/tree/master/demo)
