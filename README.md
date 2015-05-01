@@ -99,7 +99,7 @@ inv ci | less -R
 This template has a few options that can be turned on and off even after initial creation,
 which the following terminal session demonstrates for Travis CI support.
 
-![Demo Terminal Session](https://raw.githubusercontent.com/Springerle/py-generic-project/master/docs/_static/img/feature-toggles.png)
+![Demo Terminal Session](https://raw.githubusercontent.com/Springerle/py-generic-project/master/docs/img/feature-toggles.png)
 
 At the moment of this writing, those feature are ``travis``, ``flake8``, and ``cli``.
 See the ``features`` value in ``cookiecutter.json`` for a current list.
