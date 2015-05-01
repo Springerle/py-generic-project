@@ -34,7 +34,7 @@ which can be later on augmented with various optional accessories. See the
 for getting a 1ˢᵗ impression on how this Cookiecutter template can be
 used, including screenshots of the terminal session.
 
-If you have questions or need any kind of other help, please join the
+If you have questions or need any other kind of help, please join the
 `springerle-users <https://groups.google.com/forum/#!forum/springerle-users>`_
 Google group.
 
