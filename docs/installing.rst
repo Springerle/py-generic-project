@@ -1,3 +1,26 @@
+..  documentation: installing
+
+    Copyright (c) 2015 Jürgen Hermann
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Installing Python Software
 ==========================
 
@@ -17,6 +40,11 @@ Read the documentation of any software you want to install regarding the version
 of Python that particular software runs on, and act accordingly by e.g. calling
 ``virtualenv-3`` instead of just ``virtualenv``.
 
+See also these other resources on the web…
+
+-   `Picking an Interpreter <http://docs.python-guide.org/en/latest/starting/which-python/>`_
+
+
 
 POSIX (Linux, BSD, …)
 ^^^^^^^^^^^^^^^^^^^^^
@@ -24,14 +52,18 @@ POSIX (Linux, BSD, …)
 On *POSIX systems*, use whatever package manager your distribution offers, and
 as the minimum install Python itself and everything to manage Python virtual environments.
 Usually, the Python interpreter is already installed, but some of the essential extensions
-and tools might be missing. For Debian-like systems, you need::
+and tools might be missing. For Debian-like systems, you need:
+
+.. code-block:: shell
 
     apt-get install python python-setuptools python-pkg-resources \
                     python-virtualenv python-pip
 
 To successfully install C extension packages like ``lxml`` from source into a ``virtualenv``,
 you also need the necessary build tools like ``gcc`` or ``clang``.
-On Debian-like systems, this means::
+On Debian-like systems, this means:
+
+.. code-block:: shell
 
     apt-get install build-essential python-dev
 
@@ -84,34 +116,44 @@ gain some experience using ``virtualenv`` and ``pip`` before trying this.
 The following shows different ways to get ``pip`` to download and install the source directly,
 with a single command.
 
-*   Via a ZIP archive download (does not need ``git`` installed)::
+*   Via a ZIP archive download (does not need ``git`` installed):
 
-        pip install https://github.com/‹USER›/‹REPO-NAME›/archive/‹TAG-OR-SHA›.zip
+    .. code-block:: shell
+
+        pip install "https://github.com/‹USER›/‹REPO-NAME›/archive/‹TAG-OR-SHA›.zip"
 
     Usually, ``‹TAG-OR-SHA›`` will be ``master`` or ``develop`` –
     in the GitHub web UI, you can use the ``branch`` selector above the file listing
     to first select a branch, then the ``Download ZIP`` button at the bottom of the sidebar
     gives you the neccessary link.
 
-*   Via ``git clone``::
+*   Via ``git clone``:
 
-        pip install git+https://github.com/‹USER›/‹REPO-NAME›.git
+    .. code-block:: shell
 
-*   Via ``git clone`` with a tag or hash::
+        pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git"
 
-        pip install git+https://github.com/‹USER›/‹REPO-NAME›.git@‹TAG-OR-SHA›
+*   Via ``git clone`` with a tag or hash:
 
-*   From a *working directory* you manually cloned into your file system::
+    .. code-block:: shell
 
-        pip install ‹working-directory-path›
+        pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git@‹TAG-OR-SHA›"
+
+*   From a *working directory* you manually cloned into your file system:
+
+    .. code-block:: shell
+
+        pip install "‹working-directory-path›"
 
 *   The forms that use ``git+`` or a ``git`` directory can also be done as an editable package –
     the difference is that the package will end up in a top-level ``src`` directory
     instead of the deeply nested ``…/site-packages`` one, and any changes to the source will
     be instantly visible to any process that imports it.
-    When you plan to change the source or otherwise need quick access to it, that makes this easy::
+    When you plan to change the source or otherwise need quick access to it, that makes this easy:
 
-        pip install -e git+….git#egg=‹PKG-NAME›
+    .. code-block:: shell
+
+        pip install -e "git+….git#egg=‹PKG-NAME›"
 
 Note that all these forms work in requirements files,
 which in the end are only lists of ``pip install`` arguments.
