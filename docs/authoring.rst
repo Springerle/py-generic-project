@@ -41,6 +41,7 @@ Tools
 *Lists*
 
 * `reStructuredText tool support <http://stackoverflow.com/questions/2746692/restructuredtext-tool-support>`_ @ Stack Overflow.
+* `Awesome Sphinx <https://github.com/yoloseem/awesome-sphinxdoc>`_
 
 *General*
 
