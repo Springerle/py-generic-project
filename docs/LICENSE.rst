@@ -1,10 +1,12 @@
 Software License
 ================
 
-Since the files contained in the template itself will comprise the foundation of your project,
-they're unlicensed using the “Creative Commons Zero v1.0 Universal” license.
-All other files are MIT-licensed – this effectively means you only have to attribute this project
-if you re-use all or parts of the contained templating mechanics.
+Since the files contained in the ``{{cookiecutter.repo_name}}`` archetype itself
+will comprise the foundation of your project, they're unlicensed using the
+“Creative Commons Zero v1.0 Universal” license.
+All other files outside the ``{{cookiecutter.repo_name}}`` directory are
+MIT-licensed – this effectively means you only have to attribute this project
+if you re-use all or parts of the contained templating mechanics and documentation.
 
 
 The MIT License (MIT)
