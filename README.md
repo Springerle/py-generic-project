@@ -66,5 +66,6 @@ if you re-use all or parts of the contained templating mechanics and documentati
 * [mozilla/sugardough](https://github.com/mozilla/sugardough)
 
 * [PyScaffold](https://github.com/blue-yonder/pyscaffold)
+* [weber-minimal](https://github.com/vmalloc/weber-minimal) – A Flask application skeleton with Ansible deployment.
 
 See also the full list at [Cookiecutter's README](https://github.com/audreyr/cookiecutter#python).
