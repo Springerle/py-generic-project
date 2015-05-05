@@ -35,6 +35,12 @@ Introduction & Cheatsheets
 * `Sphinx reStructuredText primer <http://sphinx-doc.org/rest.html>`_
 
 
+Useful Extensions
+-----------------
+
+* `PlantUML <https://pypi.python.org/pypi/sphinxcontrib-plantuml>`_
+
+
 Tools
 -----
 
