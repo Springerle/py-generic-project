@@ -175,5 +175,6 @@ if __name__ == '__main__':
     if '--metadata' == sys.argv[1]:
         import json
         json.dump(project, sys.stdout, default=repr, indent=4, sort_keys=True)
+        sys.stdout.write('\n')
     else:
         setup(**project)
