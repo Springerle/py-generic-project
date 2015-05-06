@@ -69,3 +69,19 @@ Tools
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _restview: https://github.com/mgedmin/restview#restview
 .. _gedit3 language definition for reStructuredText: https://github.com/jhermann/ruby-slippers/blob/master/home/.local/share/gtksourceview-3.0/language-specs/restructuredtext.lang
+
+
+How-Tos
+-------
+
+Adding a Custom Pygments Lexer to Sphinx
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order for Sphinx to load and recognize a custom lexer, two things are needed:
+
+ 1. Add the package name of the lexer to the ``extensions`` list in ``conf.py``.
+    Of course, that package has to be importable, either by using a virtualenv
+    or manipulating ``sys.path``.
+ 2. Give your lexer package a Setuptools ``pygments.lexers`` entry point.
+
+Then use it in a ``code-block`` as if it were a built-in. That's all.
