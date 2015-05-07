@@ -46,7 +46,7 @@ developer toolset available. On Debian-like systems, the following makes sure of
 .. code-block:: shell
 
     sudo apt-get install python python-setuptools python-pkg-resources \
-        python-virtualenv python-pip build-essential python-dev
+        python-virtualenv python-pip python-dev build-essential git
 
 On **Mac OS X**, install a modern *Python* tool chain and
 missing *GNU* utilities that are often needed by helper scripts:
@@ -95,7 +95,7 @@ On Debian-like systems, this means:
 
 .. code-block:: shell
 
-    apt-get install build-essential python-dev
+    apt-get install python-dev build-essential git
 
 While the new ``wheel`` format for binary distributions can make this unneccessary,
 there are practical limitations: wheels have to be built and uploaded to PyPI, which is
