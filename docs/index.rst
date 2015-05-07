@@ -26,7 +26,7 @@
 Welcome to the “py-generic-project” manual!
 =============================================================================
 
-.. image:: img/logo.png
+.. image:: _static/img/logo.png
 
 This is a Cookiecutter template that creates a basic Python Setuptools project,
 which can be later on augmented with various optional accessories. See the
