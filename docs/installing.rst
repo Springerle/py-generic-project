@@ -188,7 +188,7 @@ See the `pyenv installation instructions`_ for details.
 .. _pex-install:
 
 Installation With PEX
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 `PEX files`_ are **P**\ ython **Ex**\ ecutable ZIP files, a format that contains
 a full distribution of a Python application in a single archive
