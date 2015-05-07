@@ -212,7 +212,7 @@ See `PEP 441`_ for a formal description of the underlying mechanics and all the 
 
 .. _pip-from-pypi:
 
-Installing releases from PyPI
+Installing Releases From PyPI
 -----------------------------
 
 For releases published on `PyPI`_, you should use ``pip`` to install them
@@ -255,7 +255,7 @@ including *CygWin*.
 
 .. _pip-from-github:
 
-Installing directly from GitHub
+Installing Directly From GitHub
 -------------------------------
 
 In case you *really* need the freshest source from GitHub,
