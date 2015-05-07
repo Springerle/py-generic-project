@@ -25,7 +25,7 @@ Packaging Python Software
 =========================
 
 This is a how-to for developers with directions on packaging their software
-in ways that enable a painless installation experience for end-users
+in ways that enable a painless installation experience for end-users.
 `Installing Python Software <installing.rst>`_ is the related end-user guide.
 
 See also these other resources on the web…
