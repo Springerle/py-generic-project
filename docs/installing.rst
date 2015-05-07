@@ -135,9 +135,12 @@ Python 3 already has it pre-installed.
 Babun (Windows)
 ^^^^^^^^^^^^^^^
 
-*Babun* is a turn-key *CygWin* distribution for developers and is very easy to install and maintain.
-For a Python developer, *Babun* allows working in an almost-POSIX environment – with some limitation, of course.
-This causes less friction when handling FOSS projects that are often biased towards a standard Linux environment,
+*Babun* is a turn-key *CygWin* distribution for developers
+and is very easy to install and maintain.
+For a Python developer, *Babun* allows working in an almost-POSIX environment
+– with some limitations, of course.
+This causes less friction when handling FOSS projects
+that are often biased towards a standard Linux environment,
 e.g. by using shell scripts for boot-strapping and things like that.
 
 To install it, follow these steps:
