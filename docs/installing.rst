@@ -38,7 +38,8 @@ This is a no-frills version of basic installation procedures for the three major
 Read the other sections for more details, especially if you encounter any problems with
 these condensed instructions.
 Once the basic setup is done, refer to either :ref:`pip-from-pypi` or :ref:`pip-from-github`
-to get an application installed.
+to get an application installed – and in case the project author provides a
+**P**\ ython **Ex**\ ecutable archive, prefer an :ref:`pex-install`.
 
 On **Linux**, make sure you have the right version of *Python* pre-installed, and the basic
 developer toolset available. On Debian-like systems, the following makes sure of that:
@@ -179,6 +180,31 @@ to obtain access to Python versions that are not available from
 your system's software repositories, and switch between them at will.
 
 See the `pyenv installation instructions`_ for details.
+
+
+.. _pex-install:
+
+Installation With PEX
+^^^^^^^^^^^^^^^^^^^^^
+
+`PEX files`_ are **P**\ ython **Ex**\ ecutable ZIP files, a format that contains
+a full distribution of a Python application in a single archive
+(just like exectable JARs for Java).
+PEX files can be targeted at a specific platform and Python version,
+but might also support multiple runtime environments.
+Consult the documentation of your application for further guidance.
+
+Installing a PEX file is as easy as downloading it from the project's download page
+(e.g. *Bintray* or the *GitHub* releases section of a project), using your browser
+or ``curl``, and then just start it from where you saved it to in your file system.
+On *Windows*, give the file a ``.pyz`` or ``.pyzw`` extension,
+which the *Python Launcher* is registered for.
+On POSIX systems, ``chmod +x`` the file to make it executable.
+
+See `PEP 441`_ for a formal description of the underlying mechanics and all the details.
+
+.. _`PEX files`: https://youtu.be/NmpnGhRwsu0
+.. _`PEP 441`: https://www.python.org/dev/peps/pep-0441/
 
 
 .. _pip-from-pypi:
