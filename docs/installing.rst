@@ -37,6 +37,8 @@ TL;DR
 This is a no-frills version of basic installation procedures for the three major PC platforms.
 Read the other sections for more details, especially if you encounter any problems with
 these condensed instructions.
+Once the basic setup is done, refer to either :ref:`pip-from-pypi` or :ref:`pip-from-github`
+to get an application installed.
 
 On **Linux**, make sure you have the right version of *Python* pre-installed, and the basic
 developer toolset available. On Debian-like systems, the following makes sure of that:
@@ -128,11 +130,16 @@ your system's software repositories, and switch between them at will.
 See the `pyenv installation instructions`_ for details.
 
 
+.. _pip-from-pypi:
+
 Installing releases from PyPI
 -----------------------------
 
 **TODO**
 
+
+
+.. _pip-from-github:
 
 Installing directly from GitHub
 -------------------------------
