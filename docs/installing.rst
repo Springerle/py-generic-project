@@ -56,7 +56,14 @@ missing *GNU* utilities that are often needed by helper scripts:
     sudo easy_install pip && sudo pip install virtualenv
     brew install coreutils
 
-On **Windows**, **TODO**
+For **Windows**, see the :ref:`win-python` and :ref:`babun` sections.
+The former is recommended for users who just want to run some Python software,
+the latter for developers and ‘power users’
+with some existing Python and Linux experience.
+
+.. note::
+
+    Remember that the next step is either :ref:`pip-from-pypi` or :ref:`pip-from-github`.
 
 
 Installing Python
@@ -72,7 +79,7 @@ of Python that particular software runs on, and act accordingly by e.g. calling
 
 See also these other resources on the web…
 
--   `Picking an Interpreter <http://docs.python-guide.org/en/latest/starting/which-python/>`_
+  * `Picking an Interpreter <http://docs.python-guide.org/en/latest/starting/which-python/>`_
 
 
 
@@ -103,10 +110,54 @@ seldom the case for every combination of packages and platforms. Also, wheels ar
 yet fully supported for POSIX at the time of this writing.
 
 
-Windows
-^^^^^^^
+.. _win-python:
 
-On *Windows*, … **TODO**
+Windows (python.org)
+^^^^^^^^^^^^^^^^^^^^
+
+To get the official *python.org* distribution on *Windows*, open the
+`Python Releases for Windows`_ page and select the appropriate version.
+You might want to install both a Python 2 and 3 version, to cover all
+possible needs of any applications.
+
+It's also recommended to install the `Python Extensions for Windows`_,
+because many applications rely on them to access Windows-specific features.
+
+Finally, for Python 2 you should install *PyLauncher* to be able to start
+applications distributed as an *‘executbale ZIP’*, see its
+`download page <https://bitbucket.org/vinay.sajip/pylauncher/downloads>`_.
+Python 3 already has it pre-installed.
+
+
+.. _babun:
+
+Babun (Windows)
+^^^^^^^^^^^^^^^
+
+*Babun* is a turn-key *CygWin* distribution for developers and is very easy to install and maintain.
+For a Python developer, *Babun* allows working in an almost-POSIX environment – with some limitation, of course.
+This causes less friction when handling FOSS projects that are often biased towards a standard Linux environment,
+e.g. by using shell scripts for boot-strapping and things like that.
+
+To install it, follow these steps:
+
+  * Download the installer ZIP archive from the `Babun homepage`_.
+  * Unzip the archive (e.g. using *Windows Explorer*).
+  * Double-click the installer (``install.bat``), and wait…
+  * Catch up (``babun update``).
+  * Change the default shell from ``zsh`` to ``bash`` if you prefer that (``babun shell /bin/bash``).
+  * Edit ``~/.bashrc`` to activate loading of ``~/.bash_aliases``.
+  * Install additional *Python* essentials:
+
+    .. code-block:: shell
+
+        pact install python-setuptools python-ming
+        pact install libxml2-devel libxslt-devel libyaml-devel
+        curl -skS https://bootstrap.pypa.io/get-pip.py | python
+        pip install virtualenv
+        curl -skS https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+
+  * Enjoy!
 
 
 Conda (Windows, Mac OS X, Linux)
@@ -117,7 +168,7 @@ with roots in the Scientific Python community and being part of the ``Anaconda``
 
 `Miniconda`_ is a minimal distribution containing only the Conda package manager and Python.
 Once Miniconda is installed, you can use the ``conda`` command to install any other packages
-and create environments (``conda`` is the equivalent of ``pip``).
+and create environments (``conda`` is the equivalent of ``virtualenv`` and ``pip``).
 
 
 pyenv (Simple Python Version Management)
@@ -151,7 +202,7 @@ gain some experience using ``virtualenv`` and ``pip`` before trying this.
 The following shows different ways to get ``pip`` to download and install the source directly,
 with a single command.
 
-*   Via a ZIP archive download (does not need ``git`` installed):
+  * Via a ZIP archive download (does not need ``git`` installed):
 
     .. code-block:: shell
 
@@ -162,25 +213,25 @@ with a single command.
     to first select a branch, then the ``Download ZIP`` button at the bottom of the sidebar
     gives you the neccessary link.
 
-*   Via ``git clone``:
+  * Via ``git clone``:
 
     .. code-block:: shell
 
         pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git"
 
-*   Via ``git clone`` with a tag or hash:
+  * Via ``git clone`` with a tag or hash:
 
     .. code-block:: shell
 
         pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git@‹TAG-OR-SHA›"
 
-*   From a *working directory* you manually cloned into your file system:
+  * From a *working directory* you manually cloned into your file system:
 
     .. code-block:: shell
 
         pip install "‹working-directory-path›"
 
-*   The forms that use ``git+`` or a ``git`` directory can also be done as an editable package –
+  * The forms that use ``git+`` or a ``git`` directory can also be done as an editable package –
     the difference is that the package will end up in a top-level ``src`` directory
     instead of the deeply nested ``…/site-packages`` one, and any changes to the source will
     be instantly visible to any process that imports it.
@@ -194,6 +245,9 @@ Note that all these forms work in requirements files,
 which in the end are only lists of ``pip install`` arguments.
 
 
+.. _`Python Releases for Windows`: https://www.python.org/downloads/windows/
+.. _`Python Extensions for Windows`: http://sourceforge.net/projects/pywin32/files/
+.. _`Babun homepage`: http://babun.github.io/
 .. _`Conda`: http://conda.pydata.org/
 .. _`Miniconda`: http://conda.pydata.org/miniconda.html#miniconda
 .. _`pyenv`: https://github.com/yyuu/pyenv
