@@ -215,8 +215,42 @@ See `PEP 441`_ for a formal description of the underlying mechanics and all the 
 Installing releases from PyPI
 -----------------------------
 
-**TODO**
+For releases published on `PyPI`_, you should use ``pip`` to install them
+(i.e. do not use ``easy_install`` anymore). It's common procedure to
+not install into ``/usr/local`` on Linux, but instead create a so-called
+*virtualenv*, which is a runtime environment that is (by default) isolated
+against the host system and its packages, as well as against other virtualenvs.
+This means that you don't have to carefully manage version numbers, you can
+let ``pip`` install exactly those versions an application works best with.
 
+To create a virtualenv, go to the desired install location, and create
+the new environment, also giving it a name:
+
+.. code-block:: shell
+
+    cd ~/.local/virtualenvs
+    virtualenv ‹newenv›
+    . ‹newenv›/bin/activate
+
+The last command *activates* the virtualenv, which means that
+when you call ``python`` or ``pip``, they run in the context of
+that virtualenv.
+
+Now all you have to do is call ``pip install ‹my-new-app›`` and
+it'll get installed into that environment. If the package provides
+command line tools, don't forget to add the ``bin`` directory to
+your ``PATH`` – or better yet symlink those commands into your
+``~/bin`` directory or add some definitions to ``~/.bash_aliases``,
+to make them selectively available.
+
+If you're installing a Python package that contains a single command,
+then `pipsi`_ (*Python Script Installer*) allows installing and updating
+with a simple one-liner. ``pipsi`` is just a convenient wrapper
+around ``pip`` and ``virtualenv``, and works in POSIX environments
+including *CygWin*.
+
+.. _`PyPI`: https://pypi.python.org/pypi
+.. _`pipsi`: https://github.com/mitsuhiko/pipsi#readme
 
 
 .. _pip-from-github:
