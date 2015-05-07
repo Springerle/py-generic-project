@@ -45,7 +45,7 @@ Project Creation
 Creating a new Python project based on this template goes like this
 (make sure you're in the directory you want your project added to):
 
-::
+.. code-block:: shell
 
     cookiecutter "https://github.com/Springerle/py-generic-project.git"
 
@@ -53,29 +53,32 @@ It's advisable to ``git add`` the created directory directly afterwards,
 before any generated files are added, that you don't want to have in
 your repository.
 
-:bulb: \| To get *your* defaults for common template values
-``cookiecutter`` will ask you for when you use a template, it makes
-sense to have a
-`~/.cookiecutterrc <https://github.com/jhermann/ruby-slippers/blob/master/home/.cookiecutterrc>`_
-in your home directory. Follow the link to see an example. ---- \| :----
+.. note::
 
-You should at least check these files regarding their content and adapt
+    To get *your* defaults for common template values
+    ``cookiecutter`` will ask you for when you use a template,
+    it makes sense to have a `~/.cookiecutterrc`_ in your home
+    directory. Follow the link to see an example.
+
+Also, you should at least check these files regarding their content and adapt
 them according to your needs:
 
--  ``project.d/classifiers.txt`` – Add the correct
-   `categories <http://pypi.python.org/pypi?:action=list_classifiers>`_
-   (a/k/a Trove classifiers) for your project.
--  ``requirements.txt`` – Add any Python packages you need for your
-   project *at runtime*.
+  * ``project.d/classifiers.txt`` – Add the correct
+    `categories <http://pypi.python.org/pypi?:action=list_classifiers>`_
+    (a/k/a Trove classifiers) for your project.
+  * ``requirements.txt`` – Add any Python packages you need for your
+    project *at runtime*.
 
 To bootstrap the project (as mentioned, best after ``git add``), use
 these commands from within its directory:
 
-::
+.. code-block:: shell
 
     . .env --yes --develop
     inv ci | less -R
     "$(basename $(pwd))" --help
+
+.. _`~/.cookiecutterrc`: https://github.com/jhermann/ruby-slippers/blob/master/home/.cookiecutterrc
 
 
 Feature Toggles
