@@ -57,7 +57,14 @@ grep /.bash_completion.d/$cmdname.sh ~/.bash_completion >/dev/null \
 
 ## Contributing
 
-To create a working directory for this project, call these commands:
+Contributing to this project is easy, and reporting an issue or
+adding to the documentation also improves things for every user.
+You don’t need to be a developer to contribute.
+See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) for more.
+
+As a documentation author or developer,
+to create a working directory for this project,
+call these commands:
 
 ```sh
 git clone "{{ cookiecutter.github_url }}.git"
@@ -66,10 +73,9 @@ cd "{{ cookiecutter.repo_name }}"
 invoke build --docs test check
 ```
 
-Contributing to this project is easy, and reporting an issue or
-adding to the documentation also improves things for every user.
-You don’t need to be a developer to contribute.
-See [CONTRIBUTING]({{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md) for more.
+You might also need to follow some
+[setup procedures](https://py-generic-project.readthedocs.org/en/latest/installing.html#quick-setup)
+to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
 
 ## References
