@@ -28,6 +28,11 @@ This is a directory of links to information and hints you need
 when you want to write (software) documentation using
 `reStructuredText`_ and `Sphinx`_.
 
+Also visit `Write the Docs`_, which is a place with high quality
+information about the art of writing documentation.
+
+.. _`Write the Docs`: http://docs.writethedocs.org/
+
 
 Introduction & Cheatsheets
 --------------------------
