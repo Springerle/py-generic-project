@@ -113,6 +113,8 @@ if not on_rtd:
     # Add any paths that contain custom themes here, relative to this directory.
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
+html_style = 'css/custom.css'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -128,12 +130,12 @@ html_theme_options = dict(
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "img/logo.png"
+html_logo = "_static/img/logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = "img/logo.ico"
+html_favicon = "_static/img/logo.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -10,7 +10,7 @@
 Welcome to the “{{ cookiecutter.project_name }}” manual!
 =============================================================================
 
-.. image:: img/logo.png
+.. image:: _static/img/logo.png
 
 {{ cookiecutter.short_description }}.
 
