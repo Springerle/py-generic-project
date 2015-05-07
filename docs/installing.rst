@@ -29,6 +29,34 @@ See `Packaging Python Software <packaging.rst>`_ for the related developer guide
 with distribution methods that enable this painless installation experience.
 
 
+.. _quick-setup:
+
+TL;DR
+-----
+
+This is a no-frills version of basic installation procedures for the three major PC platforms.
+Read the other sections for more details, especially if you encounter any problems with
+these condensed instructions.
+
+On **Linux**, make sure you have the right version of *Python* pre-installed, and the basic
+developer toolset available. On Debian-like systems, the following makes sure of that:
+
+.. code-block:: shell
+
+    sudo apt-get install python python-setuptools python-pkg-resources \
+        python-virtualenv python-pip build-essential python-dev
+
+On **Mac OSX**, install a modern *Python* tool chain and
+missing *GNU* utilities that are often needed by helper scripts:
+
+.. code-block:: shell
+
+    sudo easy_install pip && sudo pip install virtualenv
+    brew install coreutils
+
+On **Windows**, **TODO**
+
+
 Installing Python
 -----------------
 
