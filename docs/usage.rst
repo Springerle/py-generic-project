@@ -76,7 +76,10 @@ these commands from within its directory:
 
     . .env --yes --develop
     inv ci | less -R
-    "$(basename $(pwd))" --help
+    python -m $(./setup.py --name | tr -- - _) --help
+
+On *Windows*, please install :ref:`Babun <babun>` to be able to use the
+same procedures as on a POSIX system – the installtion is easy and painless.
 
 .. _`~/.cookiecutterrc`: https://github.com/jhermann/ruby-slippers/blob/master/home/.cookiecutterrc
 
