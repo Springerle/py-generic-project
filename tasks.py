@@ -30,12 +30,7 @@ import shutil
 
 from rituals.easy import task, Collection, pushd
 from rituals.util import antglob, notify
-from rituals.acts.documentation import sphinx
-
-
-@task(pre=[sphinx])
-def docs(ctx):
-    """Alias for 'sphinx'."""
+from rituals.acts.documentation import namespace as _docs
 
 
 @task(help=dict(
@@ -94,9 +89,5 @@ def test(ctx):
         ctx.run(venv_bin + "new-project help")
 
 
-namespace = Collection.from_module(sys.modules[__name__], name='', config=dict(
-    docs = dict(
-        sources = 'docs',
-        build = '_build',
-    ),
-))
+namespace = Collection.from_module(sys.modules[__name__], name='')
+namespace.add_collection(_docs)
