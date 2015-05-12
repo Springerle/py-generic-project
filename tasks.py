@@ -34,16 +34,19 @@ from rituals.acts.documentation import namespace as _docs
 
 
 @task(help=dict(
+    docs="Also clean the documentation build area",
     venv="Include an existing virtualenv (in '.venv')",
     extra="Any extra patterns, space-separated and possibly quoted",
 ))
-def clean(ctx, venv=False, extra=''):
+def clean(ctx, docs=False, venv=False, extra=''):
     """Perform house-keeping."""
     notify.banner("Cleaning up project files")
 
     # Add patterns based on given parameters
     venv_dirs = ['.venv']
     patterns = ['new-project/', 'pip-selfcheck.json', '**/*~']
+    if docs:
+        patterns.append('docs/_build/')
     if venv:
         patterns.extend([i + '/' for i in venv_dirs])
     if extra:
