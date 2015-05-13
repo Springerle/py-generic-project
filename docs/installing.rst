@@ -175,6 +175,26 @@ Once Miniconda is installed, you can use the ``conda`` command to install any ot
 and create environments (``conda`` is the equivalent of ``virtualenv`` and ``pip``).
 
 
+RyRun (Mac OS X, Linux, FreeBSD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Yet another contender is `PyRun`_ from *eGenix*. It is a one file Python runtime,
+that combines a Python interpreter with an almost complete Python standard library
+into a single easy-to-use executable of about 12 MiB in size.
+The selling point is easy installation by only handling a single file, which also
+results in easy relocation – ideal for using it on an USB stick for portable
+applications, or part of a self-contained bundle for server installations.
+It covers all the relevant Python versions (2.6, 2.7, and 3.4), and comes
+in 32bit and 64bit flavours.
+
+From an application installation standpoint, *PyRun* allows you to
+efficiently create isolated runtime environments that include their own
+Python interpreter and standard library, i.e. are even more detached
+from the host setup than normal virtualenvs.
+
+.. _`PyRun`: https://www.egenix.com/products/python/PyRun/
+
+
 pyenv (Simple Python Version Management)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -233,7 +253,7 @@ the new environment, also giving it a name:
     . ‹newenv›/bin/activate
     pip install -UI pip setuptools # get newest tooling
 
-The last command *activates* the virtualenv, which means that
+The third command *activates* the virtualenv, which means that
 when you call ``python`` or ``pip``, they run in the context of
 that virtualenv.
 
