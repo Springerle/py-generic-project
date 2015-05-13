@@ -105,7 +105,12 @@ highlighting in your favourite editor or IDE, see below for ``gedit3`` support.
 
 *Extensions*
 
-* `PlantUML <https://pypi.python.org/pypi/sphinxcontrib-plantuml>`_
+* `PlantUML for Sphinx <https://pypi.python.org/pypi/sphinxcontrib-plantuml>`_
+  allows you to add `PlantUML <http://plantuml.sourceforge.net/>`_
+  diagrams to your documentation.
+* `sphinxcontrib-programoutput <https://github.com/lunaryorn/sphinxcontrib-programoutput>`_
+  inserts the output of arbitrary commands into documents, helping you
+  to keep your command examples up to date.
 
 *Tools*
 
@@ -134,6 +139,35 @@ highlighting in your favourite editor or IDE, see below for ``gedit3`` support.
 
 How-Tos
 -------
+
+Sphinx Installation and Setup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See :doc:`installing`
+for the full story and all details, this is how to install *Sphinx* to
+your user account on a properly configured POSIX system (including
+*Babun* or *CygWin*):
+
+.. code-block:: shell
+
+    venv=~/.local/virtualenvs/sphinx
+    mkdir -p $(dirname $venv)
+    virtualenv $venv
+    $venv/bin/pip install -UI pip
+    $venv/bin/pip install sphinx sphinx-autobuild
+    ln -nfs ~/bin $venv/bin/sphinx-*
+
+For a *Python* project, it makes sense to add *Sphinx* to the
+development requirements of the project, and install it to the project's
+virtualenv together with other tools. This makes you independent of the
+machine you build on, and also ensures that you always get the same
+version of *Sphinx*.
+
+::
+
+    # Development requirements
+    Sphinx==1.3.1
+    sphinx-autobuild==0.5.2
 
 Creating a Minimal Project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -204,6 +238,34 @@ with OAuth2 and just click on your project repository to activate
 building – it's *very* easy.
 
 .. _`Read the Docs`: https://readthedocs.org/
+
+
+Automatic Preview
+^^^^^^^^^^^^^^^^^
+
+The best preview solution is
+`sphinx-autobuild <https://pypi.python.org/pypi/sphinx-autobuild>`_,
+which is a drop-in replacement for the ``sphine-build`` command.
+It starts a web-server bound to ``localhost`` that makes the
+documentation available, and also a watchdog that triggers a build as
+soon as you save any changes in your editor. Since only the part of the
+documentation that actually changed is rebuilt, this is usually very
+quick and you get a near-instant live-reload in your browser view via a
+Websocket connection.
+
+If you use the `rituals`_ automation tasks library,
+starting ``sphinx-autobuild`` is as easy as…
+
+.. code-block:: shell
+
+    invoke docs --watchdog --browse
+
+This launches the daemon and waits for a complete startup, then opens a
+browser tab with the rendered documentation.
+Try to ``touch docs/index.rst`` and watch the activity indicator in your
+browser – or take a look into the ``docs/watchdog.log`` file.
+
+.. _`rituals`: https://rituals.readthedocs.org/
 
 
 Converting from Markdown to reST
