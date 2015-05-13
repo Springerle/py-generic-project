@@ -42,8 +42,6 @@ documenting Python projects, but is in no way limited to those.
 Also visit `Write the Docs`_, which is a place with high quality
 information about the art of writing documentation.
 
-.. _`Write the Docs`: http://docs.writethedocs.org/
-
 
 When to Use Sphinx?
 ^^^^^^^^^^^^^^^^^^^
@@ -87,23 +85,29 @@ Introduction & Cheatsheets
 
 * See the :ref:`sphinx-how-tos` section below for some quickstart advice.
 * `Sphinx reStructuredText primer <http://sphinx-doc.org/rest.html>`_
+  – A brief introduction to *reStructuredText* (reST) concepts and syntax.
+* `Beautiful Docs <https://github.com/PharkMillups/beautiful-docs>`__
+  – A collection of exemplary open source project documentation.
 
 
-Useful Extensions
------------------
+Extensions & Tools
+------------------
+
+There are a lot of extensions, styles, themes, and so on available on
+the web. For example, see the
+`reStructuredText tool support <http://stackoverflow.com/questions/2746692/restructuredtext-tool-support>`_
+entry on *Stack Overflow*, or the
+`Awesome Sphinx <https://github.com/yoloseem/awesome-sphinxdoc>`_ bookmark list on *GitHub*.
+
+You should get a *reStructuredText* language definition enabling syntax
+highlighting in your favourite editor or IDE, see below for ``gedit3`` support.
+
+
+*Extensions*
 
 * `PlantUML <https://pypi.python.org/pypi/sphinxcontrib-plantuml>`_
 
-
-Tools
------
-
-*Lists*
-
-* `reStructuredText tool support <http://stackoverflow.com/questions/2746692/restructuredtext-tool-support>`_ @ Stack Overflow.
-* `Awesome Sphinx <https://github.com/yoloseem/awesome-sphinxdoc>`_
-
-*General*
+*Tools*
 
 * `restview`_ – A HTML viewer for reStructuredText documents that renders them on the fly.
 
@@ -121,6 +125,7 @@ Tools
 
 .. _Sphinx: http://sphinx-doc.org/index.html
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
+.. _`Write the Docs`: http://docs.writethedocs.org/
 .. _restview: https://github.com/mgedmin/restview#restview
 .. _gedit3 language definition for reStructuredText: https://github.com/jhermann/ruby-slippers/blob/master/home/.local/share/gtksourceview-3.0/language-specs/restructuredtext.lang
 
@@ -199,6 +204,21 @@ with OAuth2 and just click on your project repository to activate
 building – it's *very* easy.
 
 .. _`Read the Docs`: https://readthedocs.org/
+
+
+Converting from Markdown to reST
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you have existing Markdown files you want to integrate into your
+documentation, the ``pandoc`` tool provides an easy way to convert into
+reST-style markup. To make it available on Debian-type system, just
+install the package of the same name.
+
+Then a conversion can be done as follows:
+
+.. code-block:: shell
+
+    pandoc --from markdown --to rst -o "‹file›.rst" "‹file›.md"
 
 
 Adding a Custom Pygments Lexer to Sphinx
