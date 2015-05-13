@@ -79,7 +79,8 @@ these commands from within its directory:
     python -m $(./setup.py --name | tr -- - _) --help
 
 On *Windows*, please install :ref:`Babun <babun>` to be able to use the
-same procedures as on a POSIX system – the installtion is easy and painless.
+same procedures as on a POSIX system – the installation process is
+easy and painless.
 
 .. _`~/.cookiecutterrc`: https://github.com/jhermann/ruby-slippers/blob/master/home/.cookiecutterrc
 
