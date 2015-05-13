@@ -49,7 +49,7 @@ When to Use Sphinx?
 Using *Sphinx* has several advantages over other options for writing
 documentation that has strong ties to the source code. It can be
 maintained and versioned together with the source, which increases the
-likelyhood that you end up with *current* and *correct* documentation.
+likelihood that you end up with *current* and *correct* documentation.
 
 *Sphinx* was designed for that purpose – to write extensive ‘prosa’
 documentation in addition to any in-source markup most languages offer
