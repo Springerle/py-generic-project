@@ -24,9 +24,20 @@
 Writing Sphinx Documentation
 ============================
 
+Overview
+--------
+
 This is a directory of links to information and hints you need
 when you want to write (software) documentation using
 `reStructuredText`_ and `Sphinx`_.
+Using them should improve your experience as an author
+as well as the end result for your readers.
+
+*Sphinx* is a tool that makes it easy to
+create intelligent and beautiful documentation, and uses
+*reStructuredText* as its markup language. It was originally created for
+the new Python documentation, and thus has excellent facilities
+documenting Python projects, but is in no way limited to those.
 
 Also visit `Write the Docs`_, which is a place with high quality
 information about the art of writing documentation.
@@ -34,9 +45,47 @@ information about the art of writing documentation.
 .. _`Write the Docs`: http://docs.writethedocs.org/
 
 
+When to Use Sphinx?
+^^^^^^^^^^^^^^^^^^^
+
+Using *Sphinx* has several advantages over other options for writing
+documentation that has strong ties to the source code. It can be
+maintained and versioned together with the source, which increases the
+likelyhood that you end up with *current* and *correct* documentation.
+
+*Sphinx* was designed for that purpose – to write extensive ‘prosa’
+documentation in addition to any in-source markup most languages offer
+(e.g. Javadoc), and shines when it comes to cross-linking within the
+documentation and into source code – for example, it's easy to refer to
+identifiers in your source by their name.
+
+For a Python project, *Sphinx* is *the* obvious choice, but there are
+also extensions for Java and other languages (so-called *domains*). The
+generated output can be styled freely, and the *Sphinx* eco-system
+offers lots of documentation and code highlighting themes.
+
+Feature highlights
+^^^^^^^^^^^^^^^^^^
+
+* **Output formats** – HTML (including Windows HTML Help), LaTeX (for
+  printable PDF versions), Texinfo, manual pages, plain text.
+* **Extensive cross-references** – Semantic markup and automatic links
+  for functions, classes, citations, glossary terms and similar pieces
+  of information.
+* **Hierarchical structure** – Easy definition of a document tree, with
+  automatic links to siblings, parents and children.
+* **Automatic indices** – General index as well as a language-specific
+  module indices.
+* **Code handling** – Automatic highlighting using the Pygments
+  highlighter.
+* **Extensions** – Automatic testing of code snippets, inclusion of
+  docstrings from Python modules (API docs), and more.
+
+
 Introduction & Cheatsheets
 --------------------------
 
+* See the :ref:`sphinx-how-tos` section below for some quickstart advice.
 * `Sphinx reStructuredText primer <http://sphinx-doc.org/rest.html>`_
 
 
@@ -76,8 +125,81 @@ Tools
 .. _gedit3 language definition for reStructuredText: https://github.com/jhermann/ruby-slippers/blob/master/home/.local/share/gtksourceview-3.0/language-specs/restructuredtext.lang
 
 
+.. _sphinx-how-tos:
+
 How-Tos
 -------
+
+Creating a Minimal Project
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In your project directory, call ``sphinx-quickstart`` which will prompt
+you for required information. Answer the first question for a ‘root
+path’ with ``docs``, and the others according to your project's needs.
+You will then find a working minimal Sphinx project in the ``docs`` folder
+– ``git add`` that immediately, before you build your documentation the first time.
+
+To build a HTML rendering, go into ``docs`` and call ``make html``. If
+all goes well, you'll find the root page of your documentation at
+``docs/_build/html/index.html`` or ``docs/_build/index.html``
+(with newer versions of Sphinx) – just open it with your browser.
+
+If you used the current *Sphinx* version 1.3.1, the default theme is
+‘Alabaster’. Let's change that to the default theme used on *Read the
+Docs*, in ``docs/conf.py``:
+
+.. code-block:: python
+
+    html_theme = 'sphinx_rtd_theme'
+
+Call ``make html`` again and reload the page in your browser. You should
+see a difference.
+
+
+Adding a New Chapter
+^^^^^^^^^^^^^^^^^^^^
+
+To add a new chapter in its own file, create a file like
+``docs/chapter.rst`` with the following content:
+
+.. code-block:: rst
+
+    My New Chapter
+    ==============
+
+Then add that file to the *toctree* of your ``index.rst`` file:
+
+.. code-block:: rst
+
+    .. toctree::
+       :maxdepth: 2
+
+       chapter
+
+Entries in a *toctree* are just filenames, but relative to the
+containing file, and without extension, so we end up with just
+``chapter`` here.
+
+Rebuild the docs and *“My New Chapter”* will be added to the sidebar.
+
+
+Publishing Your Document
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to publish documentation for a project on *GitHub*, the
+easiest solution is `Read the Docs`_ (RTD), which is a hosting service
+that builds your Sphinx documentation on-the-fly based on commit
+triggers. That means you don't have to generate and upload anything,
+just commit any changes and they'll be published soon thereafter.
+
+RTD also knows about versions (as long as you maintain them properly)
+and thus offers *both* the latest documentation from source as well as
+previously released versions. As with all these services, you log in
+with OAuth2 and just click on your project repository to activate
+building – it's *very* easy.
+
+.. _`Read the Docs`: https://readthedocs.org/
+
 
 Adding a Custom Pygments Lexer to Sphinx
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
