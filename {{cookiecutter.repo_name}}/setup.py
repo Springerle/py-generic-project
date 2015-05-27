@@ -176,7 +176,7 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 project = _build_metadata()
 __all__ = ['project', 'project_root', 'package_name', 'srcfile']
 if __name__ == '__main__':
-    if '--metadata' == sys.argv[1]:
+    if '--metadata' in sys.argv[:1]:
         import json
         json.dump(project, sys.stdout, default=repr, indent=4, sort_keys=True)
         sys.stdout.write('\n')
