@@ -85,6 +85,29 @@ easy and painless.
 .. _`~/.cookiecutterrc`: https://github.com/jhermann/ruby-slippers/blob/master/home/.cookiecutterrc
 
 
+Requirements Handling
+---------------------
+
+There are *three* files that define a project's dependencies:
+``dev-requirements.txt``, ``test-requirements.txt``, and ``requirements.txt``.
+The first lists tools that you typically need as a developer to work on the project.
+It also includes the other two, so *one* call to ``pip install -r dev-requirements.txt``
+installs *all* of the project's dependencies for developer use.
+
+``tox`` uses only the test and install requirements in the virtualenvs it creates,
+because the tools aren't needed there (or if they are, they belong to the test ones).
+
+``setup.py`` loads these files into the ``install_requires`` and ``tests_require``
+parameters as far as possible. Special lines like ``-e …`` and similar are skipped,
+because only ``pip`` supports them; the idea here is to have none of those left
+at the time of a release.
+Note that ``pytest`` is always added to the test requirements, since the ``setup.py test``
+sub-command is mapped to use ``pytest`` as the test runner.
+There is also an optional file ``setup-requirements.txt`` loaded into ``setup_requires``,
+in case you need to use some *setuptools* extension. If you add that file, you should
+also include a matching  ``-r setup-requirements.txt`` line at the end of ``dev-requirements.txt``.
+
+
 Feature Toggles
 ---------------
 
