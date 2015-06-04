@@ -49,6 +49,9 @@ developer toolset available. On Debian-like systems, the following makes sure of
     sudo apt-get install python python-setuptools python-pkg-resources \
         python-virtualenv python-pip python-dev build-essential git
 
+For *Python3*, replace each occurence of ``python`` with ``python3`` in the above command –
+this requires a fairly recent distribution though, like *Debian Jessie*.
+
 On **Mac OS X**, install a modern *Python* tool chain and
 missing *GNU* utilities that are often needed by helper scripts:
 
