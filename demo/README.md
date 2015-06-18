@@ -105,8 +105,8 @@ Bump the version number to uniquely identify what we're releasing
 – the created version number is compliant to PEP-440.
 
 ```sh
-inv bump
-inv dist --devpi
+inv release.bump
+inv release.dist --devpi
 ```
 
 ![Development Dist](img/demo140.png)
@@ -156,7 +156,7 @@ git show HEAD
 Now make a distribution and upload it into ``devpi``.
 
 ```sh
-inv dist --devpi >/dev/null
+inv release.dist --devpi >/dev/null
 devpi list new-project
 ```
 
