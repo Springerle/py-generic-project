@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
+# pylint: disable=too-many-statements
 """
     {{ cookiecutter.project_name }} – {{ cookiecutter.short_description }}.
 
@@ -34,7 +35,6 @@ import os
 import re
 import sys
 import textwrap
-from codecs import open # pylint: disable=redefined-builtin
 from collections import defaultdict
 
 # Import setuptools
