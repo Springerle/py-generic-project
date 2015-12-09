@@ -2,9 +2,9 @@
 # Test requirements
 #
 
-pytest==2.7.0
+pytest==2.8.4
 pytest-spec==0.2.24
-pytest-cov==1.8.1
+pytest-cov==2.2.0
 {% if "travis" in cookiecutter.features.replace(',', ' ').split() -%}
 coveralls==0.5
 {% endif -%}
