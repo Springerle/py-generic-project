@@ -71,7 +71,7 @@ def cli(ctx, quiet=False, verbose=False, config_paths=None):  # pylint: disable=
 
 # Import sub-commands to define them AFTER `cli` is defined
 config.cli = cli
-from . import commands as _  # noqa pylint: disable=unused-import
+from . import commands as _  # noqa pylint: disable=unused-import, wrong-import-position
 
 if __name__ == "__main__":  # imported via "python -m"?
     __package__ = '{{ cookiecutter.pkg_name }}'  # pylint: disable=redefined-builtin
