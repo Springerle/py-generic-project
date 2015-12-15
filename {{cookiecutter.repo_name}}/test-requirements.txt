@@ -8,4 +8,5 @@ pytest-cov==2.2.0
 {% if "travis" in cookiecutter.features.replace(',', ' ').split() -%}
 coveralls==0.5
 {% endif -%}
+py>=1.4.29
 sh==1.11
