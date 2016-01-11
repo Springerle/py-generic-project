@@ -13,5 +13,11 @@ python:
 install:
     - "pip install -r dev-requirements.txt"
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
 # command to run tests
 script: invoke test
