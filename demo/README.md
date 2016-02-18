@@ -171,7 +171,7 @@ Yes, indeed…
 
 ```sh
 cookiecutter ../../dh-virtualenv-mold
-dch -r ''
+dch -r '' # give the changelog a properly formatted, current date entry
 ```
 
 ![Packaging create 'debian'](img/demo210.png)
