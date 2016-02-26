@@ -215,7 +215,7 @@ Installation With PEX
 
 `PEX files`_ are **P**\ ython **Ex**\ ecutable ZIP files, a format that contains
 a full distribution of a Python application in a single archive
-(just like exectable JARs for Java).
+(just like executable JARs for Java).
 PEX files can be targeted at a specific platform and Python version,
 but might also support multiple runtime environments.
 Consult the documentation of your application for further guidance.
