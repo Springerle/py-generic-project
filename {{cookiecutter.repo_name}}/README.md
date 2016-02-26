@@ -73,6 +73,9 @@ cd "{{ cookiecutter.repo_name }}"
 invoke build --docs test check
 ```
 
+To start a watchdog that auto-rebuilds documentation and reloads the opened browser tab on any change,
+call ``invoke docs -w -b`` (stop the watchdog using the ``-k`` option).
+
 You might also need to follow some
 [setup procedures](https://py-generic-project.readthedocs.org/en/latest/installing.html#quick-setup)
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
