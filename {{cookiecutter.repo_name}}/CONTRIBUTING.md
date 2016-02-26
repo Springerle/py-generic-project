@@ -82,7 +82,7 @@ All Python sources use spaces to indent, not TABs.
 
 Some things that will increase the chance that your pull request is accepted:
 
-* Follow style conventions you see used in the source already (and read [PEP8](http://www.python.org/dev/peps/pep-0008/)).
+* Follow style conventions you see used in the source already (and read [PEP8](http://pep8.org/)).
 * Include tests that fail *without* your code, and pass *with* it. Only minor refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, please also add a test for it!
 * Update any documentation or examples impacted by your change.
 * Styling conventions and code quality are checked with `invoke check`, tests are run using `invoke test`, and the docs can be built locally using `invoke build --docs`.
