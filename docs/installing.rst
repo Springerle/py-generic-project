@@ -254,7 +254,7 @@ the new environment, also giving it a name:
     cd ~/.local/virtualenvs
     virtualenv ‹newenv›
     . ‹newenv›/bin/activate
-    pip install -UI pip setuptools # get newest tooling
+    pip install -U pip setuptools # get newest tooling
 
 The third command *activates* the virtualenv, which means that
 when you call ``python`` or ``pip``, they run in the context of
