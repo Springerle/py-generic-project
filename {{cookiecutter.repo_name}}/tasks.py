@@ -49,9 +49,7 @@ def fresh_cookies(ctx, mold=''):
 namespace.add_task(fresh_cookies)
 
 
-@task(help={
-    'pty': "Whether to run commands under a pseudo-tty",
-})  # pylint: disable=invalid-name
+@task
 def ci(ctx):
     """Perform continuous integration tasks."""
     opts = ['']
