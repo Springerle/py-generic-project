@@ -25,7 +25,7 @@ Installing Python Software
 ==========================
 
 This is a guide for end-users on how to easily install Python software on the major platforms.
-See `Packaging Python Software <packaging.rst>`_ for the related developer guide
+See :doc:`packaging` for the related developer guide
 with distribution methods that enable this painless installation experience.
 
 
