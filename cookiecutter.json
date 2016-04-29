@@ -6,11 +6,12 @@
   , "repo_name": "{{ cookiecutter.project_name | lower | replace(' ', '-') }}"
   , "pkg_name": "{{ cookiecutter.repo_name | replace('-', '_') }}"
   , "version": "0.1.0"
-  , "year": "2015"
+  , "year": "2016"
   , "license": "Apache 2.0"
   , "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
   , "url": "{{ cookiecutter.github_url }}"
   , "short_description": "A new Python project"
   , "keywords": "hosted.by.github"
   , "features": "travis flake8 cli"
+  , "use_py3": "true"
 }
