@@ -207,10 +207,10 @@ sudo dpkg -i ../*.deb
 
 **Tools**
 
-* [Cookiecutter](http://cookiecutter.readthedocs.org/en/latest/)
+* [Cookiecutter](http://cookiecutter.readthedocs.io/en/latest/)
 * [PyInvoke](http://www.pyinvoke.org/)
 * [pytest](http://pytest.org/latest/contents.html)
-* [tox](https://tox.readthedocs.org/en/latest/)
+* [tox](https://tox.readthedocs.io/en/latest/)
 * [Pylint](http://docs.pylint.org/)
 * [pypa/setuptools](https://bitbucket.org/pypa/setuptools)
 * [twine](https://github.com/pypa/twine#twine)
