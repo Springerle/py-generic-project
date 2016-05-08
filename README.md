@@ -1,6 +1,6 @@
 # py-generic-project
 
- [![Logo](https://raw.githubusercontent.com/Springerle/py-generic-project/master/docs/_static/img/logo.png)](https://py-generic-project.readthedocs.org/)
+ [![Logo](https://raw.githubusercontent.com/Springerle/py-generic-project/master/docs/_static/img/logo.png)](https://py-generic-project.readthedocs.io/)
 
 A cookiecutter template that creates a basic Python setuptools project,
 which can be later on augmented with various optional accessories.
@@ -36,7 +36,7 @@ Jinja2's `_compat` module is available in the package, and fitting
 See [Porting to Python 3 Redux](http://lucumr.pocoo.org/2013/5/21/porting-to-python-3-redux/)
 for a pragmatic porting guide, based on actual experience.
 
-:books: | Get to know all the details on [Read The Docs](https://py-generic-project.readthedocs.org/).
+:books: | Get to know all the details on [Read The Docs](https://py-generic-project.readthedocs.io/).
 ----: | :----
 
 

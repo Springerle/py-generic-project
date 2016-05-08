@@ -74,7 +74,7 @@ invoke build --docs test check
 ```
 
 You might also need to follow some
-[setup procedures](https://py-generic-project.readthedocs.org/en/latest/installing.html#quick-setup)
+[setup procedures](https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup)
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
 **Running the test suite** can be done several ways, just call ``invoke test`` for a quick check,
@@ -90,10 +90,10 @@ call ``invoke docs -w -b`` (stop the watchdog using the ``-k`` option).
 
 **Tools**
 
-* [Cookiecutter](http://cookiecutter.readthedocs.org/en/latest/)
+* [Cookiecutter](http://cookiecutter.readthedocs.io/en/latest/)
 * [PyInvoke](http://www.pyinvoke.org/)
 * [pytest](http://pytest.org/latest/contents.html)
-* [tox](https://tox.readthedocs.org/en/latest/)
+* [tox](https://tox.readthedocs.io/en/latest/)
 * [Pylint](http://docs.pylint.org/)
 * [twine](https://github.com/pypa/twine#twine)
 * [bpython](http://docs.bpython-interpreter.org/)
