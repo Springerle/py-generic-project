@@ -265,7 +265,7 @@ browser tab with the rendered documentation.
 Try to ``touch docs/index.rst`` and watch the activity indicator in your
 browser – or take a look into the ``docs/watchdog.log`` file.
 
-.. _`rituals`: https://rituals.readthedocs.org/
+.. _`rituals`: https://rituals.readthedocs.io/
 
 
 Converting from Markdown to reST

@@ -98,10 +98,10 @@ References
 Tools
 ^^^^^
 
--  `Cookiecutter <http://cookiecutter.readthedocs.org/en/latest/>`_
+-  `Cookiecutter <https://cookiecutter.readthedocs.io/en/latest/>`_
 -  `PyInvoke <http://www.pyinvoke.org/>`_
 -  `pytest <http://pytest.org/latest/contents.html>`_
--  `tox <https://tox.readthedocs.org/en/latest/>`_
+-  `tox <https://tox.readthedocs.io/en/latest/>`_
 -  `Pylint <http://docs.pylint.org/>`_
 -  `pypa/setuptools <https://bitbucket.org/pypa/setuptools>`_
 -  `pypa/sampleproject <https://github.com/pypa/sampleproject>`_
