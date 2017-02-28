@@ -13,6 +13,16 @@
  [![Download format](https://pypip.in/format/{{ cookiecutter.repo_name }}/badge.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
  [![Downloads](https://img.shields.io/pypi/dw/{{ cookiecutter.repo_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/)
 
+**Contents**
+
+ * [Overview](#overview)
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [Contributing](#contributing)
+ * [Trouble-Shooting](#trouble-shooting)
+ * [References](#references)
+ * [Acknowledgements](#acknowledgements)
+
 
 ## Overview
 
@@ -69,21 +79,38 @@ call these commands:
 ```sh
 git clone "{{ cookiecutter.github_url }}.git"
 cd "{{ cookiecutter.repo_name }}"
-command . .env --yes --develop
+command . .env --yes --develop  # add '--virtualenv /usr/bin/virtualenv' for Python2
 invoke build --docs test check
 ```
 
-You might also need to follow some
+For this to work, you might also need to follow some
 [setup procedures](https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup)
 to make the necessary basic commands available on *Linux*, *Mac OS X*, and *Windows*.
 
-**Running the test suite** can be done several ways, just call ``invoke test`` for a quick check,
-or ``invoke test.tox`` for testing with all supported Python versions
-(if you [have them available](https://github.com/jhermann/priscilla/tree/master/pyenv)).
+**Running the test suite** can be done several ways, just call ``invoke test`` for a quick check.
+Run ``invoke test.tox`` for testing with *all* supported Python versions
+(if you [have them available](https://github.com/jhermann/priscilla/tree/master/pyenv)),
+or be more selective by e.g. calling ``invoke test.tox -e py27,py34``.
+
 Use ``invoke check`` to **run a code-quality scan**.
 
 To **start a watchdog that auto-rebuilds documentation** and reloads the opened browser tab on any change,
 call ``invoke docs -w -b`` (stop the watchdog using the ``-k`` option).
+
+
+## Trouble-Shooting
+
+### 'pkg-resources not found' or similar during virtualenv creation
+
+If you get errors regarding ``pkg-resources`` during the virtualenv creation,
+update your build machine's ``pip`` and ``virtualenv``.
+The versions on many distros are just too old to handle current infrastructure (especially PyPI).
+
+This is the one exception to “never sudo pip”, so go ahead and do this:
+
+```sh
+sudo pip install -U pip virtualenv
+```
 
 
 ## References
