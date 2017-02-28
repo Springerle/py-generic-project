@@ -69,7 +69,7 @@ call these commands:
 ```sh
 git clone "{{ cookiecutter.github_url }}.git"
 cd "{{ cookiecutter.repo_name }}"
-. .env --yes --develop
+command . .env --yes --develop
 invoke build --docs test check
 ```
 
