@@ -65,6 +65,11 @@ The former is recommended for users who just want to run some Python software,
 the latter for developers and ‘power users’
 with some existing Python and Linux experience.
 
+More recent options are `bash for Windows`_, `Docker for Windows`_,
+and `Windows Containers`_.
+After you install one of these, act like you're on a **Linux** system,
+because as long as you operate within those environments, you actually are.
+
 .. note::
 
     Remember that the next step is either :ref:`pip-from-pypi` or :ref:`pip-from-github`.
@@ -335,6 +340,9 @@ which in the end are only lists of ``pip install`` arguments.
 .. _`Python Releases for Windows`: https://www.python.org/downloads/windows/
 .. _`Python Extensions for Windows`: http://sourceforge.net/projects/pywin32/files/
 .. _`Babun homepage`: http://babun.github.io/
+.. _`bash for Windows`: https://msdn.microsoft.com/en-us/commandline/wsl/about
+.. _`Docker for Windows`: https://docs.docker.com/docker-for-windows/
+.. _`Windows Containers`: https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/
 .. _`Conda`: http://conda.pydata.org/
 .. _`Miniconda`: http://conda.pydata.org/miniconda.html#miniconda
 .. _`pyenv`: https://github.com/yyuu/pyenv
