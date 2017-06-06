@@ -62,6 +62,7 @@ if you re-use all or parts of the contained templating mechanics and documentati
 * [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
 * [tony/cookiecutter-pypackage](https://github.com/tony/cookiecutter-pypackage)
 * [Nekroze/cookiecutter-pypackage](https://github.com/Nekroze/cookiecutter-pypackage)
+* [darvid/cookiecutter-pylibng](https://github.com/darvid/cookiecutter-pylibng)
 * [transcode-de/cookiecutter-django-project](https://github.com/transcode-de/cookiecutter-django-project)
 * [mozilla/sugardough](https://github.com/mozilla/sugardough)
 
