@@ -66,6 +66,8 @@ if you re-use all or parts of the contained templating mechanics and documentati
 * [transcode-de/cookiecutter-django-project](https://github.com/transcode-de/cookiecutter-django-project)
 * [mozilla/sugardough](https://github.com/mozilla/sugardough)
 
+**Related Tools**
+
 * [PyScaffold](https://github.com/blue-yonder/pyscaffold)
 * [weber-minimal](https://github.com/vmalloc/weber-minimal) – A Flask application skeleton with Ansible deployment.
 
