@@ -47,7 +47,7 @@ def help_command(ctx, config_dump=False):
     click.echo("Call '{} --help' to get a list of available commands & options.".format(app_name))
     click.echo("Call '{} «command» --help' to get help on a specific command.".format(app_name))
     click.echo("Call '{} --version' to get the above version information separately.".format(app_name))
-    click.echo("Call '{} --license' to get licensing informatioon.".format(app_name))
+    click.echo("Call '{} --license' to get licensing information.".format(app_name))
 
     # click.echo('\ncontext = {}'.format(repr(vars(ctx))))
     # click.echo('\nparent = {}'.format(repr(vars(ctx.parent))))
