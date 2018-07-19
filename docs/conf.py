@@ -23,7 +23,7 @@ if not on_rtd:
 
 
 meta = dict(
-    author = 'Jürgen Hermann',
+    author = u'Jürgen Hermann',
     description = 'A cookiecutter template that creates a basic Python setuptools'
                   ' project, which can be later on augmented with various optional'
                   ' accessories.',
