@@ -32,6 +32,7 @@ See also these other resources on the web…
 
   * The `Python Packaging User Guide <https://packaging.python.org/>`_
   * `The Hitchhiker’s Guide to Python! <http://docs.python-guide.org/>`_
+  * `The Sheer Joy of Packaging! <https://python-packaging-tutorial.readthedocs.io/en/latest/>`_ – A Scipy 2018 tutorial, also covering `Conda`
 
 
 Packaging PyPI Releases
