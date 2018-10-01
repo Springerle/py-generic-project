@@ -2,7 +2,7 @@
 
 This directory exists to keep the project base directory clean and
 holds any files that do not *have to* live in the project root.
-It contains the folowing files:
+It contains the following files:
 
 Filename | Description
 :---- | :----
