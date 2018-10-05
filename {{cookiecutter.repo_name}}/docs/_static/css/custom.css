@@ -1,6 +1,20 @@
 /* Custom styles */
 
-@import url("theme.css");
+body {
+    color: #000;
+}
+
+.wy-side-nav-search > div.version {
+    color: #026;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+	color: #777;
+}
+
+.rst-content blockquote {
+    border-left: 2px solid #ddd;
+}
 
 code, .rst-content tt, .rst-content code {
     font-size: 95%;
