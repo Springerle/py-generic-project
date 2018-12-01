@@ -134,19 +134,10 @@ def prune_empty_files():
             os.unlink(filepath)
 
 
-def copy_license(repo_dir, name):
+def copy_license(name):
     """Copy license file."""
-    if repo_dir is None:
-        sys.stderr.write(
-            "Cannot access license files, is your 'cookiecutter' version too old? (need v1.1+)\n"
-            "Search for '## LICENSE' in the generated files for unreplaced placeholders.\n"
-            "\nTo install the necessary patches that make this work, use\n"
-            "\n    pip install -e 'git+https://github.com/jhermann/cookiecutter.git"
-                "@enriched-context-for-hooks#egg=cookiecutter'\n\n"
-        )
-        return
-
-    filename = os.path.join(repo_dir, 'licenses', name.replace(' ', '_') + '.txt')
+    repo_dir = os.getcwd()
+    filename = os.path.join(repo_dir, 'licenses.in', name.replace(' ', '_') + '.txt')
     trove_name = LICENSES.get(name, None)
     if trove_name:  # Known license?
         if '::' not in trove_name:
@@ -158,7 +149,7 @@ def copy_license(repo_dir, name):
         shutil.copyfile(filename, "LICENSE")
 
         # Read in short license form for source files
-        filename_short = os.path.join(repo_dir, 'licenses', 'short', name.replace(' ', '_') + '.txt')
+        filename_short = os.path.join(repo_dir, 'licenses.in', 'short', name.replace(' ', '_') + '.txt')
         with io.open(filename_short, 'r', encoding='utf-8') as handle:
             license_short = handle.readlines()
 
@@ -179,17 +170,17 @@ def copy_license(repo_dir, name):
             name, ', '.join(sorted(LICENSES.keys())),
         ))
 
+    shutil.rmtree(os.path.join(repo_dir, 'licenses.in'))
+
 
 def run():
     """Main loop."""
     Undefined = None # pylint: disable=invalid-name, unused-variable
-    repo_dir = None
-    repo_dir = {{ repo_dir | pprint }}
 
     context = get_context()
     dump_context(context, 'project.d/cookiecutter.json')
     prune_empty_files()
-    copy_license(repo_dir, context['license'])
+    copy_license(context['license'])
 
 
 if __name__ == '__main__':
