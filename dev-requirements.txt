@@ -10,12 +10,12 @@ https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 # Tornado 5+ requires an up-to-date SSL module - this means Python 2.7.9+ or 3.4+
 tornado<5; python_full_version < "2.7.9" or python_version == "3.2" or python_version == "3.3"
 
-sphinx==1.8.1
+sphinx==1.8.2
 sphinx-autobuild==0.7.1
 
 #cookiecutter>=1.1
 https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
-pytest==3.8.2
+pytest==4.0.1
 pytest-spec==1.1.0
 py>=1.4.29
 

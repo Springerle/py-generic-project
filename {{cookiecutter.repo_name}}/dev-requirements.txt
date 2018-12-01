@@ -3,21 +3,21 @@
 #
 
 pip>=8
-invoke==0.14.0
+invoke==1.2.0
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
 
-pylint==1.8.2
+pylint==2.2.2
 bpython==0.17.1
 yolk3k==0.9
 
-tox==2.9.1
-twine==1.10.0
-pip-upgrader==1.4.4
+tox==3.5.3
+twine==1.12.1
+pip-upgrader==1.4.6
 
-Sphinx==1.7.1
+Sphinx==1.8.2
 sphinx-autobuild==0.7.1
-sphinx-rtd-theme==0.2.4
+sphinx-rtd-theme==0.4.2
 docutils<0.13.1
 
 -r test-requirements.txt
