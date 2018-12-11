@@ -164,6 +164,7 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
         data_files = data_files.items(),
         zip_safe = False,
         include_package_data = True,
+        python_requires = '>=2.7' if any('Python :: 2' in x for x in classifiers) else '>=3.4',
         install_requires = requires['install'],
         setup_requires = requires['setup'],
         tests_require =  requires['test'],
