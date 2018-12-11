@@ -17,7 +17,7 @@ sphinx-autobuild==0.7.1
 https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
 pytest==4.0.1
 pytest-spec==1.1.0
-py>=1.4.29
+py>=1.5.2
 
 pylint==1.8.2
 bpython==0.17.1
