@@ -11,7 +11,7 @@ from __future__ import absolute_import, unicode_literals, print_function
 import re
 
 import click
-from bunch import Bunch
+from munch import Munch as Bunch
 
 from . import config
 
