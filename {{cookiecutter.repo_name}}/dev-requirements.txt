@@ -2,7 +2,7 @@
 # Development requirements
 #
 
-pip>=8
+pip>=18
 invoke==1.2.0
 #rituals==0.3.0
 -e git+https://github.com/jhermann/rituals.git#egg=rituals
