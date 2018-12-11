@@ -18,7 +18,6 @@ pip-upgrader==1.4.6
 Sphinx==1.8.2
 sphinx-autobuild==0.7.1
 sphinx-rtd-theme==0.4.2
-docutils<0.13.1
 
 -r test-requirements.txt
 -r requirements.txt
