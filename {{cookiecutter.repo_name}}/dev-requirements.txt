@@ -13,6 +13,7 @@ bpython==0.17.1
 yolk3k==0.9
 
 tox==3.5.3
+tox-venv==0.3.1
 twine==1.12.1
 pip-upgrader==1.4.6
 
