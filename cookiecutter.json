@@ -6,7 +6,7 @@
   , "repo_name": "{{ cookiecutter.project_name | lower | replace(' ', '-') }}"
   , "pkg_name": "{{ cookiecutter.repo_name | replace('-', '_') }}"
   , "version": "0.1.0"
-  , "year": "2018"
+  , "year": "2019"
   , "license": "Apache 2.0"
   , "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
   , "url": "{{ cookiecutter.github_url }}"
