@@ -2,7 +2,7 @@
 
 project = dict(
     name = 'py-generic-project',
-    version = '1.2',
+    version = '1.3',
     packages = [],
     url='https://github.com/Springerle/py-generic-project',
 )
