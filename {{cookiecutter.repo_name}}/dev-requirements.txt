@@ -4,8 +4,8 @@
 
 pip>=18
 invoke==1.2.0
-#rituals==0.3.0
--e git+https://github.com/jhermann/rituals.git#egg=rituals
+rituals==0.3.1
+#https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 
 pylint==1.9.3; python_version < '3.4'
 pylint==2.2.2; python_version >= '3.4'
