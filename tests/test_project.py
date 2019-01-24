@@ -41,7 +41,7 @@ def test_package_init_module_was_created(project):
 
 
 def test_readme_has_github_url_and_newline_at_end(project):
-    with io.open(project + '/README.md', encoding='utf-8') as handle:
+    with io.open(project + '/README.rst', encoding='utf-8') as handle:
         readme = handle.read()
 
     # TODO: cookiecutter needs a --no-rc option, so we'll always get 'jschmoe'
