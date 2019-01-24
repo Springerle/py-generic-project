@@ -13,5 +13,4 @@
   , "short_description": "A new Python project"
   , "keywords": "hosted.by.github"
   , "features": "travis flake8 cli"
-  , "use_py3": "true"
 }
