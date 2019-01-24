@@ -3,7 +3,13 @@
 #
 # More at https://docs.python.org/2/distutils/sourcedist.html
 
-include README.rst LICENSE requirements.txt *-requirements.txt
+include README.rst LICENSE requirements.txt *-requirements.txt .env .gitignore
 recursive-include project.d *.py *.md *.txt *.cfg
-#recursive-include debian changelog control compat copyright rules *.links *.postinst *.triggers
-#recursive-include debian/source format options
+recursive-include docs/_static/img *.md *.png *.ico *.svg *.graphml
+
+#recursive-include debian *
+#prune debian/.debhelper
+#prune debian/{{ cookiecutter.repo_name }}
+#recursive-include systemd *.service
+
+global-exclude *~ *.swp *debhelper* *.substvars files
