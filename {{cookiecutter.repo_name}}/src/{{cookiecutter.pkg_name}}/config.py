@@ -14,7 +14,6 @@ import sys
 
 from rudiments.reamed.click import Configuration  # noqa pylint: disable=unused-import
 
-from ._compat import iteritems
 
 # Determine path this command is located in (installed to)
 try:
@@ -47,7 +46,7 @@ def version_info(ctx=None):
     else:
         for dist in iter(pkg_resources.working_set):
             scripts = dist.get_entry_map().get('console_scripts') or {}
-            for _, entry_point in iteritems(scripts):
+            for _, entry_point in scripts.items():
                 if entry_point.module_name == (__package__ + '.__main__'):
                     version = dist.version
                     break
