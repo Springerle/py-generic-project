@@ -13,11 +13,13 @@ tornado<5; python_full_version < "2.7.9" or python_version == "3.2" or python_ve
 sphinx==1.8.2
 sphinx-autobuild==0.7.1
 
-#cookiecutter>=1.1
-https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
+cookiecutter==1.6.0
+##https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
+
 pytest==4.0.1
 pytest-spec==1.1.0
 py>=1.5.2
+pluggy>=0.7
 
 pylint==1.8.2
 bpython==0.17.1

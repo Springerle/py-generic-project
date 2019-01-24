@@ -9,4 +9,5 @@ pytest-cov==2.6.1
 coveralls==1.5.1
 {% endif -%}
 py>=1.5.2
+pluggy>=0.7
 sh==1.12.14
