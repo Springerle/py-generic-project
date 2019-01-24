@@ -3,7 +3,7 @@
 # pylint: disable=superfluous-parens, redefined-builtin, unused-import
 """ Project automation for Invoke.
 """
-# Copyright (c) 2015 Jürgen Hermann
+# Copyright (c) 2015 - 2019 Jürgen Hermann
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
