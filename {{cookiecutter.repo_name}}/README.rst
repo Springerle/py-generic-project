@@ -69,7 +69,7 @@ directory** for this project, call these commands:
 
     git clone "{{ cookiecutter.github_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
-    command . .env --yes --develop  # add '--virtualenv /usr/bin/virtualenv' for Python2
+    command . .env --yes --develop
     invoke build --docs test check
 
 For this to work, you might also need to follow some `setup procedures`_
