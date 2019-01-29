@@ -42,8 +42,7 @@ Google group.
 Features
 --------
 
-The resulting project uses
-`rituals <https://github.com/jhermann/rituals>`_ and
+The resulting project uses `rituals`_ and
 `invoke <https://github.com/pyinvoke/invoke/>`_ for task automation, and
 `setuptools <https://bitbucket.org/pypa/setuptools>`_ for building and
 distributing the project. A provided
@@ -113,8 +112,8 @@ Tools
 Packages
 ^^^^^^^^
 
--  `Rituals <https://jhermann.github.io/rituals>`_
--  `Click <http://click.pocoo.org/>`_
+-  `rituals`_
+-  `click <http://click.pocoo.org/>`_
 
 
 Indices and Tables
@@ -123,3 +122,6 @@ Indices and Tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+.. _`rituals`: https://jhermann.github.io/rituals
