@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
 # flake8: noqa
 """
@@ -8,8 +7,6 @@
 
     ## LICENSE_SHORT ##
 """
-from __future__ import absolute_import, unicode_literals, print_function
-
 __url__             = "{{ cookiecutter.url }}"
 __version__         = "{{ cookiecutter.version }}"
 __license__         = "{{ cookiecutter.license }}"

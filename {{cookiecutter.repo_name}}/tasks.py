@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation
 """ Project automation for Invoke.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 #
 # ## LICENSE_SHORT ##
-from __future__ import absolute_import, unicode_literals
-
 import os
 import shutil
 import tempfile

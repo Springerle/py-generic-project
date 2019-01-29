@@ -1,5 +1,4 @@
 {% if "cli" in cookiecutter.features.replace(',', ' ').split() -%}
-# *- coding: utf-8 -*-
 # pylint: disable=wildcard-import, unused-wildcard-import, missing-docstring
 # pylint: disable=redefined-outer-name, no-self-use, bad-continuation
 """ Test '__main__' CLI stub.
@@ -9,8 +8,6 @@
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 #
 # ## LICENSE_SHORT ##
-from __future__ import absolute_import, unicode_literals, print_function
-
 import os
 import sys
 

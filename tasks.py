@@ -1,4 +1,3 @@
-# *- coding: utf-8 -*-
 # pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation
 # pylint: disable=superfluous-parens, redefined-builtin, unused-import
 """ Project automation for Invoke.

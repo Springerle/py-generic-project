@@ -1,13 +1,10 @@
 {% if "cli" in cookiecutter.features.replace(',', ' ').split() -%}
-# -*- coding: utf-8 -*-
 # pylint: disable=bad-continuation
 """ Configuration utilities.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 #
 # ## LICENSE_SHORT ##
-from __future__ import absolute_import, unicode_literals, print_function
-
 import os
 import re
 import sys

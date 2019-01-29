@@ -1,4 +1,3 @@
-# *- coding: utf-8 -*-
 # pylint: disable=missing-docstring, bad-continuation
 """ Test the template.
 """
@@ -21,8 +20,6 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-from __future__ import absolute_import, unicode_literals
-
 import io
 import os
 

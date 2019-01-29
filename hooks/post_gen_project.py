@@ -1,5 +1,4 @@
 #! /usr/bin/env python
-# -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace, superfluous-parens
 """
     Cookiecutter post-gen hook.
@@ -28,8 +27,6 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
 """
-from __future__ import absolute_import, unicode_literals, print_function
-
 import io
 import os
 import sys

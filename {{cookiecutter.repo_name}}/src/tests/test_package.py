@@ -1,12 +1,9 @@
-# *- coding: utf-8 -*-
 # pylint: disable=wildcard-import, missing-docstring, no-self-use, bad-continuation
 """ Test the package metadata.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 #
 # ## LICENSE_SHORT ##
-from __future__ import absolute_import, unicode_literals, print_function
-
 from {{ cookiecutter.pkg_name }} import __version__ as version
 
 
