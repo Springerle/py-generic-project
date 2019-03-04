@@ -28,7 +28,7 @@ from source, use these commands (ideally within an activated virtualenv):
 
     repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
     python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    python3 -m pip install -e "https://github.com/$repo/archive/master.zip#egg=${repo#*/}"
+    python3 -m pip install "https://github.com/$repo/archive/master.zip#egg=${repo#*/}"
 
 See `Contributing`_ on how to create a full development environment.
 
