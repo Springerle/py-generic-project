@@ -22,13 +22,13 @@ Installation
 *{{ cookiecutter.project_name }}* can be installed via
 ``pip install {{ cookiecutter.repo_name }}`` as usual, see `releases`_
 for an overview of available versions. To get a bleeding-edge version
-from source, use these commands:
+from source, use these commands (ideally within an activated virtualenv):
 
 .. code:: sh
 
     repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
-    pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+    python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+    python3 -m pip install -e "https://github.com/$repo/archive/master.zip#egg=${repo#*/}"
 
 See `Contributing`_ on how to create a full development environment.
 
