@@ -22,7 +22,7 @@ pytest-spec==1.1.0
 py>=1.5.2
 pluggy>=0.7
 
-pylint==1.8.2
+pylint==2.3.0
 bpython==0.17.1
 yolk3k==0.9
 pip-upgrader==1.4.6
