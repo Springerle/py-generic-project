@@ -30,8 +30,8 @@ To get a bleeding-edge version from source, use these commands:
 .. code-block:: shell
 
     repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
-    pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
-    pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+    python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+    python3 -m pip install -e "git+https://github.com/$repo.git#egg=${repo#*/}"
 
 See the following section on how to create a full development environment.
 
