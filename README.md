@@ -25,7 +25,7 @@ for task automation, and
 [setuptools](https://bitbucket.org/pypa/setuptools)
 for building and distributing the project.
 A provided [autoenv](https://github.com/kennethreitz/autoenv) script takes care
-of creating a fully boot-strapped `virtualenv` – it can also be used manually
+of creating a fully boot-strapped `virtualenv` or `venv` – it can also be called manually
 if you don't want to install `autoenv`.
 
 Other integrated tools are `pylint` for code quality checking,
