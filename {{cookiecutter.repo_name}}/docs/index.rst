@@ -24,14 +24,19 @@ see `releases <{{ cookiecutter.github_url }}/releases>`_
 on GitHub for an overview of available versions – the project uses
 `semantic versioning <http://semver.org/>`_ and follows
 `PEP 440 <https://www.python.org/dev/peps/pep-0440/>`_ conventions.
+If no releases are available yet, install from source as described right below.
 
 To get a bleeding-edge version from source, use these commands:
 
 .. code-block:: shell
 
     repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+    python3 -m venv ~/.local/{{ cookiecutter.repo_name }} && . $_/bin/activate
     python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
     python3 -m pip install -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+{%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
+    ln -nfs ../.local/{{ cookiecutter.repo_name }}/bin/{{ cookiecutter.repo_name }} ~/bin
+{%- endif %}
 
 See the following section on how to create a full development environment.
 
@@ -51,6 +56,8 @@ about it, or just follow these instructions:
         || echo >>~/.bash_completion ". ~/.bash_completion.d/$cmdname.sh"
     . "/etc/bash_completion"
 {%- endif %}
+
+After installation, continue with :doc:`usage`.
 
 
 Contributing
