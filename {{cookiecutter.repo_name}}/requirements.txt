@@ -3,8 +3,8 @@
 #
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 
-click>=3.3,<4
-colorama
+click==7.0
+colorama==0.4.1
 
 munch==2.3.2
 configobj>=5.0,<6
