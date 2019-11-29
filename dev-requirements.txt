@@ -26,4 +26,4 @@ pluggy>=0.7
 pylint==2.3.0
 bpython==0.17.1
 yolk3k==0.9
-pip-upgrader==1.4.6
+pip-upgrader==1.4.15

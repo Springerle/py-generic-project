@@ -14,7 +14,7 @@ yolk3k==0.9
 tox==3.7.0
 tox-venv==0.3.1
 twine==1.12.1
-pip-upgrader==1.4.6
+pip-upgrader==1.4.15
 
 Sphinx==1.8.3
 sphinx-autobuild==0.7.1
