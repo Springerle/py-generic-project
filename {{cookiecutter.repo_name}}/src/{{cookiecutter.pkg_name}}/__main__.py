@@ -6,11 +6,13 @@
 #
 # ## LICENSE_SHORT ##
 import re
+import logging
 
 import click
 from munch import Munch as Bunch
 
 from . import config
+from .util import misc
 
 
 # Default name of the app, and its app directory
@@ -50,20 +52,40 @@ def license_option(*param_decls, **attrs):
     return decorator
 
 
+def init_logging(ctx, json_log):
+    """Initialize logging subsystem."""
+    import json_logging  # pylint: disable=import-outside-toplevel
+
+    log_level = logging.WARNING if ctx.obj.quiet else logging.DEBUG if ctx.obj.verbose else logging.INFO
+    logging.basicConfig(level=log_level)
+    if json_log:
+        json_logging.ENABLE_JSON_LOGGING = True
+    json_logging._logger.setLevel(logging.ERROR)  # get rid of ugly warning  pylint: disable=protected-access
+    json_logging.init_non_web()
+    json_logging.config_root_logger()
+    json_logging._logger.setLevel(logging.INFO)  # pylint: disable=protected-access
+
+    ctx.obj.log = misc.make_logger(ctx.info_name)
+    ctx.obj.log.setLevel(log_level)
+
+
 # Main command (root)
 @click.group(context_settings=CONTEXT_SETTINGS)
 @click.version_option(message=config.VERSION_INFO)
 @license_option()
 @click.option('-q', '--quiet', is_flag=True, default=False, help='Be quiet (show only errors).')
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
+@click.option('-J', '--json-log', is_flag=True, default=False, help='Enforce JSON logging.')
 @click.option('-c', '--config', "config_paths", metavar='FILE',
               multiple=True, type=click.Path(), help='Load given configuration file(s).')
 @click.pass_context
-def cli(ctx, quiet=False, verbose=False, config_paths=None):  # pylint: disable=unused-argument
+def cli(ctx, quiet=False, verbose=False, json_log=False, config_paths=None):  # pylint: disable=unused-argument
     """'{{ cookiecutter.repo_name }}' command line tool."""
-    config.Configuration.from_context(ctx, config_paths)
     ctx.obj.quiet = quiet
     ctx.obj.verbose = verbose
+    init_logging(ctx, json_log)
+
+    config.Configuration.from_context(ctx, config_paths)
 
 
 # Import sub-commands to define them AFTER `cli` is defined
