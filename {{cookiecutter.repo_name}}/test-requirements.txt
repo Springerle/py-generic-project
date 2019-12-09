@@ -2,12 +2,12 @@
 # Test requirements
 #
 
-pytest==5.2.1
+pytest==5.3.1
 https://github.com/jhermann/pytest-spec/archive/fix-hook-config.zip#egg=pytest-spec
 #pytest-spec==1.1.0
-pytest-cov==2.6.1
+pytest-cov==2.8.1
 {% if "travis" in cookiecutter.features.replace(',', ' ').split() -%}
-coveralls==1.5.1
+coveralls==1.9.2
 {% endif -%}
 py>=1.5.2
 pluggy>=0.7

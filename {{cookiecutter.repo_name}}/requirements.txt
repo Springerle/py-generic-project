@@ -4,9 +4,10 @@
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 
 click==7.0
-colorama==0.4.1
+colorama==0.4.3
 
-munch==2.3.2
+munch==2.5.0
+json-logging==1.0.5
 configobj>=5.0,<6
 #-e git+https://github.com/jhermann/configobj@move-to-package-32#egg=configobj
 #rudiments==0.1.0
