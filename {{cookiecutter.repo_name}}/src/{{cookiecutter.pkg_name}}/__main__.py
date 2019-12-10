@@ -6,6 +6,7 @@
 #
 # ## LICENSE_SHORT ##
 import re
+import time
 import logging
 
 import click
@@ -21,7 +22,7 @@ config.APP_NAME = __app_name__
 
 # The `click` custom context settings
 CONTEXT_SETTINGS = dict(
-    obj=Bunch(cfg=None, quiet=False, verbose=False),  # namespace for custom stuff
+    obj=Bunch(cfg=None, log=None, quiet=False, verbose=False),  # namespace for custom stuff
     help_option_names=['-h', '--help'],
     auto_envvar_prefix=__app_name__.upper().replace('-', '_'),
 )
@@ -81,6 +82,15 @@ def init_logging(ctx, json_log):
 @click.pass_context
 def cli(ctx, quiet=False, verbose=False, json_log=False, config_paths=None):  # pylint: disable=unused-argument
     """'{{ cookiecutter.repo_name }}' command line tool."""
+    def log_runtime():
+        "Log total runtime."
+        if ctx.obj.log:
+            ctx.obj.log.info('Execution took {:.2f}s'.format(time.time() - ctx.obj.startup))
+
+    ctx.obj.startup = time.time()
+    if verbose:
+        ctx.call_on_close(log_runtime)
+
     ctx.obj.quiet = quiet
     ctx.obj.verbose = verbose
     init_logging(ctx, json_log)
