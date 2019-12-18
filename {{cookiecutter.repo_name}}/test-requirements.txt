@@ -3,8 +3,8 @@
 #
 
 pytest==5.3.1
-https://github.com/jhermann/pytest-spec/archive/fix-hook-config.zip#egg=pytest-spec
-#pytest-spec==1.1.0
+#https://github.com/jhermann/pytest-spec/archive/fix-hook-config.zip#egg=pytest-spec
+pytest-spec==2.0.0
 pytest-cov==2.8.1
 {% if "travis" in cookiecutter.features.replace(',', ' ').split() -%}
 coveralls==1.9.2

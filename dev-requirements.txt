@@ -18,8 +18,8 @@ cookiecutter==1.6.0
 ##https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
 
 pytest==5.3.1
-https://github.com/jhermann/pytest-spec/archive/fix-hook-config.zip#egg=pytest-spec
-#pytest-spec==1.1.0
+#https://github.com/jhermann/pytest-spec/archive/fix-hook-config.zip#egg=pytest-spec
+pytest-spec==2.0.0
 py>=1.5.2
 pluggy>=0.7
 
