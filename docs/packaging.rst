@@ -40,6 +40,53 @@ Packaging PyPI Releases
 
 **TODO**
 
+In short:
+
+  * read above resources
+  * use ``setuptools`` and ``wheel`` via the ``bdist_wheel`` setup command
+  * use ``twine`` to upload
+
+
+
+Building Zipapps (PEP 441)
+--------------------------
+
+Running Python code directly from ZIP archives is nothing new,
+`PEP 273 <https://www.python.org/dev/peps/pep-0273/>`_ made its debut in 2001,
+as part of Python 2.3 in the form of the ``zipimport`` module..
+
+`PEP 441 <https://www.python.org/dev/peps/pep-0441/>`_ builds on this and
+describes mechanisms to bundle full applications into a single ZIP file
+that can be made executable.
+It was approved in 2015 and a first implementation appeared in Python 3.5 via the ``zipapp`` module.
+
+See the PEP for details on how making a ZIP into an executable file works,
+but basically on POSIX systems the Python interpreter is called in a ‘bang path’
+that is followed by the ZIP archive. The interpreter recognizes the ‘script’
+is a whole application archive and acts accordingly.
+On Windows, zipapps *MUST* carry the ``.pyz`` extension which is bound to the ``py`` wrapper command,
+which in turn looks at the bang path and calls a matching Python interpreter from the installed set.
+
+To display the bang path of a zipapp, use this command::
+
+    python3 -m zipapp --info foo.pyz
+
+If you want to change the requested Python version to a newer one that is actually installed,
+change the bang path as part of the installation process::
+
+    python3 -m zipapp -p '/usr/bin/env python3.5' -o ~/bin/foo foo.pyz
+
+This can also be done on an ad-hoc basis, by explicitly calling the desired interpreter::
+
+    python3.5 foo.pyz …  # POSIX
+    py -3.5 foo.pyz …  # Windows
+
+Well-known tools to build new zipapps, outside of the Python core, are
+`pex <https://github.com/pantsbuild/pex>`_ (Twitter) and
+`shiv <https://github.com/linkedin/shiv>`_ (LinkedIn).
+See their documentation for details on bundling your own applications,
+and also the next section on PEX.
+
 
 Packaging Python EXecutables (PEX)
 ----------------------------------
