@@ -60,31 +60,29 @@ missing *GNU* utilities that are often needed by helper scripts:
     sudo easy_install pip && sudo pip install virtualenv
     brew install coreutils
 
-For **Windows**, see the :ref:`win-python` and :ref:`babun` sections.
-The former is recommended for users who just want to run some Python software,
-the latter for developers and ‘power users’
-with some existing Python and Linux experience.
-
-More recent options are `bash for Windows`_, `Docker for Windows`_,
-and `Windows Containers`_.
-After you install one of these, act like you're on a **Linux** system,
-because as long as you operate within those environments, you actually are.
+For **Windows**, see the :ref:`win-python` section.
+Developers and ‘power users’ with some existing Python and Linux experience might consider using
+`Windows Subsystem for Linux (WSL) <https://docs.microsoft.com/en-us/windows/wsl/faq>`_,
+but that is outside the scope of this documentation.
+However, the POSIX workflows should work there.
 
 .. note::
 
-    Remember that the next step is either :ref:`pip-from-pypi` or :ref:`pip-from-github`.
+    Keep in mind that the next step after the basic setup
+    is either :ref:`pip-from-pypi` or :ref:`pip-from-github`.
+    And that basic setup needs to be done only once.
 
 
 Installing Python
 -----------------
 
 There are different ways to get a working Python installation, depending on your
-computer's operating system. Note that there are two major versions of Python,
-and at this time Python 2.7 and Python 3.4 are the recommended versions to use.
+computer's operating system. Note that Python 2.7 is by now increasingly unsupported,
+and Python 3.6 or above is the recommended version to use.
 
 Read the documentation of any software you want to install regarding the versions
 of Python that particular software runs on, and act accordingly by e.g. calling
-``virtualenv-3`` instead of just ``virtualenv``.
+``python3 -m venv`` instead of just ``virtualenv``.
 
 See also these other resources on the web…
 
@@ -126,50 +124,15 @@ Windows (python.org)
 
 To get the official *python.org* distribution on *Windows*, open the
 `Python Releases for Windows`_ page and select the appropriate version.
-You might want to install both a Python 2 and 3 version, to cover all
-possible needs of any applications.
+You might want to install several Python 3 versions, to cover all
+possible needs of any applications
+– having them on one machine concurrently is no problem.
 
 It's also recommended to install the `Python Extensions for Windows`_,
 because many applications rely on them to access Windows-specific features.
 
-Finally, for Python 2 you should install *PyLauncher* to be able to start
-applications distributed as an *‘executbale ZIP’*, see its
-`download page <https://bitbucket.org/vinay.sajip/pylauncher/downloads>`_.
-Python 3 already has it pre-installed.
-
-
-.. _babun:
-
-Babun (Windows)
-^^^^^^^^^^^^^^^
-
-*Babun* is a turn-key *CygWin* distribution for developers
-and is very easy to install and maintain.
-For a Python developer, *Babun* allows working in an almost-POSIX environment
-– with some limitations, of course.
-This causes less friction when handling FOSS projects
-that are often biased towards a standard Linux environment,
-e.g. by using shell scripts for boot-strapping and things like that.
-
-To install it, follow these steps:
-
-  * Download the installer ZIP archive from the `Babun homepage`_.
-  * Unzip the archive (e.g. using *Windows Explorer*).
-  * Double-click the installer (``install.bat``), and wait…
-  * Catch up (``babun update``).
-  * Change the default shell from ``zsh`` to ``bash`` if you prefer that (``babun shell /bin/bash``).
-  * Edit ``~/.bashrc`` to activate loading of ``~/.bash_aliases``.
-  * Install additional *Python* essentials:
-
-    .. code-block:: shell
-
-        pact install python-setuptools python-ming
-        pact install libxml2-devel libxslt-devel libyaml-devel
-        curl -skS https://bootstrap.pypa.io/get-pip.py | python
-        pip install virtualenv
-        curl -skS https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
-
-  * Enjoy!
+Also note that where on a POSIX system ``python3 …`` is used,
+that translates to ``py -3 …`` on Windows.
 
 
 Conda (Windows, Mac OS X, Linux)
@@ -338,7 +301,7 @@ which in the end are only lists of ``pip install`` arguments.
 
 
 .. _`Python Releases for Windows`: https://www.python.org/downloads/windows/
-.. _`Python Extensions for Windows`: http://sourceforge.net/projects/pywin32/files/
+.. _`Python Extensions for Windows`: https://github.com/mhammond/pywin32
 .. _`Babun homepage`: http://babun.github.io/
 .. _`bash for Windows`: https://msdn.microsoft.com/en-us/commandline/wsl/about
 .. _`Docker for Windows`: https://docs.docker.com/docker-for-windows/
