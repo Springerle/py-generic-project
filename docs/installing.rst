@@ -135,6 +135,44 @@ Also note that where on a POSIX system ``python3 …`` is used,
 that translates to ``py -3 …`` on Windows.
 
 
+.. _win-zipapp:
+
+Enabling Easy Zipapp Installs on Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Zipapps are a way to distribute Python applications
+and all of their dependencies in a single binary file,
+comparable to statically linked golang apps.
+Their main advantage is that distributing and installing them is quite simple.
+To learn more about zipapps, refer to :ref:`build-zipapps`.
+
+On Windows, because there is no ‘+x’ flag, things are a bit more complicated than on POSIX.
+Zipapps **MUST** have a ``.pyz`` extension,
+for which the ``py`` launcher is registered as the default application.
+The net effect is that such files become executable and are handed over to the launcher
+*if* you add a few environment settings to your machine.
+
+In the user-specific environment settings, add a new ``PATHEXT`` variable
+(or extend an existing one), with the value ``%PATHEXT%;.PYZ``.
+Also edit the ``PATH`` one and add a new ``%LOCALAPPDATA%\bin`` entry.
+Save everything (click “OK”), open a *new* command window, and verify
+the changes with
+
+     echo %PATHEXT% & echo %PATH%
+
+Create the new bin directory by calling ``md %LOCALAPPDATA%\bin``.
+Now you can place a zipapp file like ``foo.pyz`` in that directory,
+and it is immediately callable as ``foo``.
+
+If that makes more sense to you, you can change the system-wide
+variables instead of the user-specific ones, and choose paths that are
+global for all users (like ``C:\usr\bin`` or similar).
+
+To make zipapps available network-wide, you can use ``%APPDATA%`` to store the zipapps,
+so you only have to maintain them once in case you regularly
+work on several machines in the same network.
+
+
 Conda (Windows, Mac OS X, Linux)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

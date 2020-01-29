@@ -47,6 +47,7 @@ In short:
   * use ``twine`` to upload
 
 
+.. _build-zipapps:
 
 Building Zipapps (PEP 441)
 --------------------------
