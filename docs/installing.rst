@@ -46,11 +46,8 @@ developer toolset available. On Debian-like systems, the following makes sure of
 
 .. code-block:: shell
 
-    sudo apt-get install python python-setuptools python-pkg-resources \
-        python-virtualenv python-pip python-dev libffi-dev build-essential git
-
-For *Python3*, replace each occurence of ``python`` with ``python3`` in the above command –
-this requires a fairly recent distribution though, like *Debian Jessie*.
+    sudo apt-get install python3 python3-setuptools python3-pkg-resources \
+        python3-pip python3-dev libffi-dev build-essential git
 
 On **Mac OS X**, install a modern *Python* tool chain and
 missing *GNU* utilities that are often needed by helper scripts:
@@ -100,18 +97,17 @@ and tools might be missing. For Debian-like systems, you need:
 
 .. code-block:: shell
 
-    apt-get install python python-setuptools python-pkg-resources \
-                    python-virtualenv python-pip
+    sudo apt-get install python3 python3-setuptools python3-pkg-resources python3-pip
 
-To successfully install C extension packages like ``lxml`` from source into a ``virtualenv``,
+To successfully install C extension packages like ``lxml`` from source into a virtual environment,
 you also need the necessary build tools like ``gcc`` or ``clang``.
 On Debian-like systems, this means:
 
 .. code-block:: shell
 
-    apt-get install python-dev libffi-dev build-essential git
+    apt-get install python3-dev libffi-dev build-essential git
 
-While the new ``wheel`` format for binary distributions can make this unneccessary,
+While the ``wheel`` format for binary distributions can make this unneccessary,
 there are practical limitations: wheels have to be built and uploaded to PyPI, which is
 seldom the case for every combination of packages and platforms. Also, wheels are not
 yet fully supported for POSIX at the time of this writing.
