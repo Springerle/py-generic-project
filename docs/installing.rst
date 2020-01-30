@@ -232,7 +232,7 @@ On *Windows*, give the file a ``.pyz`` or ``.pyzw`` extension,
 which the *Python Launcher* is registered for.
 On POSIX systems, ``chmod +x`` the file to make it executable.
 
-See `PEP 441`_ for a formal description of the underlying mechanics and all the details.
+See `PEP 441`_  and :ref:`build-zipapps` for a formal description of the underlying mechanics and all the details.
 
 .. _`PEX files`: https://youtu.be/NmpnGhRwsu0
 .. _`PEP 441`: https://www.python.org/dev/peps/pep-0441/
