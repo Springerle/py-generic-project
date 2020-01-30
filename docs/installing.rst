@@ -298,7 +298,7 @@ with a single command.
 
     .. code-block:: shell
 
-        pip install "https://github.com/‹USER›/‹REPO-NAME›/archive/‹TAG-OR-SHA›.zip"
+        pip install "https://github.com/‹USER›/‹REPO-NAME›/archive/‹TAG-OR-SHA›.zip#egg=‹PKG-NAME›"
 
     Usually, ``‹TAG-OR-SHA›`` will be ``master`` or ``develop`` –
     in the GitHub web UI, you can use the ``branch`` selector above the file listing
@@ -309,13 +309,13 @@ with a single command.
 
     .. code-block:: shell
 
-        pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git"
+        pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git#egg=‹PKG-NAME›"
 
   * Via ``git clone`` with a tag or hash:
 
     .. code-block:: shell
 
-        pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git@‹TAG-OR-SHA›"
+        pip install "git+https://github.com/‹USER›/‹REPO-NAME›.git@‹TAG-OR-SHA›#egg=‹PKG-NAME›"
 
   * From a *working directory* you manually cloned into your file system:
 
