@@ -26,7 +26,7 @@ Installing Python Software
 
 This is a guide for end-users on how to easily install Python software on the major platforms.
 See :doc:`packaging` for the related developer guide
-with distribution methods that enable this painless installation experience.
+with distribution methods that enable this mostly painless installation experience.
 
 
 .. _quick-setup:
@@ -127,6 +127,9 @@ To get the official *python.org* distribution on *Windows*, open the
 You might want to install several Python 3 versions, to cover all
 possible needs of any applications
 – having them on one machine concurrently is no problem.
+Another officially supported way to get Python is the Windows Store,
+but at the time of this writing that is limited to Python 3.7+ and
+has no x86 support (for 32 bit architectures).
 
 It's also recommended to install the `Python Extensions for Windows`_,
 because many applications rely on them to access Windows-specific features.
