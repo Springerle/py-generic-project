@@ -256,10 +256,10 @@ the new environment, also giving it a name:
 
 .. code-block:: shell
 
-    cd ~/.local/virtualenvs
-    virtualenv ‹newenv›
+    cd ~/.local/venvs
+    python3 -m venv ‹newenv›
     . ‹newenv›/bin/activate
-    pip install -U pip setuptools # get newest tooling
+    pip install -U pip setuptools  # get newest tooling
 
 The third command *activates* the virtualenv, which means that
 when you call ``python`` or ``pip``, they run in the context of
@@ -272,14 +272,15 @@ your ``PATH`` – or better yet symlink those commands into your
 ``~/bin`` directory or add some definitions to ``~/.bash_aliases``,
 to make them selectively available.
 
-If you're installing a Python package that contains a single command,
-then `pipsi`_ (*Python Script Installer*) allows installing and updating
-with a simple one-liner. ``pipsi`` is just a convenient wrapper
-around ``pip`` and ``virtualenv``, and works in POSIX environments
-including *CygWin*.
+To make this even simpler, `dephell`_ (via its concept of ‘jails’)
+allows installing and updating with a simple one-liner.
+And – at least on Linux – it also makes any exposed CLI tools
+immediately available in your PATH.
+``dephell jail`` is just a convenient wrapper around ``pip`` and ``venv``.
 
 .. _`PyPI`: https://pypi.python.org/pypi
 .. _`pipsi`: https://github.com/mitsuhiko/pipsi#readme
+.. _`dephell`: https://github.com/dephell/dephell#readme
 
 
 .. _pip-from-github:
