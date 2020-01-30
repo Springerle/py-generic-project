@@ -337,6 +337,15 @@ Note that all these forms work in requirements files,
 which in the end are only lists of ``pip install`` arguments.
 
 
+.. tip::
+
+    Use ``python3 -m pip`` or ``python -m pip`` instead of plain ``pip`` in case you have problems,
+    or if you write automation scripts for unattended installations.
+
+    The advantage of this is that you always get the ‘right’ version of pip for the given
+    interpreter, especially when you make that configurable and people provide ‘exotic’ Python executable paths.
+
+
 .. _`Python Releases for Windows`: https://www.python.org/downloads/windows/
 .. _`Python Extensions for Windows`: https://github.com/mhammond/pywin32
 .. _`Babun homepage`: http://babun.github.io/
