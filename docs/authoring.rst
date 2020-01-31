@@ -21,11 +21,12 @@
     SOFTWARE.
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+****************************
 Writing Sphinx Documentation
-============================
+****************************
 
 Overview
---------
+========
 
 This is a directory of links to information and hints you need
 when you want to write (software) documentation using
@@ -44,7 +45,7 @@ information about the art of writing documentation.
 
 
 When to Use Sphinx?
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Using *Sphinx* has several advantages over other options for writing
 documentation that has strong ties to the source code. It can be
@@ -62,8 +63,8 @@ also extensions for Java and other languages (so-called *domains*). The
 generated output can be styled freely, and the *Sphinx* eco-system
 offers lots of documentation and code highlighting themes.
 
-Feature highlights
-^^^^^^^^^^^^^^^^^^
+Feature Highlights
+------------------
 
 * **Output formats** – HTML (including Windows HTML Help), LaTeX (for
   printable PDF versions), Texinfo, manual pages, plain text.
@@ -81,17 +82,18 @@ Feature highlights
 
 
 Introduction & Cheatsheets
---------------------------
+==========================
 
 * See the :ref:`sphinx-how-tos` section below for some quickstart advice.
 * `Sphinx reStructuredText primer <http://sphinx-doc.org/rest.html>`_
   – A brief introduction to *reStructuredText* (reST) concepts and syntax.
 * `Beautiful Docs <https://github.com/PharkMillups/beautiful-docs>`__
   – A collection of exemplary open source project documentation.
+* `Style guide for Sphinx-based documentations <https://documentation-style-guide-sphinx.readthedocs.io/>`_
 
 
 Extensions & Tools
-------------------
+==================
 
 There are a lot of extensions, styles, themes, and so on available on
 the web. For example, see the
@@ -138,10 +140,10 @@ highlighting in your favourite editor or IDE, see below for ``gedit3`` support.
 .. _sphinx-how-tos:
 
 How-Tos
--------
+=======
 
 Sphinx Installation and Setup
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 See :doc:`installing`
 for the full story and all details, this is how to install *Sphinx* to
@@ -152,8 +154,8 @@ your user account on a properly configured POSIX system (including
 
     venv=~/.local/virtualenvs/sphinx
     mkdir -p $(dirname $venv)
-    virtualenv $venv
-    $venv/bin/pip install -UI pip
+    python3 -m venv $venv
+    $venv/bin/pip install -U pip
     $venv/bin/pip install sphinx sphinx-autobuild
     ln -nfs ~/bin $venv/bin/sphinx-*
 
@@ -170,7 +172,7 @@ version of *Sphinx*.
     sphinx-autobuild==0.5.2
 
 Creating a Minimal Project
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 In your project directory, call ``sphinx-quickstart`` which will prompt
 you for required information. Answer the first question for a ‘root
@@ -196,15 +198,16 @@ see a difference.
 
 
 Adding a New Chapter
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 To add a new chapter in its own file, create a file like
 ``docs/chapter.rst`` with the following content:
 
 .. code-block:: rst
 
+    **************
     My New Chapter
-    ==============
+    **************
 
 Then add that file to the *toctree* of your ``index.rst`` file:
 
@@ -221,9 +224,14 @@ containing file, and without extension, so we end up with just
 
 Rebuild the docs and *“My New Chapter”* will be added to the sidebar.
 
+See `Sections`_ in the Sphinx documentation regarding the markup for different heading levels.
+
+
+.. _`Sections`: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections
+
 
 Publishing Your Document
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 If you want to publish documentation for a project on *GitHub*, the
 easiest solution is `Read the Docs`_ (RTD), which is a hosting service
@@ -241,7 +249,7 @@ building – it's *very* easy.
 
 
 Automatic Preview
-^^^^^^^^^^^^^^^^^
+-----------------
 
 The best preview solution is
 `sphinx-autobuild <https://pypi.python.org/pypi/sphinx-autobuild>`_,
@@ -269,7 +277,7 @@ browser – or take a look into the ``docs/watchdog.log`` file.
 
 
 Converting from Markdown to reST
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 If you have existing Markdown files you want to integrate into your
 documentation, the ``pandoc`` tool provides an easy way to convert into
@@ -284,7 +292,7 @@ Then a conversion can be done as follows:
 
 
 Adding a Custom Pygments Lexer to Sphinx
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
 
 In order for Sphinx to load and recognize a custom lexer, two things are needed:
 
