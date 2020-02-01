@@ -2,4 +2,7 @@
 # "Read The Docs" requirements
 #
 
+{% if "cli" in cookiecutter.features.replace(',', ' ').split() %}
+sphinx-click
+{%- endif %}
 -r ../requirements.txt

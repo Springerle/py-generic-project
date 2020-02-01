@@ -30,6 +30,7 @@ use a local :option:`--help` option as in ``{{ cookiecutter.repo_name }} help --
 
 
 .. _cmd-help:
+
 The `help` Command
 ==================
 
@@ -41,6 +42,7 @@ see :option:`--config` and :envvar:`{{ cookiecutter.repo_name.upper().replace('-
 
 
 .. _global-opts:
+
 Global Command Line Options
 ===========================
 
@@ -77,6 +79,7 @@ Global options must be used *before* any sub-command, e.g. ``{{ cookiecutter.rep
 
 
 .. _env-vars:
+
 Environment Variables
 =====================
 

@@ -85,6 +85,9 @@ Documentation Contents
     :maxdepth: 4
 
     usage
+{%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
+    cli-reference
+{%- endif %}
     api-reference
     CONTRIBUTING
     LICENSE

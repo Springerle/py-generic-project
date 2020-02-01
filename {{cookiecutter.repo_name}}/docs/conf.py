@@ -45,6 +45,9 @@ extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.coverage',
     'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinx.ext.napoleon',
     'sphinx.ext.intersphinx',
+{%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
+    'sphinx_click.ext',
+{%- endif %}
 ]
 
 # Add any paths that contain templates here, relative to this directory.
