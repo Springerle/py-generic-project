@@ -17,7 +17,7 @@ try:
     CLI_PATH = sys.modules['__main__'].__file__
 except (KeyError, AttributeError):
     CLI_PATH = __file__
-CLI_PATH = os.path.dirname(CLI_PATH)
+CLI_PATH = os.path.dirname(os.path.realpath(CLI_PATH))
 if CLI_PATH.endswith('/bin'):
     CLI_PATH = CLI_PATH[:-4]
 CLI_PATH = re.sub('^' + os.path.expanduser('~'), '~', CLI_PATH)
