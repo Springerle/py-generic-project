@@ -99,6 +99,16 @@ and tools might be missing. For Debian-like systems, you need:
 
     sudo apt-get install python3 python3-setuptools python3-pkg-resources python3-pip
 
+If you need the same Python version on the stable and oldstable releases of Debian and Ubuntu,
+Ubuntu's `Deadsnakes PPA`_ is a means to achieve that.
+Python 3.6 is available from the PPA for Xenial (and Bionic comes with 3.6 by default),
+and you can also `build the deadsnakes packages on Debian`_ (3.6 builds on both Stretch and Buster).
+
+.. _`Deadsnakes PPA`: https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
+.. _`build the deadsnakes packages on Debian`: https://github.com/jhermann/ezpy/tree/master/deadsnakes#readme
+
+.. rubric:: Installing Extension Packages
+
 To successfully install C extension packages like ``lxml`` from source into a virtual environment,
 you also need the necessary build tools like ``gcc`` or ``clang``.
 On Debian-like systems, this means:
@@ -110,7 +120,8 @@ On Debian-like systems, this means:
 While the ``wheel`` format for binary distributions can make this unneccessary,
 there are practical limitations: wheels have to be built and uploaded to PyPI, which is
 seldom the case for every combination of packages and platforms. Also, wheels are not
-yet fully supported for POSIX at the time of this writing.
+yet fully supported for POSIX at the time of this writing, so sometimes you have to
+install from source even if there is a pre-built wheel.
 
 
 .. _win-python:
