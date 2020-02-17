@@ -148,12 +148,25 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     # Complete project metadata
     classifiers = []
+    python_requires = (99, 0)
     for classifiers_txt in ('classifiers.txt', 'project.d/classifiers.txt'):
         classifiers_txt = srcfile(classifiers_txt)
         if os.path.exists(classifiers_txt):
             with io.open(classifiers_txt, encoding='utf-8') as handle:
-                classifiers = [i.strip() for i in handle if i.strip() and not i.startswith('#')]
+                for line in handle:
+                    if line.strip() and not line.startswith('#'):
+                        classifiers.append(line.strip())
+                        if line.startswith('Programming Language :: Python :: '):
+                            try:
+                                major, minor = map(int, line.split('::')[-1].strip().split('.'))
+                            except ValueError:
+                                pass
+                            else:
+                                if python_requires > (major, minor):
+                                    python_requires = (major, minor)
             break
+    if python_requires < (99, 0):
+        metadata.setdefault('python_requires', '>={}.{}'.format(*python_requires))
     entry_points.setdefault('console_scripts', []).extend(console_scripts)
 
     metadata.update(dict(
@@ -163,7 +176,6 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
         data_files = data_files.items(),
         zip_safe = False,
         include_package_data = True,
-        python_requires = '>=3.4',
         install_requires = requires['install'],
         setup_requires = requires['setup'],
         tests_require =  requires['test'],
