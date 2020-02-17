@@ -8,13 +8,11 @@
 # build matrix
 language: python
 python:
-    - "2.7"
-    - "3.4"
+    - "3.6"
 #    - "pypy"
 #matrix:
-#    # Do not allow failures for Python 3 when you create "universal" wheels (see 'setup.cfg')
 #    allow_failures:
-#        - python: "3.4"
+#        - python: "3.5"
 
 # command to install dependencies
 install:
