@@ -21,8 +21,9 @@
     SOFTWARE.
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+*************************
 Packaging Python Software
-=========================
+*************************
 
 This is a how-to for developers with directions on packaging their software
 in ways that enable a painless installation experience for end-users.
@@ -30,27 +31,79 @@ in ways that enable a painless installation experience for end-users.
 
 See also these other resources on the web…
 
-  * The `Python Packaging User Guide <https://packaging.python.org/>`_
-  * `The Hitchhiker’s Guide to Python! <http://docs.python-guide.org/>`_
-  * `The Sheer Joy of Packaging! <https://python-packaging-tutorial.readthedocs.io/en/latest/>`_ – A Scipy 2018 tutorial, also covering `Conda`
+* The `Python Packaging User Guide <https://packaging.python.org/>`_
+* `The Hitchhiker’s Guide to Python! <http://docs.python-guide.org/>`_
+* `The Sheer Joy of Packaging! <https://python-packaging-tutorial.readthedocs.io/en/latest/>`_ – A Scipy 2018 tutorial, also covering `Conda`
+
+The following figure gives a rough outline of what tools are involved in the development workflow.
+Regard services like GitLab and Artifactory as representatives,
+you can equally well use any git server solution and e.g. `devpi` as your artifact repository.
+There are also public services like GitHub, Travis, PyPI, and BinTray
+that can fill these roles for open-source projects.
+
+.. figure:: _static/img/py-dev-cycle.png
+   :align: center
+   :alt: Overview of Python Development Workflows
+
+   Overview of Python Development Workflows
 
 
 Packaging PyPI Releases
------------------------
+=======================
+
+This is a short summary of essentals, consult the above resources for all the details.
+It covers the ‘classic’ tool-chain, there are more ‘modern’ tools like ``poetry`` and
+``flit`` that serve similar purposes.
+
+Building with setuptools
+------------------------
 
 **TODO**
 
-In short:
+Packaging with wheel
+--------------------
 
-  * read above resources
-  * use ``setuptools`` and ``wheel`` via the ``bdist_wheel`` setup command
-  * use ``twine`` to upload
+**TODO**
+
+Uploading with twine
+--------------------
+
+Once you have your deployment artifacts ready (typically in a ``dist`` folder),
+you can upload them to ``pypi.org``, or a local repository service.
+
+There is a dedicated tool named `twine`_ for this.
+It supports using SSL for transfers, and also allows you to *first* build your artifacts,
+then test them as you see fit, and finally upload the *tested* artifacts.
+
+Configuration is taken from ``~/.pypirc``, or the environment – especially useful for CI jobs.
+A typical configuration might look like this:
+
+.. code-block:: ini
+
+    [distutils]
+    index-servers = local pypi
+
+    [local]
+    repository: https://artifactory.local/artifactory/api/pypi/pypi-releases-local
+    username: «USER»
+    password: «API_TOKEN»
+
+    [pypi]
+    # repository: https://pypi.org/pypi
+    username: «PYPI_USER»
+    password: «PYPI_PWD»
+
+You can select from the list of index servers by using ``twine upload -r «repo» …``,
+the default is ``pypi``.
+
+
+.. _`twine`: https://github.com/pypa/twine#readme
 
 
 .. _build-zipapps:
 
 Building Zipapps (PEP 441)
---------------------------
+==========================
 
 Running Python code directly from ZIP archives is nothing new,
 `PEP 273 <https://www.python.org/dev/peps/pep-0273/>`_ made its debut in 2001,
@@ -90,7 +143,7 @@ and also the next section on PEX.
 
 
 Packaging Python EXecutables (PEX)
-----------------------------------
+==================================
 
 `PEX files`_ are **P**\ ython **Ex**\ ecutable ZIP files, a format that contains
 a full distribution of a Python application in a single archive
