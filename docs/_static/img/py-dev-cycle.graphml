@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.15.0.2-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="121.4206647854693" width="103.1348775227865" x="289.59922790527344" y="-16.356971273486295"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="38.029296875" modelName="sandwich" modelPosition="n" textColor="#000000" visible="true" width="88.7587890625" x="7.188044230143248" y="-42.029296875">DPKG
+(Omnibus)</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="1"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d6">
+        <y:ImageNode>
+          <y:Geometry height="130.0" width="96.0" x="617.0" y="128.0"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.0146484375" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="88.5537109375" x="3.72314453125" y="134.0">Artifactory</y:NodeLabel>
+          <y:Image alphaImage="true" refid="2"/>
+        </y:ImageNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="107.36376953125" width="116.75049591064453" x="-245.87524795532227" y="295.4345305023329"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.0146484375" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="54.5791015625" x="31.085697174072266" y="111.36376953125">GitLab</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="3"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.document">
+          <y:Geometry height="54.17708333333337" width="75.0" x="-225.0" y="167.32291666666663"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="55.0439453125" modelName="custom" textColor="#000000" visible="true" width="58.0244140625" x="8.48779296875" y="-0.4334309895833144">Source
+Code
+ <y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="137.85076904296875" width="136.9716891197714" x="-11.237737655639648" y="124.07461547851562"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.0146484375" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="83.7001953125" x="26.635746903635706" y="141.85076904296875">virtualenv</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="4"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="73.35416666666663" width="73.35416666666663" x="304.48958333333337" y="112.14387505927692"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="38.029296875" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="121.1611328125" x="-23.903483072916686" y="77.35416666666663">wheel
+(PEP427+491)</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="5"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="69.29166666666669" width="56.73580013020836" x="312.79876660156253" y="253.11135223765444"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="38.029296875" modelName="sandwich" modelPosition="s" textColor="#000000" visible="true" width="97.3447265625" x="-20.30446321614579" y="73.29166666666669">Source
+Distribution</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="6"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d4"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLNoteNode>
+          <y:Geometry height="141.82851023943022" width="140.6119767491219" x="-257.80598837456097" y="-57.550609888992895"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Verdana" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="106.087890625" modelName="custom" textColor="#000000" visible="true" width="129.302734375" x="5.654621187060968" y="17.870309807215108">setup.cfg
+([metadata])
+· setup.py
+· pyproject.toml
+(PEP517+518)
+· Pipfile<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:UMLNoteNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d4"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="28.0" width="153.24877829218104" x="-365.47856585969646" y="111.80040850855198"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="132.20361328125" x="10.522582505465522" y="3.0">Versions: PEP440<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <edge id="e0" source="n2" target="n3">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.583984375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="61.978515625" x="-83.9836999626931" y="-87.13719641875542">git clone<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="52.994442150193066" distanceToCenter="true" position="left" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n3" target="n4">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="-53.58144023757937" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="47.751953125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="62.03125" x="38.38825702667236" y="5.6124038798179186">setup.py
+develop
+· flit<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n4" target="n5">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="68.50449726242063" sy="0.0" tx="-36.662955026964525" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="99.384765625" x="39.666782962697425" y="-7.76675907841539">setuptools
+(bdist_wheel)<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n5" target="n1">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="36.662955026964525" sy="0.0" tx="-44.02083039869228" ty="-13.084797375197837"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.583984375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="91.626953125" x="35.59300595244122" y="31.362674275359325">twine upload<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.22256036068522211" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n1" target="n4">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-30.17152223563164" sy="16.005168831478926" tx="46.41855976242063" ty="42.5">
+            <y:Point x="505.6666666666667" y="379.83333333333337"/>
+            <y:Point x="216.33333333333331" y="379.83333333333337"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="204.373046875" x="-376.0150146484375" y="184.24417622884118">pip install -r requirements.txt
+/ pipenv / poetry / hatch<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="0.5" segment="1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n4" target="n0">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="70.16599852381388" sy="-31.533333333333474" tx="-40.33642045786113" ty="18.71621981924617"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="95.013671875" x="7.7787802529364" y="-81.06623649075159">dh-virtualenv
+/ fpm<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="28.79988674136185" distanceToCenter="true" position="left" ratio="0.1513993861461187" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n0" target="n1">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="-39.99025296321531" ty="-34.58704138286171"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.583984375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="34.796875" x="98.94205303376788" y="5.126771716912842">dput<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="0.4424952317012216" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n4" target="n4">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="40.83266519048057" sy="-26.866666666666788" tx="-55.83400147618612" ty="-32.2000000000001">
+            <y:Point x="123.24810690424606" y="60.7999999999999"/>
+            <y:Point x="-22.58589457194006" y="60.7999999999999"/>
+            <y:Point x="-0.5858945719400594" y="148.1333333333332"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="47.751953125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="109.0703125" x="-104.51523019859309" y="-149.87434692382823">invoke
+· pylint / flake8
+· tox + pytest<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n4" target="n6">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="59.04167026180079" sy="29.562887858088317" tx="-29.52522642908741" ty="7.047083333333376"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="74.658203125" x="65.64747780726123" y="53.48252933641004">setuptools
+(sdist)<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="n6" target="n1">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="31.80810690424596" sy="5.047083333333376" tx="-35.99322523323576" ty="10.803931072498557"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.583984375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="91.626953125" x="41.18821693588512" y="-7.7741396306435036">twine upload<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.27172809349141247" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e10" source="n4" target="n2">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-52.55732913736152" sy="38.37817873205702" tx="0.0" ty="0.0">
+            <y:Point x="-80.29550477684404" y="349.1164152679579"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.583984375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="66.689453125" x="-94.00603510769707" y="126.00459881598982">GitLab CI<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="1.0" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e11" source="n7" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:SplineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+        </y:SplineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources>
+      <y:Resource id="1">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!-- Created with Inkscape (http://www.inkscape.org/) --&gt;
+
+&lt;svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg3626"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="Debian.svg"
+   inkscape:export-filename="/home/jhe/Pictures/icons/Debian-48.png"
+   inkscape:export-xdpi="16.879999"
+   inkscape:export-ydpi="16.879999"&gt;
+  &lt;defs
+     id="defs3628"&gt;
+    &lt;filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter7500"
+       x="-0.21997818"
+       width="1.4399564"
+       y="-0.17672312"
+       height="1.3534462"&gt;
+      &lt;feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.0809973"
+         id="feGaussianBlur7502" /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.921875"
+     inkscape:cx="128"
+     inkscape:cy="128"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="472"
+     inkscape:window-height="431"
+     inkscape:window-x="76"
+     inkscape:window-y="506"
+     inkscape:window-maximized="0" /&gt;
+  &lt;metadata
+     id="metadata3631"&gt;
+    &lt;rdf:RDF&gt;
+      &lt;cc:Work
+         rdf:about=""&gt;
+        &lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;
+        &lt;dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /&gt;
+        &lt;dc:title&gt;&lt;/dc:title&gt;
+      &lt;/cc:Work&gt;
+    &lt;/rdf:RDF&gt;
+  &lt;/metadata&gt;
+  &lt;g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-796.36218)"&gt;
+    &lt;g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/canci/Desktop/deb/ciel/wallpaper/ciel_wallpaper_1366x768x24.png"
+       style="opacity:0.94088667;fill:#e8548d;fill-opacity:1;filter:url(#filter7500)"
+       transform="matrix(1.9356706,0,0,1.9610827,-324.3481,-83.426671)"
+       id="g6598-4"&gt;
+      &lt;g
+         style="fill:#e8548d;fill-opacity:1"
+         id="g6600-3"
+         transform="matrix(0.08867123,0,0,-0.08867123,-47.135153,858.27849)"&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3255.5,3850.9 c -18,-0.2 3.4,-9.3 26.8,-12.9 6.5,5.1 12.4,10.2 17.6,15.2 -14.6,-3.6 -29.5,-3.7 -44.4,-2.3"
+           id="path6602-4" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3351.9,3874.9 c 10.7,14.8 18.5,31 21.3,47.7 -2.4,-11.9 -8.9,-22.2 -15,-33.1 -33.6,-21.1 -3.2,12.6 0,25.4 -36.1,-45.5 -5,-27.3 -6.3,-40"
+           id="path6604-9" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3387.5,3967.6 c 2.2,32.3 -6.4,22.1 -9.2,9.8 3.3,-1.8 6,-22.8 9.2,-9.8"
+           id="path6606-5" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3187.3,4409.9 c 9.6,-1.7 20.8,-3.1 19.2,-5.3 10.5,2.3 12.8,4.4 -19.2,5.3"
+           id="path6608-4" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3206.5,4404.6 -6.8,-1.5 6.3,0.6 0.5,0.9"
+           id="path6610-0" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3505.5,3955.3 c 1.1,-29.1 -8.5,-43.1 -17.1,-68.1 l -15.5,-7.8 c -12.7,-24.6 1.2,-15.6 -7.9,-35.3 -19.8,-17.6 -60.2,-55.2 -73.1,-58.6 -9.5,0.2 6.4,11.1 8.4,15.4 -26.5,-18.2 -21.3,-27.4 -61.9,-38.5 l -1.2,2.7 c -100.2,-47.2 -239.3,46.2 -237.5,173.7 -1.1,-8.1 -3,-6.1 -5.3,-9.4 -5.1,65.6 30.3,131.5 90.1,158.4 58.5,28.9 127,17 168.9,-22 -23,30.1 -68.8,62.1 -123.1,59.1 -53.1,-0.8 -102.9,-34.6 -119.5,-71.3 -27.2,-17.2 -30.4,-66.1 -42.2,-75.1 -16,-117.3 30,-168.1 107.8,-227.7 12.3,-8.3 3.5,-9.5 5.1,-15.8 -25.8,12.1 -49.5,30.4 -69,52.8 10.4,-15.1 21.5,-29.9 35.9,-41.4 -24.4,8.3 -56.9,59.1 -66.4,61.2 42,-75.3 170.5,-132 237.8,-103.9 -31.2,-1.1 -70.7,-0.6 -105.7,12.3 -14.7,7.6 -34.7,23.2 -31.1,26.2 91.8,-34.3 186.7,-26 266.1,37.7 20.2,15.7 42.3,42.5 48.7,42.9 -9.6,-14.5 1.6,-7 -5.7,-19.7 20.1,32.5 -8.8,13.2 20.8,56.1 l 10.9,-15.1 c -4.1,27 33.5,59.7 29.6,102.4 8.7,13 9.7,-14.1 0.5,-44.1 12.7,33.3 3.4,38.7 6.6,66.1 3.5,-9.2 8.2,-19 10.5,-28.7 -8.2,32.1 8.5,54.1 12.7,72.8 -4.1,1.8 -12.8,-14.2 -14.8,23.8 0.3,16.5 4.6,8.6 6.3,12.7 -3.3,1.8 -11.8,14.5 -16.9,38.7 3.7,5.8 10,-14.7 15.1,-15.6 -3.3,19.3 -9,34 -9.2,48.8 -14.9,31.2 -5.3,-4.1 -17.4,13.4 -15.8,49.5 13.2,11.5 15.2,34 24,-34.9 37.7,-88.8 44,-111.2 -4.8,27.2 -12.5,53.7 -22,79.2 7.3,-3.1 -11.8,56.1 9.5,16.9 -22.7,83.5 -97.2,161.6 -165.7,198.2 8.4,-7.7 19,-17.3 15.2,-18.8 -34.1,20.3 -28.1,21.9 -33,30.4 -27.7,11.3 -29.5,-0.9 -47.9,0 -52.3,27.7 -62.4,24.8 -110.5,42.2 l 2.2,-10.3 c -34.7,11.6 -40.4,-4.3 -77.9,0 -2.2,1.8 12,6.4 23.8,8.1 -33.5,-4.4 -31.9,6.7 -64.7,-1.2 8.1,5.7 16.6,9.5 25.2,14.3 -27.3,-1.7 -65.2,-15.9 -53.5,-3 -44.5,-19.9 -123.7,-47.8 -168.1,-89.4 l -1.4,9.3 c -20.4,-24.4 -88.7,-72.9 -94.2,-104.6 l -5.4,-1.3 c -10.6,-17.9 -17.5,-38.2 -25.9,-56.6 -13.8,-23.7 -20.3,-9.1 -18.3,-12.8 -27.2,-55.3 -40.8,-101.7 -52.5,-139.7 8.4,-12.5 0.2,-75 3.4,-125 -13.7,-247 173.4,-486.9 377.8,-542.3 30,-10.7 74.6,-10.3 112.5,-11.4 -44.8,12.8 -50.5,6.8 -94.1,22 -31.4,14.8 -38.3,31.7 -60.6,51 l 8.8,-15.6 c -43.6,15.5 -25.4,19.2 -60.9,30.4 l 9.4,12.3 c -14.1,1.1 -37.4,23.8 -43.8,36.5 l -15.5,-0.7 c -18.6,23 -28.5,39.5 -27.8,52.4 l -5,-8.9 c -5.7,9.7 -68.4,86 -35.9,68.3 -6,5.5 -14,9 -22.8,24.8 l 6.7,7.6 c -15.7,20.1 -28.9,46 -27.9,54.6 8.4,-11.3 14.2,-13.4 19.9,-15.3 -39.5,98.1 -41.8,5.4 -71.7,99.9 l 6.3,0.5 c -4.9,7.3 -7.8,15.3 -11.7,23.1 l 2.7,27.5 c -28.4,32.9 -7.9,140 -3.8,198.7 2.9,23.9 23.8,49.3 39.7,89.2 l -9.7,1.7 c 18.5,32.3 105.9,129.9 146.3,124.9 19.6,24.6 -3.9,0.1 -7.7,6.3 43,44.5 56.5,31.4 85.6,39.4 31.3,18.6 -26.9,-7.2 -12,7.1 54.1,13.8 38.3,31.5 109,38.5 7.4,-4.3 -17.3,-6.6 -23.5,-12.1 45.1,22.1 142.7,17.1 206.1,-12.2 73.6,-34.4 156.3,-136.1 159.5,-231.7 l 3.8,-1 c -1.9,-38 5.8,-82 -7.6,-122.4 l 9.1,19.1"
+           id="path6612-1" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3059.3,3826.2 -2.5,-12.6 c 11.8,-16 21.2,-33.4 36.3,-45.9 -10.9,21.1 -18.9,29.9 -33.8,58.5"
+           id="path6614-2" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3087.2,3827.3 c -6.2,6.9 -9.9,15.3 -14,23.5 3.9,-14.5 12,-27 19.6,-39.8 l -5.6,16.3"
+           id="path6616-8" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3581.3,3934.7 -2.6,-6.6 c -4.9,-34.4 -15.3,-68.4 -31.4,-99.9 17.7,33.2 29.2,69.6 34,106.5"
+           id="path6618-2" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 3190.9,4418.5 c 12.1,4.4 29.8,2.4 42.7,5.4 -16.8,-1.4 -33.5,-2.3 -50,-4.4 l 7.3,-1"
+           id="path6620-5" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 2764.3,4191.7 c 2.8,-25.9 -19.5,-36 5,-18.9 13.1,29.5 -5.2,8.1 -5,18.9"
+           id="path6622-3" /&gt;
+        &lt;path
+           style="fill:#e8548d;fill-opacity:1"
+           inkscape:connector-curvature="0"
+           d="m 2735.6,4071.7 c 5.6,17.3 6.6,27.7 8.8,37.7 -15.6,-19.9 -7.2,-24.2 -8.8,-37.7"
+           id="path6624-3" /&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g
+       id="g5421"
+       transform="matrix(1.9190912,0,0,1.9442858,-320.70747,-75.554641)"
+       style="opacity:0.94088667;fill:#e8548d;fill-opacity:1"
+       inkscape:export-filename="/home/canci/Desktop/deb/ciel/wallpaper/ciel_wallpaper_1366x768x24.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"&gt;
+      &lt;g
+         transform="matrix(0.08867123,0,0,-0.08867123,-47.135153,858.27849)"
+         id="GROUP_BEGIN_2"
+         style="fill:#e8548d;fill-opacity:1"&gt;
+        &lt;path
+           id="PATH_1"
+           d="m 3255.5,3850.9 c -18,-0.2 3.4,-9.3 26.8,-12.9 6.5,5.1 12.4,10.2 17.6,15.2 -14.6,-3.6 -29.5,-3.7 -44.4,-2.3"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_2"
+           d="m 3351.9,3874.9 c 10.7,14.8 18.5,31 21.3,47.7 -2.4,-11.9 -8.9,-22.2 -15,-33.1 -33.6,-21.1 -3.2,12.6 0,25.4 -36.1,-45.5 -5,-27.3 -6.3,-40"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_3"
+           d="m 3387.5,3967.6 c 2.2,32.3 -6.4,22.1 -9.2,9.8 3.3,-1.8 6,-22.8 9.2,-9.8"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_4"
+           d="m 3187.3,4409.9 c 9.6,-1.7 20.8,-3.1 19.2,-5.3 10.5,2.3 12.8,4.4 -19.2,5.3"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_5"
+           d="m 3206.5,4404.6 -6.8,-1.5 6.3,0.6 0.5,0.9"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_6"
+           d="m 3505.5,3955.3 c 1.1,-29.1 -8.5,-43.1 -17.1,-68.1 l -15.5,-7.8 c -12.7,-24.6 1.2,-15.6 -7.9,-35.3 -19.8,-17.6 -60.2,-55.2 -73.1,-58.6 -9.5,0.2 6.4,11.1 8.4,15.4 -26.5,-18.2 -21.3,-27.4 -61.9,-38.5 l -1.2,2.7 c -100.2,-47.2 -239.3,46.2 -237.5,173.7 -1.1,-8.1 -3,-6.1 -5.3,-9.4 -5.1,65.6 30.3,131.5 90.1,158.4 58.5,28.9 127,17 168.9,-22 -23,30.1 -68.8,62.1 -123.1,59.1 -53.1,-0.8 -102.9,-34.6 -119.5,-71.3 -27.2,-17.2 -30.4,-66.1 -42.2,-75.1 -16,-117.3 30,-168.1 107.8,-227.7 12.3,-8.3 3.5,-9.5 5.1,-15.8 -25.8,12.1 -49.5,30.4 -69,52.8 10.4,-15.1 21.5,-29.9 35.9,-41.4 -24.4,8.3 -56.9,59.1 -66.4,61.2 42,-75.3 170.5,-132 237.8,-103.9 -31.2,-1.1 -70.7,-0.6 -105.7,12.3 -14.7,7.6 -34.7,23.2 -31.1,26.2 91.8,-34.3 186.7,-26 266.1,37.7 20.2,15.7 42.3,42.5 48.7,42.9 -9.6,-14.5 1.6,-7 -5.7,-19.7 20.1,32.5 -8.8,13.2 20.8,56.1 l 10.9,-15.1 c -4.1,27 33.5,59.7 29.6,102.4 8.7,13 9.7,-14.1 0.5,-44.1 12.7,33.3 3.4,38.7 6.6,66.1 3.5,-9.2 8.2,-19 10.5,-28.7 -8.2,32.1 8.5,54.1 12.7,72.8 -4.1,1.8 -12.8,-14.2 -14.8,23.8 0.3,16.5 4.6,8.6 6.3,12.7 -3.3,1.8 -11.8,14.5 -16.9,38.7 3.7,5.8 10,-14.7 15.1,-15.6 -3.3,19.3 -9,34 -9.2,48.8 -14.9,31.2 -5.3,-4.1 -17.4,13.4 -15.8,49.5 13.2,11.5 15.2,34 24,-34.9 37.7,-88.8 44,-111.2 -4.8,27.2 -12.5,53.7 -22,79.2 7.3,-3.1 -11.8,56.1 9.5,16.9 -22.7,83.5 -97.2,161.6 -165.7,198.2 8.4,-7.7 19,-17.3 15.2,-18.8 -34.1,20.3 -28.1,21.9 -33,30.4 -27.7,11.3 -29.5,-0.9 -47.9,0 -52.3,27.7 -62.4,24.8 -110.5,42.2 l 2.2,-10.3 c -34.7,11.6 -40.4,-4.3 -77.9,0 -2.2,1.8 12,6.4 23.8,8.1 -33.5,-4.4 -31.9,6.7 -64.7,-1.2 8.1,5.7 16.6,9.5 25.2,14.3 -27.3,-1.7 -65.2,-15.9 -53.5,-3 -44.5,-19.9 -123.7,-47.8 -168.1,-89.4 l -1.4,9.3 c -20.4,-24.4 -88.7,-72.9 -94.2,-104.6 l -5.4,-1.3 c -10.6,-17.9 -17.5,-38.2 -25.9,-56.6 -13.8,-23.7 -20.3,-9.1 -18.3,-12.8 -27.2,-55.3 -40.8,-101.7 -52.5,-139.7 8.4,-12.5 0.2,-75 3.4,-125 -13.7,-247 173.4,-486.9 377.8,-542.3 30,-10.7 74.6,-10.3 112.5,-11.4 -44.8,12.8 -50.5,6.8 -94.1,22 -31.4,14.8 -38.3,31.7 -60.6,51 l 8.8,-15.6 c -43.6,15.5 -25.4,19.2 -60.9,30.4 l 9.4,12.3 c -14.1,1.1 -37.4,23.8 -43.8,36.5 l -15.5,-0.7 c -18.6,23 -28.5,39.5 -27.8,52.4 l -5,-8.9 c -5.7,9.7 -68.4,86 -35.9,68.3 -6,5.5 -14,9 -22.8,24.8 l 6.7,7.6 c -15.7,20.1 -28.9,46 -27.9,54.6 8.4,-11.3 14.2,-13.4 19.9,-15.3 -39.5,98.1 -41.8,5.4 -71.7,99.9 l 6.3,0.5 c -4.9,7.3 -7.8,15.3 -11.7,23.1 l 2.7,27.5 c -28.4,32.9 -7.9,140 -3.8,198.7 2.9,23.9 23.8,49.3 39.7,89.2 l -9.7,1.7 c 18.5,32.3 105.9,129.9 146.3,124.9 19.6,24.6 -3.9,0.1 -7.7,6.3 43,44.5 56.5,31.4 85.6,39.4 31.3,18.6 -26.9,-7.2 -12,7.1 54.1,13.8 38.3,31.5 109,38.5 7.4,-4.3 -17.3,-6.6 -23.5,-12.1 45.1,22.1 142.7,17.1 206.1,-12.2 73.6,-34.4 156.3,-136.1 159.5,-231.7 l 3.8,-1 c -1.9,-38 5.8,-82 -7.6,-122.4 l 9.1,19.1"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_7"
+           d="m 3059.3,3826.2 -2.5,-12.6 c 11.8,-16 21.2,-33.4 36.3,-45.9 -10.9,21.1 -18.9,29.9 -33.8,58.5"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_8"
+           d="m 3087.2,3827.3 c -6.2,6.9 -9.9,15.3 -14,23.5 3.9,-14.5 12,-27 19.6,-39.8 l -5.6,16.3"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_9"
+           d="m 3581.3,3934.7 -2.6,-6.6 c -4.9,-34.4 -15.3,-68.4 -31.4,-99.9 17.7,33.2 29.2,69.6 34,106.5"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_10"
+           d="m 3190.9,4418.5 c 12.1,4.4 29.8,2.4 42.7,5.4 -16.8,-1.4 -33.5,-2.3 -50,-4.4 l 7.3,-1"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_11"
+           d="m 2764.3,4191.7 c 2.8,-25.9 -19.5,-36 5,-18.9 13.1,29.5 -5.2,8.1 -5,18.9"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_12"
+           d="m 2735.6,4071.7 c 5.6,17.3 6.6,27.7 8.8,37.7 -15.6,-19.9 -7.2,-24.2 -8.8,-37.7"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g
+       id="g5421-6"
+       transform="matrix(1.9356706,0,0,1.9610827,-324.3481,-83.426671)"
+       style="opacity:0.94088667;fill:#e8548d;fill-opacity:1"
+       inkscape:export-filename="/home/canci/Desktop/deb/ciel/wallpaper/ciel_wallpaper_1366x768x24.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"&gt;
+      &lt;g
+         transform="matrix(0.08867123,0,0,-0.08867123,-47.135153,858.27849)"
+         id="GROUP_BEGIN_2-9"
+         style="fill:#e8548d;fill-opacity:1"&gt;
+        &lt;path
+           id="PATH_1-03"
+           d="m 3255.5,3850.9 c -18,-0.2 3.4,-9.3 26.8,-12.9 6.5,5.1 12.4,10.2 17.6,15.2 -14.6,-3.6 -29.5,-3.7 -44.4,-2.3"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_2-7"
+           d="m 3351.9,3874.9 c 10.7,14.8 18.5,31 21.3,47.7 -2.4,-11.9 -8.9,-22.2 -15,-33.1 -33.6,-21.1 -3.2,12.6 0,25.4 -36.1,-45.5 -5,-27.3 -6.3,-40"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_3-04"
+           d="m 3387.5,3967.6 c 2.2,32.3 -6.4,22.1 -9.2,9.8 3.3,-1.8 6,-22.8 9.2,-9.8"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_4-2"
+           d="m 3187.3,4409.9 c 9.6,-1.7 20.8,-3.1 19.2,-5.3 10.5,2.3 12.8,4.4 -19.2,5.3"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_5-6"
+           d="m 3206.5,4404.6 -6.8,-1.5 6.3,0.6 0.5,0.9"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_6-2"
+           d="m 3505.5,3955.3 c 1.1,-29.1 -8.5,-43.1 -17.1,-68.1 l -15.5,-7.8 c -12.7,-24.6 1.2,-15.6 -7.9,-35.3 -19.8,-17.6 -60.2,-55.2 -73.1,-58.6 -9.5,0.2 6.4,11.1 8.4,15.4 -26.5,-18.2 -21.3,-27.4 -61.9,-38.5 l -1.2,2.7 c -100.2,-47.2 -239.3,46.2 -237.5,173.7 -1.1,-8.1 -3,-6.1 -5.3,-9.4 -5.1,65.6 30.3,131.5 90.1,158.4 58.5,28.9 127,17 168.9,-22 -23,30.1 -68.8,62.1 -123.1,59.1 -53.1,-0.8 -102.9,-34.6 -119.5,-71.3 -27.2,-17.2 -30.4,-66.1 -42.2,-75.1 -16,-117.3 30,-168.1 107.8,-227.7 12.3,-8.3 3.5,-9.5 5.1,-15.8 -25.8,12.1 -49.5,30.4 -69,52.8 10.4,-15.1 21.5,-29.9 35.9,-41.4 -24.4,8.3 -56.9,59.1 -66.4,61.2 42,-75.3 170.5,-132 237.8,-103.9 -31.2,-1.1 -70.7,-0.6 -105.7,12.3 -14.7,7.6 -34.7,23.2 -31.1,26.2 91.8,-34.3 186.7,-26 266.1,37.7 20.2,15.7 42.3,42.5 48.7,42.9 -9.6,-14.5 1.6,-7 -5.7,-19.7 20.1,32.5 -8.8,13.2 20.8,56.1 l 10.9,-15.1 c -4.1,27 33.5,59.7 29.6,102.4 8.7,13 9.7,-14.1 0.5,-44.1 12.7,33.3 3.4,38.7 6.6,66.1 3.5,-9.2 8.2,-19 10.5,-28.7 -8.2,32.1 8.5,54.1 12.7,72.8 -4.1,1.8 -12.8,-14.2 -14.8,23.8 0.3,16.5 4.6,8.6 6.3,12.7 -3.3,1.8 -11.8,14.5 -16.9,38.7 3.7,5.8 10,-14.7 15.1,-15.6 -3.3,19.3 -9,34 -9.2,48.8 -14.9,31.2 -5.3,-4.1 -17.4,13.4 -15.8,49.5 13.2,11.5 15.2,34 24,-34.9 37.7,-88.8 44,-111.2 -4.8,27.2 -12.5,53.7 -22,79.2 7.3,-3.1 -11.8,56.1 9.5,16.9 -22.7,83.5 -97.2,161.6 -165.7,198.2 8.4,-7.7 19,-17.3 15.2,-18.8 -34.1,20.3 -28.1,21.9 -33,30.4 -27.7,11.3 -29.5,-0.9 -47.9,0 -52.3,27.7 -62.4,24.8 -110.5,42.2 l 2.2,-10.3 c -34.7,11.6 -40.4,-4.3 -77.9,0 -2.2,1.8 12,6.4 23.8,8.1 -33.5,-4.4 -31.9,6.7 -64.7,-1.2 8.1,5.7 16.6,9.5 25.2,14.3 -27.3,-1.7 -65.2,-15.9 -53.5,-3 -44.5,-19.9 -123.7,-47.8 -168.1,-89.4 l -1.4,9.3 c -20.4,-24.4 -88.7,-72.9 -94.2,-104.6 l -5.4,-1.3 c -10.6,-17.9 -17.5,-38.2 -25.9,-56.6 -13.8,-23.7 -20.3,-9.1 -18.3,-12.8 -27.2,-55.3 -40.8,-101.7 -52.5,-139.7 8.4,-12.5 0.2,-75 3.4,-125 -13.7,-247 173.4,-486.9 377.8,-542.3 30,-10.7 74.6,-10.3 112.5,-11.4 -44.8,12.8 -50.5,6.8 -94.1,22 -31.4,14.8 -38.3,31.7 -60.6,51 l 8.8,-15.6 c -43.6,15.5 -25.4,19.2 -60.9,30.4 l 9.4,12.3 c -14.1,1.1 -37.4,23.8 -43.8,36.5 l -15.5,-0.7 c -18.6,23 -28.5,39.5 -27.8,52.4 l -5,-8.9 c -5.7,9.7 -68.4,86 -35.9,68.3 -6,5.5 -14,9 -22.8,24.8 l 6.7,7.6 c -15.7,20.1 -28.9,46 -27.9,54.6 8.4,-11.3 14.2,-13.4 19.9,-15.3 -39.5,98.1 -41.8,5.4 -71.7,99.9 l 6.3,0.5 c -4.9,7.3 -7.8,15.3 -11.7,23.1 l 2.7,27.5 c -28.4,32.9 -7.9,140 -3.8,198.7 2.9,23.9 23.8,49.3 39.7,89.2 l -9.7,1.7 c 18.5,32.3 105.9,129.9 146.3,124.9 19.6,24.6 -3.9,0.1 -7.7,6.3 43,44.5 56.5,31.4 85.6,39.4 31.3,18.6 -26.9,-7.2 -12,7.1 54.1,13.8 38.3,31.5 109,38.5 7.4,-4.3 -17.3,-6.6 -23.5,-12.1 45.1,22.1 142.7,17.1 206.1,-12.2 73.6,-34.4 156.3,-136.1 159.5,-231.7 l 3.8,-1 c -1.9,-38 5.8,-82 -7.6,-122.4 l 9.1,19.1"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_7-6"
+           d="m 3059.3,3826.2 -2.5,-12.6 c 11.8,-16 21.2,-33.4 36.3,-45.9 -10.9,21.1 -18.9,29.9 -33.8,58.5"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_8-2"
+           d="m 3087.2,3827.3 c -6.2,6.9 -9.9,15.3 -14,23.5 3.9,-14.5 12,-27 19.6,-39.8 l -5.6,16.3"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_9-7"
+           d="m 3581.3,3934.7 -2.6,-6.6 c -4.9,-34.4 -15.3,-68.4 -31.4,-99.9 17.7,33.2 29.2,69.6 34,106.5"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_10-6"
+           d="m 3190.9,4418.5 c 12.1,4.4 29.8,2.4 42.7,5.4 -16.8,-1.4 -33.5,-2.3 -50,-4.4 l 7.3,-1"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_11-7"
+           d="m 2764.3,4191.7 c 2.8,-25.9 -19.5,-36 5,-18.9 13.1,29.5 -5.2,8.1 -5,18.9"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+        &lt;path
+           id="PATH_12-2"
+           d="m 2735.6,4071.7 c 5.6,17.3 6.6,27.7 8.8,37.7 -15.6,-19.9 -7.2,-24.2 -8.8,-37.7"
+           inkscape:connector-curvature="0"
+           style="fill:#e8548d;fill-opacity:1" /&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</y:Resource>
+      <y:Resource id="2" type="java.awt.image.BufferedImage">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&#13;
+g/4MNX9yAAAAAElFTkSuQmCC</y:Resource>
+      <y:Resource id="3">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r"
+   sodipodi:docname="gitlab-logo.svg"&gt;
+  &lt;metadata
+     id="metadata33"&gt;
+    &lt;rdf:RDF&gt;
+      &lt;cc:Work
+         rdf:about=""&gt;
+        &lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;
+        &lt;dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /&gt;
+        &lt;dc:title&gt;wm_no_bg&lt;/dc:title&gt;
+      &lt;/cc:Work&gt;
+    &lt;/rdf:RDF&gt;
+  &lt;/metadata&gt;
+  &lt;sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1068"
+     inkscape:window-height="856"
+     id="namedview31"
+     showgrid="false"
+     inkscape:zoom="5.8583333"
+     inkscape:cx="60"
+     inkscape:cy="60"
+     inkscape:window-x="49"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" /&gt;
+  &lt;!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch --&gt;
+  &lt;title
+     id="title4"&gt;wm_no_bg&lt;/title&gt;
+  &lt;desc
+     id="desc6"&gt;Created with Sketch.&lt;/desc&gt;
+  &lt;defs
+     id="defs8" /&gt;
+  &lt;g
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+     id="logo"
+     sketch:type="MSShapeGroup"
+     transform="matrix(0.31403797,0,0,0.31403797,1.7778785,6.2995307)"&gt;
+    &lt;path
+       d="m 185.3984,341.1298 0,0 68.013,-209.322 -136.026,0 68.013,209.322 0,0 z"
+       id="Fill-14"
+       inkscape:connector-curvature="0"
+       style="fill:#e24329" /&gt;
+    &lt;path
+       id="Fill-15"
+       d=""
+       inkscape:connector-curvature="0"
+       style="fill:#e24329" /&gt;
+    &lt;path
+       d="m 185.3984,341.1294 -68.013,-209.321 -95.319,0 163.332,209.321 z"
+       id="Fill-16"
+       inkscape:connector-curvature="0"
+       style="fill:#fc6d26" /&gt;
+    &lt;path
+       id="Fill-17"
+       d=""
+       inkscape:connector-curvature="0"
+       style="fill:#e24329" /&gt;
+    &lt;path
+       d="m 22.0664,131.8081 0,0 -20.669,63.611 c -1.885,5.802 0.18,12.158 5.116,15.743 l 178.885,129.967 -163.332,-209.321 z"
+       id="Fill-18"
+       inkscape:connector-curvature="0"
+       style="fill:#fca326" /&gt;
+    &lt;path
+       id="Fill-19"
+       d=""
+       inkscape:connector-curvature="0"
+       style="fill:#e24329" /&gt;
+    &lt;path
+       d="m 22.0664,131.8083 95.319,0 -40.964,-126.073 c -2.108,-6.487 -11.285,-6.487 -13.392,0 l -40.963,126.073 z"
+       id="Fill-20"
+       inkscape:connector-curvature="0"
+       style="fill:#e24329" /&gt;
+    &lt;path
+       d="m 185.3984,341.1294 68.013,-209.321 95.319,0 -163.332,209.321 z"
+       id="Fill-21"
+       inkscape:connector-curvature="0"
+       style="fill:#fc6d26" /&gt;
+    &lt;path
+       d="m 348.7303,131.8081 0,0 20.669,63.611 c 1.885,5.802 -0.18,12.158 -5.116,15.743 l -178.885,129.967 163.332,-209.321 z"
+       id="Fill-22"
+       inkscape:connector-curvature="0"
+       style="fill:#fca326" /&gt;
+    &lt;path
+       d="m 348.7303,131.8083 -95.319,0 40.964,-126.073 c 2.108,-6.487 11.285,-6.487 13.392,0 l 40.963,126.073 z"
+       id="Fill-23"
+       inkscape:connector-curvature="0"
+       style="fill:#e24329" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</y:Resource>
+      <y:Resource id="4">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!-- Created with Inkscape (http://www.inkscape.org/) --&gt;
+
+&lt;svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="64"
+   height="64"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Python2-notext.svg"&gt;
+  &lt;metadata
+     id="metadata2193"&gt;
+    &lt;rdf:RDF&gt;
+      &lt;cc:Work
+         rdf:about=""&gt;
+        &lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;
+        &lt;dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /&gt;
+        &lt;dc:title&gt;&lt;/dc:title&gt;
+      &lt;/cc:Work&gt;
+    &lt;/rdf:RDF&gt;
+  &lt;/metadata&gt;
+  &lt;sodipodi:namedview
+     inkscape:window-height="1005"
+     inkscape:window-width="1143"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="4.2888242"
+     inkscape:cx="183.43065"
+     inkscape:cy="19.991162"
+     inkscape:window-x="2754"
+     inkscape:window-y="504"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" /&gt;
+  &lt;defs
+     id="defs4"&gt;
+    &lt;linearGradient
+       id="linearGradient2795"&gt;
+      &lt;stop
+         style="stop-color:#b8b8b8;stop-opacity:0.49803922"
+         offset="0"
+         id="stop2797" /&gt;
+      &lt;stop
+         style="stop-color:#7f7f7f;stop-opacity:0"
+         offset="1"
+         id="stop2799" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient
+       id="linearGradient2787"&gt;
+      &lt;stop
+         style="stop-color:#7f7f7f;stop-opacity:0.5"
+         offset="0"
+         id="stop2789" /&gt;
+      &lt;stop
+         style="stop-color:#7f7f7f;stop-opacity:0"
+         offset="1"
+         id="stop2791" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient
+       id="linearGradient3676"&gt;
+      &lt;stop
+         style="stop-color:#b2b2b2;stop-opacity:0.5"
+         offset="0"
+         id="stop3678" /&gt;
+      &lt;stop
+         style="stop-color:#b3b3b3;stop-opacity:0"
+         offset="1"
+         id="stop3680" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient
+       id="linearGradient3236"&gt;
+      &lt;stop
+         style="stop-color:#f4f4f4;stop-opacity:1"
+         offset="0"
+         id="stop3244" /&gt;
+      &lt;stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop3240" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient
+       id="linearGradient4671"&gt;
+      &lt;stop
+         style="stop-color:#ffd43b;stop-opacity:1"
+         offset="0"
+         id="stop4673" /&gt;
+      &lt;stop
+         style="stop-color:#ffe873;stop-opacity:1"
+         offset="1"
+         id="stop4675" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient
+       id="linearGradient4689"&gt;
+      &lt;stop
+         style="stop-color:#5a9fd4;stop-opacity:1"
+         offset="0"
+         id="stop4691" /&gt;
+      &lt;stop
+         style="stop-color:#306998;stop-opacity:1"
+         offset="1"
+         id="stop4693" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient
+       x1="224.23996"
+       y1="144.75717"
+       x2="-65.308502"
+       y2="144.75717"
+       id="linearGradient2987"
+       xlink:href="#linearGradient4671"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(100.2702,99.61116)" /&gt;
+    &lt;linearGradient
+       x1="172.94208"
+       y1="77.475983"
+       x2="26.670298"
+       y2="76.313133"
+       id="linearGradient2990"
+       xlink:href="#linearGradient4689"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(100.2702,99.61116)" /&gt;
+    &lt;linearGradient
+       x1="172.94208"
+       y1="77.475983"
+       x2="26.670298"
+       y2="76.313133"
+       id="linearGradient2587"
+       xlink:href="#linearGradient4689"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(100.2702,99.61116)" /&gt;
+    &lt;linearGradient
+       x1="224.23996"
+       y1="144.75717"
+       x2="-65.308502"
+       y2="144.75717"
+       id="linearGradient2589"
+       xlink:href="#linearGradient4671"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(100.2702,99.61116)" /&gt;
+    &lt;linearGradient
+       x1="172.94208"
+       y1="77.475983"
+       x2="26.670298"
+       y2="76.313133"
+       id="linearGradient2248"
+       xlink:href="#linearGradient4689"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(100.2702,99.61116)" /&gt;
+    &lt;linearGradient
+       x1="224.23996"
+       y1="144.75717"
+       x2="-65.308502"
+       y2="144.75717"
+       id="linearGradient2250"
+       xlink:href="#linearGradient4671"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(100.2702,99.61116)" /&gt;
+    &lt;linearGradient
+       x1="224.23996"
+       y1="144.75717"
+       x2="-65.308502"
+       y2="144.75717"
+       id="linearGradient2255"
+       xlink:href="#linearGradient4671"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.562541,0,0,0.567972,-11.5974,-7.60954)" /&gt;
+    &lt;linearGradient
+       x1="172.94208"
+       y1="76.176224"
+       x2="26.670298"
+       y2="76.313133"
+       id="linearGradient2258"
+       xlink:href="#linearGradient4689"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.562541,0,0,0.567972,-11.5974,-7.60954)" /&gt;
+    &lt;radialGradient
+       cx="61.518883"
+       cy="132.28575"
+       r="29.036913"
+       fx="61.518883"
+       fy="132.28575"
+       id="radialGradient2801"
+       xlink:href="#linearGradient2795"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.177966,0,108.7434)" /&gt;
+    &lt;linearGradient
+       x1="150.96111"
+       y1="192.35176"
+       x2="112.03144"
+       y2="137.27299"
+       id="linearGradient1475"
+       xlink:href="#linearGradient4671"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.562541,0,0,0.567972,-9.399749,-5.305317)" /&gt;
+    &lt;linearGradient
+       x1="26.648937"
+       y1="20.603781"
+       x2="135.66525"
+       y2="114.39767"
+       id="linearGradient1478"
+       xlink:href="#linearGradient4689"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.562541,0,0,0.567972,-9.399749,-5.305317)" /&gt;
+    &lt;radialGradient
+       cx="61.518883"
+       cy="132.28575"
+       r="29.036913"
+       fx="61.518883"
+       fy="132.28575"
+       id="radialGradient1480"
+       xlink:href="#linearGradient2795"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.382716e-8,-0.296405,1.43676,4.683673e-7,-128.544,150.5202)" /&gt;
+    &lt;radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2795"
+       id="radialGradient3023"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-0.10447351,0.45920512,1.6508486e-7,-30.852168,64.683649)"
+       cx="61.518883"
+       cy="132.28575"
+       fx="61.518883"
+       fy="132.28575"
+       r="29.036913" /&gt;
+    &lt;linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4671"
+       id="linearGradient3026"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.29216732,0,0,0.29498802,-2.1945778,-12.85964)"
+       x1="150.96111"
+       y1="192.35176"
+       x2="112.03144"
+       y2="137.27299" /&gt;
+    &lt;linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4689"
+       id="linearGradient3029"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.29216732,0,0,0.29498802,-2.1945778,-12.85964)"
+       x1="26.648937"
+       y1="20.603781"
+       x2="135.66525"
+       y2="114.39767" /&gt;
+    &lt;linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4689"
+       id="linearGradient3061"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.29216732,0,0,0.29498802,-2.1945778,-12.85964)"
+       x1="26.648937"
+       y1="20.603781"
+       x2="135.66525"
+       y2="114.39767" /&gt;
+    &lt;linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4671"
+       id="linearGradient3063"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.29216732,0,0,0.29498802,-2.1945778,-12.85964)"
+       x1="150.96111"
+       y1="192.35176"
+       x2="112.03144"
+       y2="137.27299" /&gt;
+    &lt;linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4689"
+       id="linearGradient3075"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.29216732,0,0,0.29498802,-2.1945778,-12.85964)"
+       x1="26.648937"
+       y1="20.603781"
+       x2="135.66525"
+       y2="114.39767" /&gt;
+    &lt;linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4671"
+       id="linearGradient3077"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.29216732,0,0,0.29498802,-2.1945778,-12.85964)"
+       x1="150.96111"
+       y1="192.35176"
+       x2="112.03144"
+       y2="137.27299" /&gt;
+  &lt;/defs&gt;
+  &lt;g
+     id="g3037"
+     transform="translate(-2.4583464,9.5959945)"&gt;
+    &lt;path
+       id="path1948"
+       style="fill:url(#linearGradient3075);fill-opacity:1"
+       d="m 34.114579,-6.781294 c -2.380615,0.011058 -4.654048,0.2140937 -6.654438,0.5680616 -5.892892,1.0410807 -6.962811,3.2201515 -6.962812,7.2387295 l 0,5.30732 13.925626,0 0,1.7691065 -13.925626,0 -5.226167,0 c -4.047177,0 -7.5909986,2.4325854 -8.6994608,7.0601954 -1.2785973,5.304316 -1.3353099,8.614294 0,14.152851 0.9898833,4.122689 3.3538588,7.060194 7.4010328,7.060195 l 4.787949,0 0,-6.36229 c 0,-4.596379 3.976896,-8.650768 8.699458,-8.650769 l 13.909398,0 c 3.871884,0 6.962814,-3.187982 6.962813,-7.076425 l 0,-13.2601839 c 0,-3.7739237 -3.183732,-6.6088768 -6.962813,-7.2387295 -2.392214,-0.3982146 -4.874345,-0.5791233 -7.25496,-0.5680616 z m -7.530874,4.2685781 c 1.43842,0 2.613083,1.1938495 2.613083,2.66177488 -1e-6,1.46272252 -1.174663,2.64554492 -2.613083,2.64554492 -1.443579,0 -2.613085,-1.1828229 -2.613085,-2.64554492 -1e-6,-1.46792498 1.169506,-2.66177488 2.613085,-2.66177488 z"
+       inkscape:connector-curvature="0" /&gt;
+    &lt;path
+       id="path1950"
+       style="fill:url(#linearGradient3077);fill-opacity:1"
+       d="m 50.068998,8.1019236 0,6.1837574 c 0,4.794184 -4.06454,8.829301 -8.699459,8.829302 l -13.909398,0 c -3.810016,0 -6.962811,3.26086 -6.962812,7.076426 l 0,13.260182 c 0,3.773924 3.281689,5.993705 6.962812,7.076426 4.408073,1.296145 8.635181,1.530393 13.909398,0 3.505834,-1.015053 6.962814,-3.057853 6.962813,-7.076426 l 0,-5.307318 -13.909397,0 0,-1.769108 13.909397,0 6.962816,0 c 4.047176,0 5.555319,-2.82299 6.96281,-7.060195 1.453889,-4.362135 1.392026,-8.557035 0,-14.152851 -1.000196,-4.028988 -2.910487,-7.0601954 -6.96281,-7.0601954 l -5.22617,0 z M 42.245977,41.682486 c 1.44358,2e-6 2.613085,1.182823 2.613085,2.645542 -1e-6,1.467925 -1.169507,2.661776 -2.613085,2.661776 -1.438423,0 -2.613083,-1.193851 -2.613083,-2.661776 10e-7,-1.462719 1.174659,-2.645542 2.613083,-2.645542 z"
+       inkscape:connector-curvature="0" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</y:Resource>
+      <y:Resource id="5">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+
+&lt;svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 512 512"
+   style="enable-background:new 0 0 512 512;"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="wheel.svg"&gt;&lt;metadata
+     id="metadata47"&gt;&lt;rdf:RDF&gt;&lt;cc:Work
+         rdf:about=""&gt;&lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;&lt;dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /&gt;&lt;/cc:Work&gt;&lt;/rdf:RDF&gt;&lt;/metadata&gt;&lt;defs
+     id="defs45" /&gt;&lt;sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview43"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-x="2201"
+     inkscape:window-y="272"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Capa_1" /&gt;&lt;g
+     id="g3"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)"&gt;&lt;g
+       id="g5"&gt;&lt;g
+         id="g7"&gt;&lt;path
+           d="m 256,85.333 c -94.104,0 -170.667,76.563 -170.667,170.667 0,94.104 76.563,170.667 170.667,170.667 94.104,0 170.667,-76.563 170.667,-170.667 C 426.667,161.896 350.104,85.333 256,85.333 Z m 87.313,63.75 c 1.917,-2.135 4.625,-3.396 7.5,-3.51 2.479,-0.281 5.667,0.927 7.75,2.906 22.125,20.948 37.167,47.615 43.458,77.115 1,4.708 -1.271,9.5 -5.542,11.708 -10.438,5.396 -22.833,8.01 -34.708,8.01 -15.479,0 -30.146,-4.438 -38.646,-12.938 -18.083,-18.072 -10.542,-49.207 20.188,-83.291 z m -174.625,215.5 c -1.917,2.135 -4.625,3.406 -7.5,3.521 -0.125,0.01 -0.271,0.01 -0.417,0.01 -2.729,0 -5.354,-1.042 -7.333,-2.917 -22.125,-20.948 -37.167,-47.615 -43.458,-77.125 -1,-4.708 1.271,-9.5 5.542,-11.708 24.042,-12.406 58.333,-10.094 73.354,4.927 18.062,18.074 10.52,49.209 -20.188,83.292 z m 20.187,-132.208 c -8.5,8.5 -23.167,12.938 -38.646,12.938 -11.875,0 -24.25,-2.615 -34.708,-8.01 -4.271,-2.208 -6.542,-7 -5.542,-11.708 6.292,-29.5 21.333,-56.167 43.458,-77.115 2.083,-1.979 5.146,-3.208 7.75,-2.906 2.875,0.115 5.583,1.375 7.5,3.51 30.73,34.083 38.271,65.218 20.188,83.291 z M 301.458,398.24 c -14.771,4.708 -30.063,7.094 -45.458,7.094 -15.395,0 -30.688,-2.385 -45.458,-7.094 -4.688,-1.5 -7.75,-6 -7.417,-10.906 C 205.792,348.948 228.521,320 256,320 c 27.479,0 50.208,28.948 52.875,67.333 0.333,4.907 -2.729,9.407 -7.417,10.907 z M 213.333,256 c 0,-23.531 19.146,-42.667 42.667,-42.667 23.521,0 42.667,19.135 42.667,42.667 0,23.532 -19.146,42.667 -42.667,42.667 -23.521,0 -42.667,-19.136 -42.667,-42.667 z m 95.542,-130.49 c -2.667,38.375 -25.396,67.323 -52.875,67.323 -27.479,0 -50.208,-28.948 -52.875,-67.323 -0.333,-4.906 2.708,-9.406 7.396,-10.896 29.542,-9.438 61.417,-9.438 90.958,0 4.688,1.49 7.729,5.99 7.396,10.896 z m 93.146,160.865 c -6.292,29.51 -21.333,56.177 -43.458,77.125 -1.979,1.875 -4.604,2.917 -7.333,2.917 -0.146,0 -0.292,0 -0.417,-0.01 -2.875,-0.115 -5.583,-1.375 -7.5,-3.51 -30.729,-34.083 -38.271,-65.229 -20.188,-83.302 15.021,-15.031 49.292,-17.313 73.354,-4.927 4.271,2.207 6.542,6.999 5.542,11.707 z"
+           id="path9"
+           inkscape:connector-curvature="0" /&gt;&lt;path
+           d="M 256,0 C 114.833,0 0,114.844 0,256 0,397.156 114.833,512 256,512 397.167,512 512,397.156 512,256 512,114.844 397.167,0 256,0 Z m 0,448 C 150.125,448 64,361.865 64,256 64,150.135 150.125,64 256,64 c 105.875,0 192,86.135 192,192 0,105.865 -86.125,192 -192,192 z"
+           id="path11"
+           inkscape:connector-curvature="0" /&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g
+     id="g13"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g15"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g17"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g19"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g21"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g23"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g25"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g27"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g29"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g31"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g33"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g35"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g37"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g39"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;g
+     id="g41"
+     transform="matrix(0.94921875,0,0,0.94921875,13,13)" /&gt;&lt;/svg&gt;</y:Resource>
+      <y:Resource id="6">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   style="enable-background:new 0 0 512 512;"
+   version="1.1"
+   viewBox="0 0 512 512"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="document-red-tgz.svg"&gt;&lt;metadata
+     id="metadata17"&gt;&lt;rdf:RDF&gt;&lt;cc:Work
+         rdf:about=""&gt;&lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;&lt;dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /&gt;&lt;dc:title /&gt;&lt;/cc:Work&gt;&lt;/rdf:RDF&gt;&lt;/metadata&gt;&lt;defs
+     id="defs15" /&gt;&lt;sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1569"
+     inkscape:window-height="936"
+     id="namedview13"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="256"
+     inkscape:cy="342.77966"
+     inkscape:window-x="2267"
+     inkscape:window-y="305"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /&gt;&lt;style
+     type="text/css"
+     id="style3"&gt;
+	.st0{fill:#ED1C24;}
+&lt;/style&gt;&lt;path
+     style="fill:#ed1c24"
+     d="M 135 6 C 103.9 6 78.699219 32.600391 78.699219 65.400391 L 78.699219 284.59961 L 51.300781 284.59961 L 51.300781 433.19922 L 78.699219 433.19922 L 78.699219 446.59961 C 78.699219 479.29961 104 506 135 506 L 404.40039 506 C 435.50039 506 460.69922 479.39961 460.69922 446.59961 L 460.69922 124.69922 C 460.69922 122.29922 459.8 119.89922 458 118.19922 L 346.5 8.4003906 C 345 6.9003906 342.89922 6 340.69922 6 L 135 6 z M 135 23.900391 L 320.90039 23.900391 L 320.90039 76.599609 C 320.90039 110.39961 348.29961 137.90039 382.09961 137.90039 L 443.69922 137.90039 L 443.69922 446.59961 C 443.69922 469.49961 426.10039 488.09961 404.40039 488.09961 L 135 488.09961 C 113.3 488.09961 95.699219 469.49961 95.699219 446.59961 L 95.699219 433.19922 L 282.69922 433.19922 C 319.19922 433.19922 348.69922 399.90039 348.69922 358.90039 C 348.69922 317.90039 319.09922 284.59961 282.69922 284.59961 L 95.699219 284.59961 L 95.699219 65.400391 C 95.699219 42.500391 113.3 23.900391 135 23.900391 z M 337.90039 24.400391 L 434.90039 120 L 382.09961 120 C 357.69961 120 337.90039 100.49961 337.90039 76.599609 L 337.90039 24.400391 z M 193.35938 312.07031 C 198.90824 312.07031 204.19248 312.58043 209.21289 313.59961 C 214.2333 314.58104 219.81983 316.56288 225.97266 319.54492 L 225.97266 339.30469 L 223.53906 339.30469 C 222.48214 338.51199 220.93484 337.39924 218.89648 335.96484 C 216.85812 334.49269 214.89518 333.24574 213.00781 332.22656 C 210.81846 331.01865 208.25094 329.98147 205.30664 329.11328 C 202.40009 328.24509 199.30551 327.81055 196.02148 327.81055 C 192.17125 327.81055 188.67991 328.37735 185.54688 329.50977 C 182.41384 330.64219 179.6007 332.37841 177.10938 334.71875 C 174.73128 336.9836 172.84392 339.87035 171.44727 343.38086 C 170.08836 346.85363 169.4082 350.87397 169.4082 355.44141 C 169.4082 364.76502 171.88127 371.9008 176.82617 376.8457 C 181.77109 381.79062 189.07494 384.26172 198.73828 384.26172 C 199.56872 384.26172 200.4756 384.24281 201.45703 384.20508 C 202.47621 384.16734 203.40003 384.11067 204.23047 384.03516 L 204.23047 367.50195 L 187.41406 367.50195 L 187.41406 351.5918 L 226.3125 351.5918 L 226.3125 393.20898 C 222.53776 394.68114 217.53692 396.15285 211.30859 397.625 C 205.08027 399.0594 198.87026 399.77734 192.67969 399.77734 C 178.33567 399.77734 167.10593 395.88925 158.99023 388.11328 C 150.87454 380.29957 146.81641 369.5213 146.81641 355.78125 C 146.81641 342.6829 150.91233 332.13331 159.10352 324.13086 C 167.29471 316.09067 178.71338 312.07031 193.35938 312.07031 z M 64.263672 313.71289 L 138.66406 313.71289 L 138.66406 330.01953 L 112.33398 330.01953 L 112.33398 398.02148 L 90.591797 398.02148 L 90.591797 330.01953 L 64.263672 330.01953 L 64.263672 313.71289 z M 242.11133 313.71289 L 308.64062 313.71289 L 308.64062 329.79297 L 266.68359 381.71484 L 310.9043 381.71484 L 310.9043 398.02148 L 240.07227 398.02148 L 240.07227 382.22461 L 282.08594 330.01953 L 242.11133 330.01953 L 242.11133 313.71289 z "
+     id="path7" /&gt;&lt;/svg&gt;</y:Resource>
+    </y:Resources>
+  </data>
+</graphml>
