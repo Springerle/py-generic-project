@@ -2,7 +2,7 @@
 # Development and integration test requirements
 #
 
-pip>=18
+pip>=20
 invoke==1.2.0
 rituals==0.3.1
 #https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
