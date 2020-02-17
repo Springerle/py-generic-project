@@ -118,7 +118,6 @@ Distribution</y:NodeLabel>
     </node>
     <node id="n7">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLNoteNode>
           <y:Geometry height="141.82851023943022" width="140.6119767491219" x="-257.80598837456097" y="-57.550609888992895"/>
@@ -141,7 +140,6 @@ Distribution</y:NodeLabel>
     </node>
     <node id="n8">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="28.0" width="153.24877829218104" x="-365.47856585969646" y="111.80040850855198"/>
@@ -245,8 +243,8 @@ develop
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="204.373046875" x="-376.0150146484375" y="184.24417622884118">pip install -r requirements.txt
-/ pipenv / poetry / hatch<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="268.791015625" x="-408.2239990234375" y="184.24417622884113">pip install -r requirements.txt / poetry 
+/ hatch / flit / dephell / pipenv / …<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -305,7 +303,7 @@ develop
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="47.751953125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="109.0703125" x="-104.51523019859309" y="-149.87434692382823">invoke
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="47.751953125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="109.0703125" x="-103.96223642417903" y="-152.18880004882823">invoke
 · pylint / flake8
 · tox + pytest<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
@@ -364,7 +362,8 @@ develop
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.583984375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="66.689453125" x="-94.00603510769707" y="126.00459881598982">GitLab CI<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Verdana" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.16796875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="105.712890625" x="-113.5177538576971" y="118.71260662848982">GitLab CI
+(.gitlab-ci.yml)<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -377,7 +376,6 @@ develop
       </data>
     </edge>
     <edge id="e11" source="n7" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:SplineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
