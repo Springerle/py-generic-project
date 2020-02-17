@@ -9,6 +9,11 @@
 
 .. contents:: **Contents**
 
+:Code:          {{ cookiecutter.github_url }}#readme
+:Docs:          https://{{ cookiecutter.repo_name }}.readthedocs.io/
+:CI:            https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+:Issues:        {{ cookiecutter.github_url }}/issues
+
 
 Overview
 --------
@@ -20,9 +25,14 @@ Installation
 ------------
 
 *{{ cookiecutter.project_name }}* can be installed via
-``pip install {{ cookiecutter.repo_name }}`` as usual, see `releases`_
-for an overview of available versions. To get a bleeding-edge version
-from source, use these commands (ideally within an activated virtualenv):
+``python3 -m pip install --user {{ cookiecutter.repo_name }}`` as usual,
+see `releases`_ for an overview of available versions.
+
+If you prefer an **isolated and easily removable venv installation**,
+consider using `dephell jail install {{ cookiecutter.repo_name }}`_ instead.
+
+To get a **bleeding-edge version from source**, use these commands
+(ideally within an activated virtualenv):
 
 .. code:: sh
 
@@ -133,6 +143,7 @@ Acknowledgements
 …
 
 .. _releases: {{ cookiecutter.github_url }}/releases
+.. _`dephell jail install {{ cookiecutter.repo_name }}`: https://dephell.readthedocs.io/cmd-jail-install.html
 .. _Click docs: http://click.pocoo.org/4/bashcomplete/#activation
 .. _CONTRIBUTING: {{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md
 .. _setup procedures: https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup
