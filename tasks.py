@@ -83,8 +83,8 @@ def test(ctx):
             ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
             ctx.run("invoke --echo --pty ci")
         else:
-            venv_bin = '.venv/new-project/bin/'
-            ctx.run("bash -c '. .env --yes --develop && invoke ci'")
+            venv_bin = '.venv/bin/'
+            ctx.run("bash -c '. .env --yes && invoke ci'")
 
         ctx.run(venv_bin + "new-project --help")
         ctx.run(venv_bin + "new-project --version")
