@@ -5,9 +5,9 @@
     ## LICENSE_SHORT ##
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+######################
 Complete API Reference
-======================
+######################
 
 The following is a complete API reference generated from source.
 

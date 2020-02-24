@@ -6,9 +6,9 @@
     ## LICENSE_SHORT ##
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**********************
+######################
 Complete CLI Reference
-**********************
+######################
 
 This is a full reference of the :command:`{{ cookiecutter.repo_name }}` command,
 with the same information as you get from using :option:`--help`.
