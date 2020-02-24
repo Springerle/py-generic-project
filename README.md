@@ -35,6 +35,42 @@ Other integrated tools are `pylint` for code quality checking,
 ----: | :----
 
 
+## Reapplying to an Existing Project
+
+You can convert the ``cookiecutter.json`` file
+to a ``.cookiecutterrc`` one by calling this command::
+
+    python3 -c \
+        "import sys,json,yaml; d=json.load(sys.stdin); yaml.dump(d, sys.stdout)" \
+        <cookiecutter.json
+
+The resulting output can be added to a copy of your ``~/.cookiecutterrc``, and then
+used in a new ``cookiecutter`` call::
+
+    cp ~/.cookiecutterrc .
+    vi .cookiecutterrc  # see above
+    cookiecutter --no-input --config-file .cookiecutterrc «project-template»
+
+You now have a *current* copy of your project in a sub-directory of your workdir.
+Make sure you have everything committed and no local pending changes, then call::
+
+    cp -rp «project-name»/* .
+    git diff
+
+Now comes the labor-intensive part, checking all the changes and integrating them.
+You can make that a bit easier by using ``git``::
+
+    git checkout -b cookiecutter v0
+    cp -rp «project-name»/* .
+    git commit -m "cookiecutter template update"
+    git checkout master
+    git merge cookiecutter
+
+This is assuming you have committed the original *unchanged* template and
+marked it with the ``v0`` tag. Now you need to resolve all the conflicts
+you get (and you normally get plenty) – still a lot of work, but a little better.
+
+
 ## Split Licensing
 
 Since the files contained in the ``{{cookiecutter.repo_name}}`` archetype itself
