@@ -152,12 +152,12 @@ your user account on a properly configured POSIX system (including
 
 .. code-block:: shell
 
-    venv=~/.local/virtualenvs/sphinx
+    venv=~/.local/venvs/sphinx
     mkdir -p $(dirname $venv)
     python3 -m venv $venv
     $venv/bin/pip install -U pip
     $venv/bin/pip install sphinx sphinx-autobuild
-    ln -nfs ~/bin $venv/bin/sphinx-*
+    ln -nfs ~/.local/bin $venv/bin/sphinx-*
 
 For a *Python* project, it makes sense to add *Sphinx* to the
 development requirements of the project, and install it to the project's
