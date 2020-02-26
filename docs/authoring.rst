@@ -168,8 +168,9 @@ version of *Sphinx*.
 ::
 
     # Development requirements
-    Sphinx==1.3.1
-    sphinx-autobuild==0.5.2
+    Sphinx==2.2.2
+    sphinx-autobuild==0.7.1
+    sphinx-rtd-theme==0.4.2
 
 Creating a Minimal Project
 --------------------------
@@ -185,9 +186,8 @@ all goes well, you'll find the root page of your documentation at
 ``docs/_build/html/index.html`` or ``docs/_build/index.html``
 (with newer versions of Sphinx) – just open it with your browser.
 
-If you used the current *Sphinx* version 1.3.1, the default theme is
-‘Alabaster’. Let's change that to the default theme used on *Read the
-Docs*, in ``docs/conf.py``:
+If you use the current *Sphinx* version, the default theme is ‘Alabaster’.
+Let's change that to the default theme used on *Read the Docs*, in ``docs/conf.py``:
 
 .. code-block:: python
 
@@ -205,9 +205,9 @@ To add a new chapter in its own file, create a file like
 
 .. code-block:: rst
 
-    **************
+    ##############
     My New Chapter
-    **************
+    ##############
 
 Then add that file to the *toctree* of your ``index.rst`` file:
 
