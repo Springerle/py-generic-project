@@ -47,8 +47,8 @@ The resulting project uses `rituals`_ and
 `setuptools <https://bitbucket.org/pypa/setuptools>`_ for building and
 distributing the project. A provided
 `autoenv <https://github.com/kennethreitz/autoenv>`_ script takes care
-of creating a fully boot-strapped ``virtualenv`` – it can also be used
-manually if you don't want to install ``autoenv``.
+of creating a fully boot-strapped Python 3 ``venv`` or Python 2 ``virtualenv``
+– it can also be called manually if you don't want to install ``autoenv``.
 
 The ``setup.py`` script follows the DRY principle and tries to minimize
 repetition of project metadata by loading it from other places (like the
