@@ -157,7 +157,7 @@ your user account on a properly configured POSIX system (including
     python3 -m venv $venv
     $venv/bin/pip install -U pip
     $venv/bin/pip install sphinx sphinx-autobuild
-    ln -nfs ~/.local/bin $venv/bin/sphinx-*
+    ln -nfs -t ~/.local/bin $venv/bin/sphinx-*
 
 For a *Python* project, it makes sense to add *Sphinx* to the
 development requirements of the project, and install it to the project's
