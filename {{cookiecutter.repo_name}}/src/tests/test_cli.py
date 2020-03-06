@@ -81,9 +81,9 @@ def test_cmd_help():
     if result.exit_code:
         print(vars(result))
         print('~' * 78)
-        print(result.stdout_bytes)
+        print(result.stdout_bytes)  # pylint: disable=no-member
         print('~' * 78)
-        print(result.stderr_bytes)
+        print(result.stderr_bytes)  # pylint: disable=no-member
         print('~' * 78)
     words = result.output.split()
 
