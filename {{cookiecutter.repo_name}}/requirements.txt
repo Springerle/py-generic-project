@@ -11,6 +11,6 @@ json-logging==1.0.5
 configobj>=5.0,<6
 #-e git+https://github.com/jhermann/configobj@move-to-package-32#egg=configobj
 #rudiments==0.1.0
--e git+https://github.com/jhermann/rudiments#egg=rudiments
+https://github.com/jhermann/rudiments/archive/master.zip#egg=rudiments
 
 {%- endif %}
