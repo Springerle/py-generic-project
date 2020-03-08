@@ -7,14 +7,15 @@
 # build matrix
 language: python
 python:
-    - "3.6"
-    - "3.8"
+  - "3.6"
+  - "3.8"
 
-# command to install dependencies
+# commands to install dependencies
+before_install:
+  - sudo apt-get -y install pandoc
+
 install:
-    - "pip install -r dev-requirements.txt"
-
-sudo: false
+  - "pip install -r dev-requirements.txt"
 
 cache:
   directories:
