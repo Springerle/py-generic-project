@@ -37,31 +37,35 @@ Other integrated tools are `pylint` for code quality checking,
 
 ## Reapplying to an Existing Project
 
-You can convert the ``cookiecutter.json`` file
-to a ``.cookiecutterrc`` one by calling this command::
+To update your project from the *current* version of the template,
+you can re-create it with the original inputs and merge the changes
+with your repository, as outlined below.
+
+First, convert the ``cookiecutter.json`` file
+to a ``.cookiecutterrc`` one by calling this command:
 
     python3 -c \
         "import sys,json,yaml; d=json.load(sys.stdin); yaml.dump(d, sys.stdout)" \
         <cookiecutter.json
 
 The resulting output can be added to a copy of your ``~/.cookiecutterrc``, and then
-used in a new ``cookiecutter`` call::
+used in a new ``cookiecutter`` call:
 
     cp ~/.cookiecutterrc .
     vi .cookiecutterrc  # see above
     cookiecutter --no-input --config-file .cookiecutterrc «project-template»
 
 You now have a *current* copy of your project in a sub-directory of your workdir.
-Make sure you have everything committed and no local pending changes, then call::
+Make sure you have everything committed and no local pending changes, then call:
 
-    cp -rp «project-name»/* .
+    cp -rp «project-name»/{.??*,*} .
     git diff
 
 Now comes the labor-intensive part, checking all the changes and integrating them.
-You can make that a bit easier by using ``git``::
+You can make that a bit easier by using ``git``:
 
     git checkout -b cookiecutter v0
-    cp -rp «project-name»/* .
+    cp -rp «project-name»/{.??*,*} .
     git commit -m "cookiecutter template update"
     git checkout master
     git merge cookiecutter
