@@ -26,10 +26,13 @@ import os
 import sys
 import shlex
 import shutil
+import subprocess
 
 from rituals.easy import task, Collection, pushd
 from rituals.util import antglob, notify
 from rituals.acts.documentation import namespace as _docs
+
+WINDOWS = all(os.getenv(x) for x in ("SYSTEMROOT", "WINDIR"))
 
 
 @task(help=dict(
@@ -70,9 +73,10 @@ def clean(ctx, docs=False, venv=False, extra=''):
 @task(pre=[clean])
 def test(ctx):
     """Perform integration tests."""
-    ctx.run("touch '{{cookiecutter.repo_name}}/empty-testfile'")
-    ctx.run("py.test")
-    ctx.run("rm '{{cookiecutter.repo_name}}/empty-testfile'")
+    run = subprocess.check_call if WINDOWS else ctx.run
+    run("touch '{{cookiecutter.repo_name}}/empty-testfile'")
+    run("pytest")
+    run("rm '{{cookiecutter.repo_name}}/empty-testfile'")
 
     with pushd('new-project'):
         assert not os.path.exists('empty-testfile'), "empty file is removed"
@@ -80,15 +84,15 @@ def test(ctx):
         if os.environ.get('TRAVIS', '') == 'true':
             venv_bin = ''
             notify.info("Installing archetype requirements...")
-            ctx.run("pip --log pip-install.log -q install -r dev-requirements.txt")
-            ctx.run("invoke --echo --pty ci")
+            run("pip --log pip-install.log -q install -r dev-requirements.txt")
+            run("invoke --echo --pty ci")
         else:
             venv_bin = '.venv/bin/'
-            ctx.run("bash -c '. .env --yes && invoke ci'")
+            run("bash -c '. .env --yes && invoke ci'")
 
-        ctx.run(venv_bin + "new-project --help")
-        ctx.run(venv_bin + "new-project --version")
-        ctx.run(venv_bin + "new-project help")
+        run(venv_bin + "new-project --help")
+        run(venv_bin + "new-project --version")
+        run(venv_bin + "new-project help")
 
 
 namespace = Collection.from_module(sys.modules[__name__], name='')
