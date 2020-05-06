@@ -40,7 +40,7 @@ def project():
 
     if os.path.exists(new_project):
         shutil.rmtree(new_project)
-    subprocess.check_call(['cookiecutter', '--no-input', '--config-file=/dev/null',  '.'])
+    subprocess.check_call(['cookiecutter', '--no-input', '--config-file=' + os.devnull,  '.'])
 
     return os.path.abspath(new_project)
 
