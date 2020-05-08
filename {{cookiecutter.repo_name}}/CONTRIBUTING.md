@@ -51,7 +51,7 @@ Tests are written and executed using [pytest](http://pytest.org/) and
 ### Set up a working development environment
 
 To set up a working directory from your own fork,
-follow [these steps]({{ cookiecutter.github_url }}#contributing),
+follow [these steps]({{ cookiecutter.repo_url }}#contributing),
 but replace the repository `https` URLs with SSH ones that point to your fork.
 
 For that to work on Debian type systems, you need the

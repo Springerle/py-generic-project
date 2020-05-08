@@ -9,10 +9,10 @@
 
 .. contents:: **Contents**
 
-:Code:          {{ cookiecutter.github_url }}#readme
+:Code:          {{ cookiecutter.repo_url }}#readme
 :Docs:          https://{{ cookiecutter.repo_name }}.readthedocs.io/
-:CI:            https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-:Issues:        {{ cookiecutter.github_url }}/issues
+:CI:            https://travis-ci.org/{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}
+:Issues:        {{ cookiecutter.repo_url }}/issues
 
 
 Overview
@@ -36,7 +36,7 @@ To get a **bleeding-edge version from source**, use these commands
 
 .. code:: sh
 
-    repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+    repo="{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}"
     python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
     python3 -m pip install "https://github.com/$repo/archive/master.zip#egg=${repo#*/}"
 
@@ -77,7 +77,7 @@ directory** for this project, call these commands:
 
 .. code:: sh
 
-    git clone "{{ cookiecutter.github_url }}.git"
+    git clone "{{ cookiecutter.repo_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
     command . .env --yes --develop
     invoke build --docs test check
@@ -142,10 +142,10 @@ Acknowledgements
 
 …
 
-.. _releases: {{ cookiecutter.github_url }}/releases
+.. _releases: {{ cookiecutter.repo_url }}/releases
 .. _`dephell jail install {{ cookiecutter.repo_name }}`: https://dephell.readthedocs.io/cmd-jail-install.html
 .. _Click docs: http://click.pocoo.org/4/bashcomplete/#activation
-.. _CONTRIBUTING: {{ cookiecutter.github_url }}/blob/master/CONTRIBUTING.md
+.. _CONTRIBUTING: {{ cookiecutter.repo_url }}/blob/master/CONTRIBUTING.md
 .. _setup procedures: https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup
 .. _have them available: https://github.com/jhermann/priscilla/tree/master/pyenv
 .. _Cookiecutter: http://cookiecutter.readthedocs.io/en/latest/
@@ -159,14 +159,14 @@ Acknowledgements
 .. _Rituals: https://jhermann.github.io/rituals
 .. _Click: http://click.pocoo.org/
 
-.. |Travis CI| image:: https://api.travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg
-   :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-.. |Coveralls| image:: https://img.shields.io/coveralls/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg
-   :target: https://coveralls.io/r/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-.. |GitHub Issues| image:: https://img.shields.io/github/issues/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg
-   :target: {{ cookiecutter.github_url }}/issues
+.. |Travis CI| image:: https://api.travis-ci.org/{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}.svg
+   :target: https://travis-ci.org/{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}
+.. |Coveralls| image:: https://img.shields.io/coveralls/{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}.svg
+   :target: https://coveralls.io/r/{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}
+.. |GitHub Issues| image:: https://img.shields.io/github/issues/{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}.svg
+   :target: {{ cookiecutter.repo_url }}/issues
 .. |License| image:: https://img.shields.io/pypi/l/{{ cookiecutter.repo_name }}.svg
-   :target: {{ cookiecutter.github_url }}/blob/master/LICENSE
+   :target: {{ cookiecutter.repo_url }}/blob/master/LICENSE
 .. |Latest Version| image:: https://img.shields.io/pypi/v/{{ cookiecutter.repo_name }}.svg
    :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
 .. |Downloads| image:: https://img.shields.io/pypi/dw/{{ cookiecutter.repo_name }}.svg

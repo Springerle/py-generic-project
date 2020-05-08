@@ -21,7 +21,7 @@ Installing
 
 *{{ cookiecutter.project_name }}* can be installed from PyPI
 via ``pip install {{ cookiecutter.repo_name }}`` as usual,
-see `releases <{{ cookiecutter.github_url }}/releases>`_
+see `releases <{{ cookiecutter.repo_url }}/releases>`_
 on GitHub for an overview of available versions – the project uses
 `semantic versioning <http://semver.org/>`_ and follows
 `PEP 440 <https://www.python.org/dev/peps/pep-0440/>`_ conventions.
@@ -31,7 +31,7 @@ To get a bleeding-edge version from source, use these commands:
 
 .. code-block:: shell
 
-    repo="{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+    repo="{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}"
     python3 -m venv ~/.local/venvs/{{ cookiecutter.repo_name }} && . $_/bin/activate
     python3 -m pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
     python3 -m pip install -e "git+https://github.com/$repo.git#egg=${repo#*/}"
@@ -69,7 +69,7 @@ To create a working directory for this project, call these commands:
 
 .. code-block:: shell
 
-    git clone "{{ cookiecutter.github_url }}.git"
+    git clone "{{ cookiecutter.repo_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
     . .env --yes --develop
     invoke build --docs test check
