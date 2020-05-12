@@ -1,0 +1,51 @@
+{% if "actions" in cookiecutter.features.replace(',', ' ').split() -%}
+{%- raw -%}
+# GitHub CI Action for Python Project (with tox / Invoke)
+#
+# DOCS
+#
+#   https://help.github.com/en/actions/language-and-framework-guides/github-actions-for-python
+#   https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
+#   https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
+#   https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md#readme
+#   https://github.com/ymyzk/tox-gh-actions#readme
+---
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+# https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables#default-environment-variables
+#env:
+#  FOO: bar
+
+jobs:
+  tests:
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      matrix:
+        python-version: ["3.6", "3.7", "3.8"]
+    name: "Python ${{ matrix.python-version }}"
+
+    steps:
+      - uses: "actions/checkout@v2"
+      - uses: "actions/setup-python@v1"
+        with:
+          python-version: "${{ matrix.python-version }}"
+      - name: "Install dependencies"
+        run: |
+          set -xe
+          python -VV
+          python -m site
+          echo
+          python -m pip install --upgrade pip setuptools wheel
+          #python -m pip install --upgrade tox tox-venv tox-gh-actions
+          python -m pip install -r dev-requirements.txt
+      - name: "Run CI task for Python ${{ matrix.python-version }}"
+        run: "invoke --echo --pty ci"
+{% endraw -%}
+{% endif -%}

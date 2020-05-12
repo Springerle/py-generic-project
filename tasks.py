@@ -81,7 +81,7 @@ def test(ctx):
     with pushd('new-project'):
         assert not os.path.exists('empty-testfile'), "empty file is removed"
 
-        if os.environ.get('TRAVIS', '') == 'true':
+        if any(os.environ.get(x, '').lower() == 'true' for x in {'TRAVIS', 'GITHUB_ACTIONS'}):
             venv_bin = ''
             notify.info("Installing archetype requirements...")
             run("pip --log pip-install.log -q install -r dev-requirements.txt")

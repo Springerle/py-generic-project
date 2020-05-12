@@ -51,8 +51,8 @@ def ci(ctx):
     """Perform continuous integration tasks."""
     opts = ['']
 
-    # 'tox' makes no sense in Travis
-    if os.environ.get('TRAVIS', '').lower() == 'true':
+    # 'tox' makes no sense in Travis / GH Actions
+    if any(os.environ.get(x, '').lower() == 'true' for x in {'TRAVIS', 'GITHUB_ACTIONS'}):
         opts += ['test.pytest']
     else:
         opts += ['test.tox']
