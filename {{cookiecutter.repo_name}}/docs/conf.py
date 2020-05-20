@@ -16,8 +16,10 @@ import sys
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath(".."))
-sys.path.insert(0, os.path.abspath("../src"))
+docs_dir = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(docs_dir))
+sys.path.insert(0, os.path.join(os.path.dirname(docs_dir), "src"))
+
 from setup import project as meta
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 from {{ cookiecutter.pkg_name }} import __main__
@@ -26,7 +28,7 @@ from {{ cookiecutter.pkg_name }} import __main__
 def setup(app):
     """See https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html"""
     if os.path.exists('_static/css/custom.css'):
-        app.add_stylesheet('css/custom.css')
+        app.add_css_file('css/custom.css')
     if os.path.exists('_static/js/custom.js'):
         app.add_javascript('js/custom.js')
 
@@ -45,6 +47,8 @@ extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.coverage',
     'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinx.ext.napoleon',
     'sphinx.ext.intersphinx',
+    #'sphinx.ext.graphviz',
+    #'sphinxcontrib.plantuml',
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
     'sphinx_click.ext',
 {%- endif %}
@@ -265,3 +269,11 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+# -- GraphViz configuration ----------------------------------------------
+graphviz_output_format = 'svg'
+
+# -- PlantUML configuration ----------------------------------------------
+plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
+plantuml_output_format = 'svg'
