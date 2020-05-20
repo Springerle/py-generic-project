@@ -33,7 +33,7 @@ import sys
 import pprint
 from collections import OrderedDict
 
-DEBUG = False
+DEBUG = bool(os.environ.get('CC_DEBUG_HOOK', 'False'))
 
 
 def run():

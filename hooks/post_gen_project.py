@@ -38,7 +38,7 @@ from fnmatch import fnmatchcase as globmatch
 
 
 VERBOSE = True
-DEBUG = False
+DEBUG = bool(os.environ.get('CC_DEBUG_HOOK', 'False'))
 NOSCAN_DIRS = set((
     '.git', '.svn', '.hg',
     '.env', '.venv', '.tox',
