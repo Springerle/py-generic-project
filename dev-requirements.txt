@@ -14,7 +14,7 @@ sphinx==2.4.1
 sphinx-autobuild==0.7.1
 sphinx-rtd-theme==0.1.9
 
-cookiecutter==1.7.0
+cookiecutter==1.7.2
 ##https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
 
 pytest==5.3.5
