@@ -6,6 +6,7 @@
 include README.rst LICENSE requirements.txt *-requirements.txt .env .gitignore
 recursive-include project.d *.py *.md *.txt *.cfg *.ini
 recursive-include docs/_static/img *.md *.png *.ico *.svg *.graphml
+#recursive-include docs/uml *.puml
 
 #recursive-include debian *
 #prune debian/.debhelper
