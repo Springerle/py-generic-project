@@ -17,10 +17,13 @@ try:
     CLI_PATH = sys.modules['__main__'].__file__
 except (KeyError, AttributeError):
     CLI_PATH = __file__
-CLI_PATH = os.path.dirname(os.path.realpath(CLI_PATH))
+CLI_PATH = os.path.dirname(CLI_PATH)
 if CLI_PATH.endswith('/bin'):
     CLI_PATH = CLI_PATH[:-4]
-CLI_PATH = re.sub('^' + os.path.expanduser('~'), '~', CLI_PATH)
+elif CLI_PATH.endswith(r'\Scripts'):
+    CLI_PATH = CLI_PATH[:-8]
+if CLI_PATH.startswith(os.path.expanduser('~') + os.sep):
+    CLI_PATH = '~' + CLI_PATH[len(os.path.expanduser('~')):]
 
 # Extended version info for use by `click.version_option`
 VERSION_INFO = '%(prog)s %(version)s from {} [Python {}]'.format(CLI_PATH, ' '.join(sys.version.split()[:1]),)
