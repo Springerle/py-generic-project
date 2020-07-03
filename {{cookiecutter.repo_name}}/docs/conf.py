@@ -115,8 +115,14 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-# Napoleon settings
+# Napoleon / API doc settings
 napoleon_numpy_docstring = False
+napoleon_use_ivar = True
+autodoc_default_options = {
+    "members": True,
+    "undoc-members": True,
+    "private-members": True,
+}
 
 
 # -- Options for HTML output ---------------------------------------------------
