@@ -71,7 +71,7 @@ def init_logging(ctx, json_log):
 
 
 # Main command (root)
-@click.group(context_settings=CONTEXT_SETTINGS)
+@click.group(context_settings=CONTEXT_SETTINGS, invoke_without_command=False, no_args_is_help=False)
 @click.version_option(message=config.VERSION_INFO)
 @license_option()
 @click.option('-q', '--quiet', is_flag=True, default=False, help='Be quiet (show only errors).')
