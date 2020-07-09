@@ -92,7 +92,7 @@ today_fmt = '%Y-%m-%d'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    "*~", "README.rst",
+    "*~", "README.rst", "api/modules.rst",
 ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
@@ -118,10 +118,20 @@ pygments_style = 'sphinx'
 # Napoleon / API doc settings
 napoleon_numpy_docstring = False
 napoleon_use_ivar = True
+
+# https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+autodoc_inherit_docstrings = True
 autodoc_default_options = {
-    "members": True,
-    "undoc-members": True,
-    "private-members": True,
+    'members': None,
+    'member-order': 'bysource',
+    'undoc-members': None,
+    'private-members': None,
+    #'special-members': '__str__,__repr__',  # comma-separated specials to include
+    #'inherited-members': 'object,tuple,namedtuple',  # comma-separated
+    #'show-inheritance': None,
+    #'ignore-module-all': '',
+    #'imported-members': 'StringIO',
+    'exclude-members': '__weakref__',  # comma-separated exclusions
 }
 
 
