@@ -8,6 +8,7 @@
 import os
 import re
 import sys
+import logging
 
 from rudiments.reamed.click import Configuration  # noqa pylint: disable=unused-import
 
@@ -25,22 +26,37 @@ elif CLI_PATH.endswith(r'\Scripts'):
 if CLI_PATH.startswith(os.path.expanduser('~') + os.sep):
     CLI_PATH = '~' + CLI_PATH[len(os.path.expanduser('~')):]
 
-# Extended version info for use by `click.version_option`
 VERSION_INFO = '%(prog)s %(version)s from {} [Python {}]'.format(CLI_PATH, ' '.join(sys.version.split()[:1]),)
+"""str: Extended version info for use by :py:func:`click.version_option`."""
 
 # These will be filled by `__main__`
 APP_NAME = None
+"""str: Application name, used e.g. in configuration filenames."""
 cli = None  # pylint: disable=invalid-name
+""" click.core.Group: The main command object, needed to define sub-commands.
+    This is set in :py:mod:`~mam_generic_config.__main__` *before* the
+    sub-command modules are imported.
+"""
+LOG = logging.getLogger()
+"""~logging.Logger: The main / default logger."""
 
 
 def version_info(ctx=None):
-    """Return version information just like --version does."""
-    from . import __version__
+    """ Return version information just like --version does.
+
+        Args:
+            ctx (~click.Context): The Click context, used to determine
+                any dynamic program names when given.
+
+        Returns:
+            str: Extended version info based on :py:data:`VERSION_INFO`.
+    """
+    from . import __version__  # pylint: disable=import-outside-toplevel
 
     prog = ctx.find_root().info_name if ctx else APP_NAME
     version = __version__
     try:
-        import pkg_resources
+        import pkg_resources  # pylint: disable=import-outside-toplevel
     except ImportError:
         pass
     else:
@@ -55,7 +71,14 @@ def version_info(ctx=None):
 
 
 def envvar(name, default=None):
-    """Return an environment variable specific for this application (using a prefix)."""
+    """ Return an environment variable specific for this application (using a prefix).
+
+        Before lookup, any dashes are replaced by underscores, and the name is converted to upper case.
+
+        Args:
+            name (str): Name of the variable, without the ``<APP_NAME>_`` prefix.
+            default (str): An optional default value.
+    """
     varname = (APP_NAME + '-' + name).upper().replace('-', '_')
     return os.environ.get(varname, default)
 {% endif -%}
