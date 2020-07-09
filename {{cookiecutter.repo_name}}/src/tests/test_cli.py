@@ -71,7 +71,7 @@ def test_cmd_missing():
     runner = CliRunner()
     result = runner.invoke(main.cli)
 
-    assert result.exit_code == 0
+    assert result.exit_code == 2
 
 
 @cli
