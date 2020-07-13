@@ -3,7 +3,7 @@
 #
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 
-click==7.0
+click==7.1.2
 colorama==0.4.3
 
 munch==2.5.0
