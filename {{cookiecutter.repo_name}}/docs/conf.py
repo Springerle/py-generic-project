@@ -287,6 +287,13 @@ texinfo_documents = [
 #texinfo_show_urls = 'footnote'
 
 
+# -- InterSphinx configuration ----------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#configuration
+intersphinx_timeout = 15  # seconds
+intersphinx_mapping = dict(
+    invoke=('http://docs.pyinvoke.org/en/stable', None),
+)
+
 # -- GraphViz configuration ----------------------------------------------
 graphviz_output_format = 'svg'
 
