@@ -14,6 +14,9 @@ Overview
 ********
 
 **TODO**
+
+This project is based on the :gh:`Springerle/py-generic-project` cookiecutter.
+Distribution packages are versioned according to :pep:`440`.
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
 
 
