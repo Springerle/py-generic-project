@@ -58,7 +58,18 @@ extensions = [
 templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
+try:
+    import recommonmark
+except ImportError:
+    import warnings
+    warnings.warn("'recommonmark' extension not available!")
+    del source_suffix['.md']
+else:
+    extensions += ['recommonmark']
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
