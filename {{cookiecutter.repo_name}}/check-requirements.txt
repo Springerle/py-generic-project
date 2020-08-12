@@ -17,3 +17,5 @@ flake8-rst==0.7.2
 pep8
 pylint==2.5.3
 dlint==0.10.3
+bandit==1.6.2
+flake8-bandit==2.1.2
