@@ -19,3 +19,58 @@ pylint==2.5.3
 dlint==0.10.3
 bandit==1.6.2
 flake8-bandit==2.1.2
+
+# Plugins to look at / integrate
+#
+#   PyCQA / flake8-import-order
+#   https://github.com/PyCQA/pep8-naming
+#   https://github.com/asottile/flake8-typing-imports
+#   https://github.com/asottile/yesqa
+#   ebeweber / flake8-mutable
+#   zheller / flake8-quotes
+#   adamchainz / flake8-comprehensions
+#   adamchainz / flake8-tidy-imports
+#   sobolevn / flake8-broken-line
+#   schlamar / flake8-todo
+#   https://github.com/xZise/flake8-future-import
+#   https://github.com/Arkq/flake8-requirements
+#   https://github.com/ar4s/flake8_tuple
+#   https://github.com/best-doctor/flake8-variables-names
+#   https://github.com/best-doctor/flake8-class-attributes-order
+#   https://github.com/best-doctor/flake8-annotations-complexity
+#   https://github.com/best-doctor/flake8-expression-complexity
+#   https://github.com/aleGpereira/flake8-mock
+#   https://github.com/m-burst/flake8-pytest-style
+#   https://github.com/Miserlou/JonesComplexity
+#   https://github.com/gforcada/flake8-pep3101
+#   https://github.com/gforcada/flake8-deprecated
+#   https://github.com/afonasev/flake8-return
+#
+#   https://github.com/lordmauve/flake8-html
+#   OR https://github.com/myth/pepper8
+#   https://github.com/astj/flake8-formatter-junit-xml
+
+# Plugins that might help in certain cases only (or are simply subjective),
+# but not generally useful or applicable...
+#
+#   deppen8 / pandas-vet
+#   JBKahn / flake8-print
+#   JBKahn / flake8-debugger
+#   https://github.com/MichaelAquilina/flake8-spellcheck
+#   https://github.com/dealertrack/flake8-diff
+#   https://github.com/savoirfairelinux/flake8-copyright
+#   https://github.com/datatheorem/flake8-alfred
+#   https://github.com/jparise/flake8-assertive
+#   https://github.com/tk0miya/flake8-coding
+#   https://github.com/stummjr/flake8-scrapy
+
+# Other extensions / tools:
+#
+#   https://github.com/DmytroLitvinov/awesome-flake8-extensions
+#   https://github.com/tholo/pytest-flake8
+#   https://github.com/mlshapiro/jupyterlab-flake8
+#   OR https://github.com/mattijn/pycodestyle_magic
+#   https://github.com/wemake-services/wemake-python-styleguide
+#   https://github.com/OrkoHunter/pep8speaks
+#   https://github.com/johnfraney/flake8-markdown
+#   https://github.com/afonasev/flake8-plugin-utils
