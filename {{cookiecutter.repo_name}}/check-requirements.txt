@@ -1,12 +1,16 @@
 # Requirements for code quality checks
 
 flake8==3.8.3
+pylint==2.5.3
+
 flakehell==0.5.0
 flake8-builtins==1.5.3
 flake8-commas==2.0.0
 flake8-bugbear==20.1.4
 flake8-blind-except==0.1.1
+flake8-mutable==1.2.0
 flake8-logging-format==0.6.0
+flake8-import-order==0.18.1
 flake8-2020==1.6.0
 flake8-eradicate==0.4.0
 flake8-annotations-coverage==0.0.4
@@ -15,18 +19,15 @@ flake8-docstrings==1.5.0
 flake8-rst-docstrings==0.0.13
 flake8-rst==0.7.2
 pep8
-pylint==2.5.3
+pep8-naming==0.11.1
 dlint==0.10.3
 bandit==1.6.2
 flake8-bandit==2.1.2
 
 # Plugins to look at / integrate
 #
-#   PyCQA / flake8-import-order
-#   https://github.com/PyCQA/pep8-naming
 #   https://github.com/asottile/flake8-typing-imports
 #   https://github.com/asottile/yesqa
-#   ebeweber / flake8-mutable
 #   zheller / flake8-quotes
 #   adamchainz / flake8-comprehensions
 #   adamchainz / flake8-tidy-imports
