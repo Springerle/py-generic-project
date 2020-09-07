@@ -258,3 +258,11 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+# -- GraphViz configuration ----------------------------------------------
+graphviz_output_format = 'svg'
+
+# -- PlantUML configuration ----------------------------------------------
+plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
+plantuml_output_format = 'svg_obj'
