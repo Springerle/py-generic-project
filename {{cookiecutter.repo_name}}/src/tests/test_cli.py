@@ -18,7 +18,7 @@ from click.testing import CliRunner
 from markers import *
 from {{ cookiecutter.pkg_name }} import __version__ as version
 from {{ cookiecutter.pkg_name }} import __main__ as main
-from {{ cookiecutter.pkg_name }} import commands
+from {{ cookiecutter.pkg_name }} import commands  # register sub-commands  pylint: disable=unused-import
 
 
 UsageError = sh.ErrorReturnCode_2  # pylint: disable=no-member

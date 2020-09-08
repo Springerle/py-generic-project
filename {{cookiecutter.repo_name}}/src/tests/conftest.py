@@ -1,4 +1,4 @@
-# pylint: disable=
+# pylint: disable=redefined-outer-name
 """ py.test dynamic configuration.
 
     For details needed to understand these tests, refer to:

@@ -6,7 +6,6 @@
 #
 # ## LICENSE_SHORT ##
 import os
-import re
 import sys
 import logging
 

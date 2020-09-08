@@ -1,4 +1,4 @@
-# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation
+# pylint: disable=wildcard-import, unused-wildcard-import, bad-continuation, invalid-name
 """ Project automation for Invoke.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
