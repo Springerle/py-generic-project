@@ -306,7 +306,7 @@ intersphinx_mapping = dict(
 # -- External Links configuration -------------------------------------------
 extensions += ['sphinx.ext.extlinks']
 extlinks = dict(
-    gh=('https://github.com/', ''),
+    gh=('https://github.com/%s', ''),
 )
 
 # -- GraphViz configuration -------------------------------------------------
