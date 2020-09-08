@@ -46,9 +46,6 @@ needs_sphinx = '1.3'
 extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.coverage',
     'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinx.ext.napoleon',
-    'sphinx.ext.intersphinx', 'sphinx.ext.extlinks',
-    #'sphinx.ext.graphviz',
-    #'sphinxcontrib.plantuml',
 {%- if "cli" in cookiecutter.features.replace(',', ' ').split() %}
     'sphinx_click.ext',
 {%- endif %}
@@ -300,19 +297,23 @@ texinfo_documents = [
 
 # -- InterSphinx configuration ----------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#configuration
+extensions += ['sphinx.ext.intersphinx']
 intersphinx_timeout = 15  # seconds
 intersphinx_mapping = dict(
     invoke=('http://docs.pyinvoke.org/en/stable', None),
 )
 
 # -- External Links configuration -------------------------------------------
+extensions += ['sphinx.ext.extlinks']
 extlinks = dict(
     gh=('https://github.com/', ''),
 )
 
 # -- GraphViz configuration -------------------------------------------------
+extensions += ['sphinx.ext.graphviz']
 graphviz_output_format = 'svg'
 
 # -- PlantUML configuration -------------------------------------------------
+##extensions += ['sphinxcontrib.plantuml']
 plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
-plantuml_output_format = 'svg'
+plantuml_output_format = 'svg_obj'
