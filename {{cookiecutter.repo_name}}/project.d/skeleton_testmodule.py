@@ -1,4 +1,4 @@
-# pylint: disable=wildcard-import, missing-docstring, no-self-use, bad-continuation
+# pylint: disable=wildcard-import, missing-docstring, no-self-use
 # pylint: disable=invalid-name, redefined-outer-name, too-few-public-methods
 """ Test :py:mod:`«some_module»`.
 """

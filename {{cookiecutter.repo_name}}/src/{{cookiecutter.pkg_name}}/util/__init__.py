@@ -1,4 +1,3 @@
-# pylint: disable=bad-continuation
 """ Helper functions and classes.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>

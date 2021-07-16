@@ -1,4 +1,4 @@
-# pylint: disable=wildcard-import, missing-docstring, no-self-use, bad-continuation
+# pylint: disable=wildcard-import, missing-docstring, no-self-use
 """ Test the package metadata.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>

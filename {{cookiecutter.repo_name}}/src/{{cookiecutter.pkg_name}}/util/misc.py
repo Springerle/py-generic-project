@@ -1,4 +1,3 @@
-# pylint: disable=bad-continuation
 """ Miscellaneous helpers.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>

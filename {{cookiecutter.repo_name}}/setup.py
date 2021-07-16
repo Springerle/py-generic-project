@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-# pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
+# pylint: disable=attribute-defined-outside-init, invalid-name
 # pylint: disable=too-many-statements, wrong-import-position
 """
     {{ cookiecutter.project_name }} – {{ cookiecutter.short_description }}.

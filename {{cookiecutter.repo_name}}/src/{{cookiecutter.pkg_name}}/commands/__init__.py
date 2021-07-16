@@ -1,5 +1,5 @@
 {% if "cli" in cookiecutter.features.replace(',', ' ').split() -%}
-# pylint: disable=bad-continuation, unused-import
+# pylint: disable=unused-import
 """ Implementation of CLI sub-commands.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>

@@ -1,5 +1,4 @@
 {% if "cli" in cookiecutter.features.replace(',', ' ').split() -%}
-# pylint: disable=bad-continuation
 """ Configuration utilities.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>

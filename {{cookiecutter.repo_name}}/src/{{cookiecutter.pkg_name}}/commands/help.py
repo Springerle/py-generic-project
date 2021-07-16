@@ -1,5 +1,5 @@
 {% if "cli" in cookiecutter.features.replace(',', ' ').split() -%}
-# pylint: disable=bad-continuation, too-few-public-methods
+# pylint: disable=too-few-public-methods
 """ 'help' command.
 """
 # Copyright ©  {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
