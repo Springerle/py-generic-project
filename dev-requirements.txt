@@ -3,27 +3,27 @@
 #
 
 pip>=20
-invoke==1.4.1
+invoke==1.6.0
 rituals==0.4.1
 #https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 
 # Tornado 5+ requires an up-to-date SSL module - this means Python 2.7.9+ or 3.4+
 tornado<5; python_full_version < "2.7.9" or python_version == "3.2" or python_version == "3.3"
 
-sphinx==2.4.1
-sphinx-autobuild==0.7.1
-sphinx-rtd-theme==0.1.9
+sphinx==3.5.4
+sphinx-autobuild==2021.3.14
+sphinx-rtd-theme==0.5.2
 
-cookiecutter==1.7.2
+cookiecutter==1.7.3
 ##https://github.com/jhermann/cookiecutter/archive/enriched-context-for-hooks.zip#egg=cookiecutter
 
-pytest==5.3.5
+pytest==6.2.4
 #https://github.com/jhermann/pytest-spec/archive/fix-hook-config.zip#egg=pytest-spec
-pytest-spec==2.0.0
+pytest-spec==3.2.0
 py>=1.5.2
 pluggy>=0.7
 
-pylint==2.4.4
-bpython==0.18
+pylint==2.9.3
+bpython==0.21
 yolk3k==0.9
 pip-upgrader==1.4.15

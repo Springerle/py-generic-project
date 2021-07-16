@@ -3,20 +3,20 @@
 #
 
 pip>=20
-invoke==1.4.1
+invoke==1.6.0
 rituals==0.4.1
 #https://github.com/jhermann/rituals/archive/master.zip#egg=rituals
 
-pylint==2.5.3
-bpython==0.19
+pylint==2.9.3
+bpython==0.21
 yolk3k==0.9
 
-tox==3.16.1
+tox==3.24.0
 tox-venv==0.4.0
-twine==3.2.0
+twine==3.4.1
 pip-upgrader==1.4.15
-check-manifest==0.45
-check-python-versions==0.16.0
+check-manifest==0.46
+check-python-versions==0.18.1
 
 Sphinx==3.1.2
 sphinx-autobuild==0.7.1
